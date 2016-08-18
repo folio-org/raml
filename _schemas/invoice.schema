@@ -84,10 +84,10 @@
 					"type":"object",
 					"properties":{
 						"value":{
-							"type":"null"
+							"type":"string"
 						},
 						"desc":{
-							"type":"null"
+							"type":"string"
 						}
 					},
 					"required":[
