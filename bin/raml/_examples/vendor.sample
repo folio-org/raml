@@ -1,0 +1,95 @@
+{
+  "_id": "123123123",
+  "code": "YBP",
+  "name": "YBP book vendor",
+  "status": "ACTIVE",
+  "vendor_language": "English",
+  "financial_sys_code": "asswwe",
+  "licensor": false,
+  "governmental": false,
+  "link": null,
+  "liable_for_vat": false,
+  "material_supplier": true,
+  "access_provider": false,
+  "contact_info": {
+    "address": [
+      {
+        "line1": "208 West Chicago St.",
+        "line2": null,
+        "city": "Brooklyn",
+        "country": "US",
+        "preferred": true,
+        "state_province": "NY",
+        "postal_code": "11552",
+        "start_date": "2011-12-17Z",
+        "address_type": [
+          "order",
+          "payment"
+        ]
+      }
+    ],
+    "email": [
+      {
+        "description": null,
+        "preferred": true,
+        "email_address": "reply@ybp.com",
+        "email_type": [
+          "orderMail",
+          "paymentMail"
+        ]
+      }
+    ],
+    "phone": [
+      {
+        "preferred": true,
+        "phone_number": "1-800-800-8000",
+        "preferred_sms": true,
+        "phone_type": [
+          "orderPhone",
+          "paymentPhone"
+        ]
+      }
+    ],
+    "web_address": []
+  },
+  "edi_info": {
+    "tenant_specific_code": "222222",
+    "type": "31B - US-SAN",
+    "naming_convention": "Blackwell",
+    "password": "asdf",
+    "user": "asdf",
+    "server": "localhost",
+    "port": 12345,
+    "secured_ftp": true
+  },
+  "accepts_currency": [
+    {
+      "value": "USD",
+      "desc": "US Dollar"
+    },
+    {
+      "value": "EUR",
+      "desc": "Euro"
+    }
+  ],
+  "account": [
+    {
+      "code": "YBP",
+      "description": "The YBP Inc.",
+      "status": "ACTIVE",
+      "note": null,
+      "discount_percent": 0,
+      "subscription_interval": 90,
+      "library": [
+        "MYLIB"
+      ],
+      "payment_method": "ACCOUNTINGDEPARTMENT"
+    }
+  ],
+  "contact_person": [
+    {
+      "first_name": "sam",
+      "last_name": "sam"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "invoices": {
+      "id": "invoiceData",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "$ref" : "invoice"
+      }
+    },
+    "total_records": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "invoices",
+    "total_records"
+  ]
+}

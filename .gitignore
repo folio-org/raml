@@ -1,0 +1,11 @@
+#mvn build
+target/
+#vert.x
+.vertx/
+file-uploads/
+#netbeans
+nbproject/
+#eclipse
+.project
+.settings/
+.classpath
