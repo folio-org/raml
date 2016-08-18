@@ -29,15 +29,23 @@
       "desc": "US Dollar"
     }
   },
+  "fund_distributions": [
+    {
+      "fund_code": "12345",
+      "amount": {
+        "sum": 123.5,
+        "currency": "USD"
+      }
+    }
+  ],
   "vendor_reference_number": "ybp-1234567890",
   "ebook_url": "",
   "source_type": "API",
   "po_number": "0987654321",
   "invoice_reference": "",
-  "resource_metadata": "/almaws/v1/bibs/99113721800121",
+  "resource_metadata": "/abc/v1/bibs/99113721800121",
   "access_provider": "",
   "material_type": "BOOK",
-  "fund_distribution": [],
   "block_alert_on_po_line": [
     {
       "value": "FUNDMISS",

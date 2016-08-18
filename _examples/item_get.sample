@@ -5,7 +5,7 @@
     "value": "STACK",
     "desc": "Stacks (STACK)"
   },
-  "status": {
+  "item_status": {
     "value": "01",
     "desc": "ITEM_STATUS_MISSING"
   },

@@ -22,7 +22,7 @@
 				}
 			}
 		},
-		"status":{
+		"item_status":{
 			"type":"object",
 			"properties":{
 				"value":{
@@ -67,7 +67,7 @@
 	},
 	"required":[
 		"location",
-		"status",
+		"item_status",
 		"material_type",
 		"item_link",
 		"bib_id"
