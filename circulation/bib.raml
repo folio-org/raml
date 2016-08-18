@@ -9,30 +9,30 @@ documentation:
     content: <b>This documents the API calls that can be made for bibs to fulfill circulation functionality</b>
 
 schemas:
- - bibs: !include _schemas/bibs.schema
- - bib: !include _schemas/bib.schema
- - item: !include _schemas/item.schema 
- - items: !include _schemas/items.schema
- - item_requests: !include  _schemas/item_requests.schema 
- - item_request: !include  _schemas/item_request.schema
+ - bibs: !include ../_schemas/bibs.schema
+ - bib: !include ../_schemas/bib.schema
+ - item: !include ../_schemas/item.schema 
+ - items: !include ../_schemas/items.schema
+ - item_requests: !include  ../_schemas/item_requests.schema 
+ - item_request: !include  ../_schemas/item_request.schema
 traits: 
- - secured: !include traits/auth.raml
- - orderable: !include traits/orderable.raml
- - pageable:  !include traits/pageable.raml
- - searchable: !include traits/searchable.raml
- - display: !include traits/display.raml
- - time-period: !include traits/time-period.raml
- - language: !include traits/language.raml 
+ - secured: !include ../traits/auth.raml
+ - orderable: !include ../traits/orderable.raml
+ - pageable:  !include ../traits/pageable.raml
+ - searchable: !include ../traits/searchable.raml
+ - display: !include ../traits/display.raml
+ - time-period: !include ../traits/time-period.raml
+ - language: !include ../traits/language.raml 
 resourceTypes: 
- - collection: !include rtypes/collection.raml
- - collection-item: !include rtypes/item-collection.raml
+ - collection: !include ../rtypes/collection.raml
+ - collection-item: !include ../rtypes/item-collection.raml
      
 /bibs:
   displayName: Bibs
   type:
     collection:
-      exampleCollection: !include  _examples/bib_get.sample
-      exampleItem: !include _examples/bib_post.sample
+      exampleCollection: !include  ../_examples/bib_get.sample
+      exampleItem: !include ../_examples/bib_post.sample
       schemaCollection: bibs
       schemaItem: bib
   get:
@@ -45,7 +45,7 @@ resourceTypes:
   /{bibId}:
     type:
       collection-item:
-        exampleItem: !include _examples/bib_get.sample
+        exampleItem: !include ../_examples/bib_get.sample
         schema: bib
     get:
       is: [
@@ -59,8 +59,8 @@ resourceTypes:
       description: Bib level requests. <ul><li>List of requests per the given bib</li><li>Add request per given bib</li></ul>
       type:
         collection:
-          exampleCollection: !include  _examples/item_request_get.sample
-          exampleItem: !include _examples/item_request_post.sample
+          exampleCollection: !include  ../_examples/item_request_get.sample
+          exampleItem: !include ../_examples/item_request_post.sample
           schemaCollection: item_requests
           schemaItem: item_request
       get:
@@ -81,15 +81,15 @@ resourceTypes:
         description: Bib level requests. <ul><li>Get s specific request per the given bib</li><li>Update request per given bib</li><li>Delete request per given bib.</li></ul>
         type:
           collection-item:
-            exampleItem: !include _examples/item_request_get.sample
+            exampleItem: !include ../_examples/item_request_get.sample
             schema: item_request
     /items:
       displayName: Items
       description: Items services <br> <ul><li>Return list of items</li><li>Create an Item</li></ul>
       type:
         collection:
-          exampleCollection: !include  _examples/item_get.sample
-          exampleItem: !include _examples/item_post.sample
+          exampleCollection: !include  ../_examples/item_get.sample
+          exampleItem: !include ../_examples/item_post.sample
           schemaCollection: items
           schemaItem: item
       get:
@@ -97,7 +97,7 @@ resourceTypes:
       /{itemId}:
         type:
           collection-item:
-            exampleItem: !include _examples/item_get.sample
+            exampleItem: !include ../_examples/item_get.sample
             schema: item
         get:
           is: [display: {view: "full"}]

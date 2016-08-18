@@ -9,38 +9,38 @@ documentation:
     content: <b>This documents the API calls that can be made for users to fulfill circulation functionality</b>
 
 schemas:
- - patrons: !include _schemas/patrons.schema
- - patron: !include _schemas/patron.schema
- - fines:  !include _schemas/fines.schema
- - fine:  !include _schemas/fine.schema
- - item: !include _schemas/item.schema 
- - loans: !include  _schemas/loans.schema
- - loan: !include  _schemas/loan.schema  
- - item_requests: !include  _schemas/item_requests.schema 
- - item_request: !include  _schemas/item_request.schema 
+ - patrons: !include ../_schemas/patrons.schema
+ - patron: !include ../_schemas/patron.schema
+ - fines:  !include ../_schemas/fines.schema
+ - fine:  !include ../_schemas/fine.schema
+ - item: !include ../_schemas/item.schema 
+ - loans: !include  ../_schemas/loans.schema
+ - loan: !include  ../_schemas/loan.schema  
+ - item_requests: !include  ../_schemas/item_requests.schema 
+ - item_request: !include  ../_schemas/item_request.schema 
    
 traits: 
- - secured: !include traits/auth.raml
- - orderable: !include traits/orderable.raml
- - pageable:  !include traits/pageable.raml
- - searchable: !include traits/searchable.raml
- - payment: !include traits/payment.raml
- - barcode_id: !include traits/barcode_id.raml
- - item_id: !include traits/item_id.raml
- - reason: !include traits/reason.raml     
- - language: !include traits/language.raml
+ - secured: !include ../traits/auth.raml
+ - orderable: !include ../traits/orderable.raml
+ - pageable:  !include ../traits/pageable.raml
+ - searchable: !include ../traits/searchable.raml
+ - payment: !include ../traits/payment.raml
+ - barcode_id: !include ../traits/barcode_id.raml
+ - item_id: !include ../traits/item_id.raml
+ - reason: !include ../traits/reason.raml     
+ - language: !include ../traits/language.raml
 
 resourceTypes: 
- - collection: !include rtypes/collection.raml
- - collection-item: !include rtypes/item-collection.raml
- - get-only: !include rtypes/get-only.raml
- - post-empty-body: !include rtypes/post-empty-body.raml
+ - collection: !include ../rtypes/collection.raml
+ - collection-item: !include ../rtypes/item-collection.raml
+ - get-only: !include ../rtypes/get-only.raml
+ - post-empty-body: !include ../rtypes/post-empty-body.raml
 /patrons:
   displayName: Patrons
   type:
     collection:
-      exampleCollection: !include  _examples/patron_get.sample
-      exampleItem: !include _examples/patron_post.sample
+      exampleCollection: !include  ../_examples/patron_get.sample
+      exampleItem: !include ../_examples/patron_post.sample
       schemaCollection: patrons
       schemaItem: patron
   get:
@@ -54,7 +54,7 @@ resourceTypes:
     description: Allows for searching fines across all patrons - such as all fines with amount due > X 
     type:
       get-only:
-        exampleCollection: !include  _examples/fine_get.sample
+        exampleCollection: !include  ../_examples/fine_get.sample
         schema: fines
     get:
       is: [
@@ -65,15 +65,15 @@ resourceTypes:
   /{patronId}:
     type:
       collection-item:
-        exampleItem: !include _examples/patron_get.sample
+        exampleItem: !include ../_examples/patron_get.sample
         schema: patron
     /fines:
       displayName: Fees
       description: Fines associated with a specific patron
       type:
         collection:
-          exampleCollection: !include  _examples/fine_get.sample
-          exampleItem: !include _examples/fine_post.sample
+          exampleCollection: !include  ../_examples/fine_get.sample
+          exampleItem: !include ../_examples/fine_post.sample
           schemaCollection: fines
           schemaItem: fine
       get:
@@ -86,7 +86,7 @@ resourceTypes:
         description:  <ul><li>Retrieves the user fine for a particular user id and fine id<br><li>Update a fine for a specific user<br><li>Delete fineId belonging to patronId<br><li>Pay, waive, or dispute a fine</ul>
         type:
           collection-item:
-            exampleItem: !include _examples/fine_get.sample
+            exampleItem: !include ../_examples/fine_get.sample
             schema: fine
         post:
           description: Applies the operation specified in the query parameter to a specific fine.
@@ -99,7 +99,7 @@ resourceTypes:
                   description: URI to the created fine item
               body:
                 application/json:
-                  example: !include _examples/fine_get.sample
+                  example: !include ../_examples/fine_get.sample
                   schema: fine
             400:
               description: "Bad request, e.g malformed request body or query parameter. Details of the error (e.g name of the parameter or line/character number with malformed data) provided in the response."
@@ -117,8 +117,8 @@ resourceTypes:
       description:  <ul><li>Retrieve a list of loans for a user<br><li>Add a loan for a user</ul>
       type:
         collection:
-          exampleCollection: !include  _examples/loan_get.sample
-          exampleItem: !include _examples/loan_post.sample
+          exampleCollection: !include  ../_examples/loan_get.sample
+          exampleItem: !include ../_examples/loan_post.sample
           schemaCollection: loans
           schemaItem: loan
       get:
@@ -131,7 +131,7 @@ resourceTypes:
         description: <ul><li>Retrieves the loan for a particular user id and loan id<br><li>Update a specific loan for a specific user<br><li>Cancel a user's loan<br><li>Renew a loan</ul>
         type:
           collection-item:
-            exampleItem: !include _examples/loan_get.sample
+            exampleItem: !include ../_examples/loan_get.sample
             schema: loan
         post:
           description: Renew a loan for patronId
@@ -151,7 +151,7 @@ resourceTypes:
                   description: URI to the created fine item
               body:
                 application/json:
-                  example: !include _examples/loan_get.sample
+                  example: !include ../_examples/loan_get.sample
                   schema: loan
             400:
               description: "Bad request, e.g malformed request body or query parameter. Details of the error (e.g name of the parameter or line/character number with malformed data) provided in the response."
@@ -169,8 +169,8 @@ resourceTypes:
       description:  <ul><li>Retrieve a list of requests made by a user<br><li>Add a request for an item by a user</ul>
       type:
         collection:
-          exampleCollection: !include  _examples/item_request_get.sample
-          exampleItem: !include _examples/item_request_post.sample
+          exampleCollection: !include  ../_examples/item_request_get.sample
+          exampleItem: !include ../_examples/item_request_post.sample
           schemaCollection: item_requests
           schemaItem: item_request
       get:
@@ -195,7 +195,7 @@ resourceTypes:
         description: <ul><li>Retrieves the request for a particular user id and request id<br><li>Update a specific request for a specific user<br><li>Cancel a user's request</ul>
         type:
           collection-item:
-            exampleItem: !include _examples/item_request_get.sample  
+            exampleItem: !include ../_examples/item_request_get.sample  
             schema: item_request
         delete:
           description: Cancel a user's request

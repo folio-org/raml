@@ -9,36 +9,36 @@ documentation:
     content: <b>This documents the API calls that can be made for items to fulfill circulation functionality</b>
 
 schemas:
- - items: !include _schemas/items.schema 
- - item: !include _schemas/item.schema 
- - fines:  !include _schemas/fines.schema
- - fine:  !include _schemas/fine.schema
- - item_requests: !include  _schemas/item_requests.schema 
- - item_request: !include  _schemas/item_request.schema
+ - items: !include ../_schemas/items.schema 
+ - item: !include ../_schemas/item.schema 
+ - fines:  !include ../_schemas/fines.schema
+ - fine:  !include ../_schemas/fine.schema
+ - item_requests: !include  ../_schemas/item_requests.schema 
+ - item_request: !include  ../_schemas/item_request.schema
 traits: 
- - secured: !include traits/auth.raml
- - orderable: !include traits/orderable.raml
- - pageable:  !include traits/pageable.raml
- - searchable: !include traits/searchable.raml
- - display: !include traits/display.raml
- - time-period: !include traits/time-period.raml
- - item_id: !include traits/item_id.raml
- - reason: !include traits/reason.raml
- - payment: !include traits/payment.raml
- - language: !include traits/language.raml
+ - secured: !include ../traits/auth.raml
+ - orderable: !include ../traits/orderable.raml
+ - pageable:  !include ../traits/pageable.raml
+ - searchable: !include ../traits/searchable.raml
+ - display: !include ../traits/display.raml
+ - time-period: !include ../traits/time-period.raml
+ - item_id: !include ../traits/item_id.raml
+ - reason: !include ../traits/reason.raml
+ - payment: !include ../traits/payment.raml
+ - language: !include ../traits/language.raml
 
 resourceTypes: 
- - collection: !include rtypes/collection.raml
- - collection-item: !include rtypes/item-collection.raml
- - get-only: !include rtypes/get-only.raml
+ - collection: !include ../rtypes/collection.raml
+ - collection-item: !include ../rtypes/item-collection.raml
+ - get-only: !include ../rtypes/get-only.raml
 
 /items:
   displayName: Items
   description: Items services 
   type:
     collection:
-      exampleCollection: !include  _examples/item_get.sample
-      exampleItem: !include _examples/item_post.sample
+      exampleCollection: !include  ../_examples/item_get.sample
+      exampleItem: !include ../_examples/item_post.sample
       schemaCollection: items
       schemaItem: item
   get:
@@ -53,7 +53,7 @@ resourceTypes:
   /{itemId}:
     type:
       collection-item:
-        exampleItem: !include _examples/item_get.sample
+        exampleItem: !include ../_examples/item_get.sample
         schema: item
     get:
       is: [display: {view: "full"}]
@@ -62,8 +62,8 @@ resourceTypes:
       displayName: Fees
       type:
         collection:
-          exampleCollection: !include  _examples/fine_get.sample
-          exampleItem: !include _examples/fine_post.sample
+          exampleCollection: !include  ../_examples/fine_get.sample
+          exampleItem: !include ../_examples/fine_post.sample
           schemaCollection: fines
           schemaItem: fine
       get:
@@ -76,7 +76,7 @@ resourceTypes:
         description:  <ul><li>Retrieves the fine for a particular item id and fine id<br><li>Update a fine for a specific item<br><li>Delete fineId belonging to ItemId<br><li>Pay, waive, or dispute a fine</ul>
         type:
           collection-item:
-            exampleItem: !include _examples/fine_get.sample
+            exampleItem: !include ../_examples/fine_get.sample
             schema: fine
         post:
           description: Applies the operation specified in the query parameter to a specific fine.
@@ -89,7 +89,7 @@ resourceTypes:
                   description: URI to the created fine item
               body:
                 application/json:
-                  example: !include _examples/fine_get.sample
+                  example: !include ../_examples/fine_get.sample
                   schema: fine
             400:
               description: "Bad request, e.g malformed request body or query parameter. Details of the error (e.g name of the parameter or line/character number with malformed data) provided in the response."
@@ -109,8 +109,8 @@ resourceTypes:
       description:  <ul><li>Retrieve a list of requests made on an item<br><li>Add a request for an item</ul>
       type:
         collection:
-          exampleCollection: !include  _examples/item_request_post.sample
-          exampleItem: !include _examples/item_request_get.sample
+          exampleCollection: !include  ../_examples/item_request_post.sample
+          exampleItem: !include ../_examples/item_request_get.sample
           schemaCollection: item_requests
           schemaItem: item_request
       get:
@@ -134,7 +134,7 @@ resourceTypes:
         description: <ul><li>Retrieves the request for a particular item id and request id<br><li>Update a specific request for a specific item id<br><li>Cancel an item request</ul>
         type:
           collection-item:
-            exampleItem: !include _examples/item_request_get.sample  
+            exampleItem: !include ../_examples/item_request_get.sample  
             schema: item_request
         delete:
           description: Cancel an item request
