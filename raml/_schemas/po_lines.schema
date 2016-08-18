@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "po_lines": {
+      "id": "poData",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "$ref" : "po_line"
+      }
+    },
+    "total_records": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "po_lines",
+    "total_records"
+  ]
+}

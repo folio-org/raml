@@ -1,0 +1,226 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "string"
+    },
+    "po_line_status": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "desc": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "desc"
+      ]
+    },
+    "owner": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "desc": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "desc"
+      ]
+    },
+    "type": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "desc": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "desc"
+      ]
+    },
+    "vendor": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "desc": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "desc"
+      ]
+    },
+    "vendor_account_CODE": {
+      "type": "string"
+    },
+    "acquisition_method_CODE": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "desc": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "desc"
+      ]
+    },
+    "rush": {
+      "type": "boolean"
+    },
+    "price": {
+      "type": "object",
+      "properties": {
+        "sum": {
+          "type": "string"
+        },
+        "po_currency": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "string"
+            },
+            "desc": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value",
+            "desc"
+          ]
+        }
+      },
+      "required": [
+        "sum",
+        "currency"
+      ]
+    },
+    "vendor_reference_number": {
+      "type": "string"
+    },
+    "ebook_url": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "po_number": {
+      "type": "string"
+    },
+    "invoice_reference": {
+      "type": "string"
+    },
+    "resource_metadata": {
+      "type": "string"
+    },
+    "access_provider": {
+      "type": "string"
+    },
+    "material_type": {
+      "type": "string"
+    },
+    "fund_distributions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fund_code": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "object",
+            "properties": {
+              "sum": {
+                "type": "number"
+              },
+              "currency": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "block_alert_on_po_line": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          },
+          "desc": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "value",
+          "desc"
+        ]
+      }
+    },
+    "note": {
+      "type": "array",
+      "items": {}
+    },
+    "location": {
+      "type": "array",
+      "items": {}
+    },
+    "created_date": {
+      "type": "string"
+    },
+    "update_date": {
+      "type": "string"
+    },
+    "renewal_period": {
+      "type": "string"
+    },
+    "renewal_date": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "po_line_status",
+    "owner",
+    "type",
+    "vendor",
+    "vendor_account_CODE",
+    "acquisition_method_CODE",
+    "rush",
+    "price",
+    "vendor_reference_number",
+    "ebook_url",
+    "source_type",
+    "po_number",
+    "invoice_reference",
+    "resource_metadata",
+    "access_provider",
+    "material_type",
+    "fund_distribution",
+    "block_alert_on_po_line",
+    "location",
+    "created_date",
+    "update_date",
+    "renewal_period",
+    "renewal_date"
+  ]
+}

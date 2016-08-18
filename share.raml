@@ -1,0 +1,39 @@
+#%RAML 0.8
+title: Sharing data service
+version: v1
+baseUri: http://github.com/sling-incubator/lsp-apis
+protocols: [ HTTPS ]
+
+documentation:
+  - title: API for emails, sms, social networking 
+    content: <b>This documents the API calls that can be made to email, sms, and social network content in the system</b>
+
+
+schemas:
+ - email: !include _schemas/email.schema
+ - emails: !include _schemas/emails.schema
+traits: 
+ - secured: !include traits/auth.raml
+ - language: !include traits/language.raml
+ - schedule: !include traits/email.raml
+ - pageable: !include traits/pageable.raml
+resourceTypes: 
+ - collection: !include rtypes/collection.raml
+
+/email:
+  displayName: Email service
+  description: <ul><li>Retrieve sent / scheduled emails or send / schedule an email to be sent
+  type:
+    collection:
+      schemaCollection: emails
+      schemaItem: email
+      exampleCollection: !include _examples/email.sample
+      exampleItem: !include _examples/email.sample
+  get:
+    is: [
+      pageable
+    ] 
+  post:
+    is: [
+      schedule
+    ]

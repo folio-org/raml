@@ -1,0 +1,67 @@
+#the raml making use of this collection must include the following 
+#traits: 
+# - orderable: !include traits/orderable.raml
+# - pageable:  !include traits/pageable.raml
+# - searchable: !include traits/searchable.raml
+ 
+    description: Collection of <<resourcePathName|!singularize>> items.
+    is: [secured, language]
+
+    get:
+      description: Get the file content
+      responses:
+        200:
+          body:
+            binary/octet-stream:
+              example: |
+                "package com.sample
+                import com.sling.rest.jaxrs.model.Patron;
+                rule \"Patron needs one ID at the least\"
+                  no-loop
+                    when
+                        p : Patron( patronBarcode  == null, patron_id == null )
+                    then
+                        System.out.println( myMessage );
+                        p.setPatronName(\"Joe Shmoe\");
+                        update( p );
+                end"
+        400:
+          description: "Bad request"
+          body:
+            text/plain:
+              example: "unable to list <<resourcePathName>> -- malformed parameter 'query', syntax error at column 6"
+        500:
+          description: "Internal server error, e.g due to misconfiguration"
+          body:
+            text/plain:
+              example: "internal server error, contact administrator"        
+    post:
+      description: |
+         Enters the file content for an existing song entity.
+         Use the "multipart-form/data" content type to upload a file which content will become the file-content
+      body:
+        multipart/form-data:
+          formParameters:
+            file:
+              description: The file to be uploaded
+              required: true
+              type: file 
+              example: <<exampleItem>>
+
+      responses:
+        204:
+          description: "Returns id of saved item in location header"
+          headers:
+            Location:
+              description: URI to the created <<resourcePathName|!singularize>> item
+        400:
+          description: "Bad request"
+          body:
+            text/plain:
+              example: |
+                "unable to add <<resourcePathName|!singularize>>"
+        500:
+          description: "Internal server error, e.g. due to misconfiguration"
+          body:
+            text/plain:
+              example: "Internal server error, contact administrator"
