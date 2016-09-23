@@ -8,17 +8,18 @@ documentation:
   - title: API for emails, sms, social networking
     content: <b>This documents the API calls that can be made to email, sms, and social network content in the system</b>
 
-
 schemas:
- - email: !include _schemas/email.schema
- - emails: !include _schemas/emails.schema
+  - email: !include _schemas/email.schema
+  - emails: !include _schemas/emails.schema
+
 traits:
- - secured: !include traits/auth.raml
- - language: !include traits/language.raml
- - schedule: !include traits/email.raml
- - pageable: !include traits/pageable.raml
+  - secured: !include traits/auth.raml
+  - language: !include traits/language.raml
+  - schedule: !include traits/email.raml
+  - pageable: !include traits/pageable.raml
+
 resourceTypes:
- - collection: !include rtypes/collection.raml
+  - collection: !include rtypes/collection.raml
 
 /email:
   displayName: Email service
