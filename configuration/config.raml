@@ -8,28 +8,29 @@ documentation:
   - title: Configuration API updating system wide configurations
     content: <b>This documents the API calls that can be made to update configurations in the system</b>
 
-
 schemas:
- - configs: !include _schemas/kv_configurations.schema
- - config: !include _schemas/kv_configuration.schema
- - libraries: !include _schemas/library.schema
+  - configs: !include _schemas/kv_configurations.schema
+  - config: !include _schemas/kv_configuration.schema
+  - libraries: !include _schemas/library.schema
 
 traits:
- - secured: !include traits/auth.raml
- - orderable: !include traits/orderable.raml
- - pageable:  !include traits/pageable.raml
- - searchable: !include traits/searchable.raml
- - payment: !include traits/payment.raml
- - barcode_id: !include traits/barcode_id.raml
- - item_id: !include traits/item_id.raml
- - reason: !include traits/reason.raml
- - language: !include traits/language.raml
+  - secured: !include traits/auth.raml
+  - orderable: !include traits/orderable.raml
+  - pageable:  !include traits/pageable.raml
+  - searchable: !include traits/searchable.raml
+  - payment: !include traits/payment.raml
+  - barcode_id: !include traits/barcode_id.raml
+  - item_id: !include traits/item_id.raml
+  - reason: !include traits/reason.raml
+  - language: !include traits/language.raml
+
 resourceTypes:
- - collection: !include rtypes/collection.raml
- - collection-item: !include rtypes/item-collection.raml
- - post-empty-body: !include rtypes/post-empty-body.raml
- - get-only: !include rtypes/get-only.raml
- - attachments: !include rtypes/attachments.raml
+  - collection: !include rtypes/collection.raml
+  - collection-item: !include rtypes/item-collection.raml
+  - post-empty-body: !include rtypes/post-empty-body.raml
+  - get-only: !include rtypes/get-only.raml
+  - attachments: !include rtypes/attachments.raml
+
 /configurations:
   /tables:
     displayName: Configurations

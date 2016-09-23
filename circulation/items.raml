@@ -9,28 +9,29 @@ documentation:
     content: <b>This documents the API calls that can be made for items to fulfill circulation functionality</b>
 
 schemas:
- - items: !include ../_schemas/items.schema
- - item: !include ../_schemas/item.schema
- - fines:  !include ../_schemas/fines.schema
- - fine:  !include ../_schemas/fine.schema
- - item_requests: !include  ../_schemas/item_requests.schema
- - item_request: !include  ../_schemas/item_request.schema
+  - items: !include ../_schemas/items.schema
+  - item: !include ../_schemas/item.schema
+  - fines:  !include ../_schemas/fines.schema
+  - fine:  !include ../_schemas/fine.schema
+  - item_requests: !include  ../_schemas/item_requests.schema
+  - item_request: !include  ../_schemas/item_request.schema
+
 traits:
- - secured: !include ../traits/auth.raml
- - orderable: !include ../traits/orderable.raml
- - pageable:  !include ../traits/pageable.raml
- - searchable: !include ../traits/searchable.raml
- - display: !include ../traits/display.raml
- - time-period: !include ../traits/time-period.raml
- - item_id: !include ../traits/item_id.raml
- - reason: !include ../traits/reason.raml
- - payment: !include ../traits/payment.raml
- - language: !include ../traits/language.raml
+  - secured: !include ../traits/auth.raml
+  - orderable: !include ../traits/orderable.raml
+  - pageable:  !include ../traits/pageable.raml
+  - searchable: !include ../traits/searchable.raml
+  - display: !include ../traits/display.raml
+  - time-period: !include ../traits/time-period.raml
+  - item_id: !include ../traits/item_id.raml
+  - reason: !include ../traits/reason.raml
+  - payment: !include ../traits/payment.raml
+  - language: !include ../traits/language.raml
 
 resourceTypes:
- - collection: !include ../rtypes/collection.raml
- - collection-item: !include ../rtypes/item-collection.raml
- - get-only: !include ../rtypes/get-only.raml
+  - collection: !include ../rtypes/collection.raml
+  - collection-item: !include ../rtypes/item-collection.raml
+  - get-only: !include ../rtypes/get-only.raml
 
 /items:
   displayName: Items

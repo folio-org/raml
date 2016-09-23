@@ -4,38 +4,37 @@ version: v1
 baseUri: http://github.com/sling-incubator/lsp-apis
 protocols: [ HTTPS ]
 
-
 documentation:
   - title: Acquisitions API
     content: <b>This documents the API calls that can be made for users to fulfill Acquisitions functionality</b>
 
 schemas:
- - fund: !include _schemas/fund.schema
- - funds: !include _schemas/funds.schema
- - invoice: !include _schemas/invoice.schema
- - invoices: !include _schemas/invoices.schema
- - invoice_line: !include _schemas/invoice_line.schema
- - invoice_lines: !include _schemas/invoice_lines.schema
- - po_line: !include _schemas/po_line.schema
- - po_lines: !include _schemas/po_lines.schema
- - vendor: !include _schemas/vendor.schema
- - vendors: !include _schemas/vendors.schema
+  - fund: !include _schemas/fund.schema
+  - funds: !include _schemas/funds.schema
+  - invoice: !include _schemas/invoice.schema
+  - invoices: !include _schemas/invoices.schema
+  - invoice_line: !include _schemas/invoice_line.schema
+  - invoice_lines: !include _schemas/invoice_lines.schema
+  - po_line: !include _schemas/po_line.schema
+  - po_lines: !include _schemas/po_lines.schema
+  - vendor: !include _schemas/vendor.schema
+  - vendors: !include _schemas/vendors.schema
 
 traits:
- - secured: !include traits/auth.raml
- - orderable: !include traits/orderable.raml
- - pageable:  !include traits/pageable.raml
- - searchable: !include traits/searchable.raml
- - payment: !include traits/payment.raml
- - barcode_id: !include traits/barcode_id.raml
- - item_id: !include traits/item_id.raml
- - reason: !include traits/reason.raml
- - language: !include traits/language.raml
+  - secured: !include traits/auth.raml
+  - orderable: !include traits/orderable.raml
+  - pageable:  !include traits/pageable.raml
+  - searchable: !include traits/searchable.raml
+  - payment: !include traits/payment.raml
+  - barcode_id: !include traits/barcode_id.raml
+  - item_id: !include traits/item_id.raml
+  - reason: !include traits/reason.raml
+  - language: !include traits/language.raml
 
 resourceTypes:
- - collection: !include rtypes/collection.raml
- - collection-item: !include rtypes/item-collection.raml
- - get-only: !include rtypes/get-only.raml
+  - collection: !include rtypes/collection.raml
+  - collection-item: !include rtypes/item-collection.raml
+  - get-only: !include rtypes/get-only.raml
 
 /funds:
   displayName: Funds

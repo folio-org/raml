@@ -9,32 +9,33 @@ documentation:
     content: <b>This documents the API calls that can be made for users to fulfill circulation functionality</b>
 
 schemas:
- - patrons: !include ../_schemas/patrons.schema
- - patron: !include ../_schemas/patron.schema
- - fines:  !include ../_schemas/fines.schema
- - fine:  !include ../_schemas/fine.schema
- - item: !include ../_schemas/item.schema
- - loans: !include  ../_schemas/loans.schema
- - loan: !include  ../_schemas/loan.schema
- - item_requests: !include  ../_schemas/item_requests.schema
- - item_request: !include  ../_schemas/item_request.schema
+  - patrons: !include ../_schemas/patrons.schema
+  - patron: !include ../_schemas/patron.schema
+  - fines:  !include ../_schemas/fines.schema
+  - fine:  !include ../_schemas/fine.schema
+  - item: !include ../_schemas/item.schema
+  - loans: !include  ../_schemas/loans.schema
+  - loan: !include  ../_schemas/loan.schema
+  - item_requests: !include  ../_schemas/item_requests.schema
+  - item_request: !include  ../_schemas/item_request.schema
 
 traits:
- - secured: !include ../traits/auth.raml
- - orderable: !include ../traits/orderable.raml
- - pageable:  !include ../traits/pageable.raml
- - searchable: !include ../traits/searchable.raml
- - payment: !include ../traits/payment.raml
- - barcode_id: !include ../traits/barcode_id.raml
- - item_id: !include ../traits/item_id.raml
- - reason: !include ../traits/reason.raml
- - language: !include ../traits/language.raml
+  - secured: !include ../traits/auth.raml
+  - orderable: !include ../traits/orderable.raml
+  - pageable:  !include ../traits/pageable.raml
+  - searchable: !include ../traits/searchable.raml
+  - payment: !include ../traits/payment.raml
+  - barcode_id: !include ../traits/barcode_id.raml
+  - item_id: !include ../traits/item_id.raml
+  - reason: !include ../traits/reason.raml
+  - language: !include ../traits/language.raml
 
 resourceTypes:
- - collection: !include ../rtypes/collection.raml
- - collection-item: !include ../rtypes/item-collection.raml
- - get-only: !include ../rtypes/get-only.raml
- - post-empty-body: !include ../rtypes/post-empty-body.raml
+  - collection: !include ../rtypes/collection.raml
+  - collection-item: !include ../rtypes/item-collection.raml
+  - get-only: !include ../rtypes/get-only.raml
+  - post-empty-body: !include ../rtypes/post-empty-body.raml
+
 /patrons:
   displayName: Patrons
   type:
