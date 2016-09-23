@@ -14,7 +14,7 @@ schemas:
  - config: !include _schemas/kv_configuration.schema
  - libraries: !include _schemas/library.schema
 
-traits: 
+traits:
  - secured: !include traits/auth.raml
  - orderable: !include traits/orderable.raml
  - pageable:  !include traits/pageable.raml
@@ -24,7 +24,7 @@ traits:
  - item_id: !include traits/item_id.raml
  - reason: !include traits/reason.raml
  - language: !include traits/language.raml
-resourceTypes: 
+resourceTypes:
  - collection: !include rtypes/collection.raml
  - collection-item: !include rtypes/item-collection.raml
  - post-empty-body: !include rtypes/post-empty-body.raml
@@ -45,7 +45,7 @@ resourceTypes:
         searchable: {description: "with valid searchable fields: for example module = CIRCULATION", example: "[\"module\", \"CIRCULATION\", \"=\"]"},
         orderable: {fieldsList: "module"},
         pageable
-      ] 
+      ]
     /{tableId}:
       displayName: Module configurations
       description: <ul><li>Delete or Update a specific module from the configuration table<br>An example of this would be to add a configuration to the circulation table or to delete a configuration from the circulation table. The query parameters can be used to filter for the desired module's configuration</li><li>Get a the specified module's configurations</li></ul><br>The JWT token limits the returned configurations to those of the calling institution
@@ -58,7 +58,7 @@ resourceTypes:
           searchable: {description: "with valid searchable fields: for example name = renewals_allowed_count", example: "[\"name\", \"renewals_allowed_count\", \"=\"]"},
           orderable: {fieldsList: "module"},
           pageable
-        ] 
+        ]
   /rules:
     description: The file to be reproduced by the client
     type:

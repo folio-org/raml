@@ -5,19 +5,19 @@ baseUri: http://github.com/sling-incubator/lsp-apis
 protocols: [ HTTPS ]
 
 documentation:
-  - title: API for emails, sms, social networking 
+  - title: API for emails, sms, social networking
     content: <b>This documents the API calls that can be made to email, sms, and social network content in the system</b>
 
 
 schemas:
  - email: !include _schemas/email.schema
  - emails: !include _schemas/emails.schema
-traits: 
+traits:
  - secured: !include traits/auth.raml
  - language: !include traits/language.raml
  - schedule: !include traits/email.raml
  - pageable: !include traits/pageable.raml
-resourceTypes: 
+resourceTypes:
  - collection: !include rtypes/collection.raml
 
 /email:
@@ -32,7 +32,7 @@ resourceTypes:
   get:
     is: [
       pageable
-    ] 
+    ]
   post:
     is: [
       schedule
