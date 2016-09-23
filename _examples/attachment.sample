@@ -1,7 +1,7 @@
- ------WebKitFormBoundaryAcNN9H3iQZAJ9Muk 
+ ------WebKitFormBoundaryAcNN9H3iQZAJ9Muk
  Content-Disposition: form-data; name="config.json"; filename="kv_configuration.sample"
  Content-Type: application/octet-stream
- 
+
  {
    "module": "CIRCULATION",
    "name": "validation_rules",
@@ -23,34 +23,34 @@
  ------WebKitFormBoundaryAcNN9H3iQZAJ9Muk
  Content-Disposition: form-data; name="sample.drl"; filename="Sample.drl"
  Content-Type: application/octet-stream
- 
+
  package com.sample
-  
+
  import com.sling.rest.jaxrs.model.Patron;
-  
- 
+
+
  rule "Patron needs one ID at the least"
- 
+
    no-loop
-   
+
  when
      p : Patron( patronBarcode  == null, patronLocalId == null )
  then
-   throw new java.lang.Exception("Patron needs one ID field populated at the least"); 
+   throw new java.lang.Exception("Patron needs one ID field populated at the least");
      //System.out.println( "aaaaaaaaa" );
      //p.setPatronName("Joe Shmoe");
      //update( p );
  end
- 
+
  rule "Patron Name null"
      when
          Patron( patronName  == null, myMessage : patronLocalId )
      then
          System.out.println("---------------------- name is null for id = " + myMessage  );
  end
- 
+
  ------WebKitFormBoundaryAcNN9H3iQZAJ9Muk
  Content-Disposition: form-data; name="package com.sample%0D%0A %0D%0Aimport com.sling.rest.jaxrs.model.Patron;%0D%0A %0D%0A%0D%0Arule %22Patron needs one ID at the least%22%0D%0A%0D%0A	no-loop%0D%0A	%0D%0A    when%0D%0A        p : Patron( patronBarcode"
- 
- 
+
+
  ------WebKitFormBoundaryAcNN9H3iQZAJ9Muk--

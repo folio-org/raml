@@ -1,9 +1,9 @@
-#the raml making use of this collection must include the following 
-#traits: 
+#the raml making use of this collection must include the following
+#traits:
 # - orderable: !include traits/orderable.raml
 # - pageable:  !include traits/pageable.raml
 # - searchable: !include traits/searchable.raml
- 
+
     description: Collection of <<resourcePathName|!singularize>> items.
     is: [secured, language]
 
@@ -34,7 +34,7 @@
           description: "Internal server error, e.g due to misconfiguration"
           body:
             text/plain:
-              example: "internal server error, contact administrator"        
+              example: "internal server error, contact administrator"
     post:
       description: |
          Enters the file content for an existing entity.
@@ -45,7 +45,7 @@
             file:
               description: The file to be uploaded
               required: true
-              type: file 
+              type: file
               example: <<exampleItem>>
 
       responses:
