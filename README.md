@@ -7,4 +7,6 @@ Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 
 ## Introduction
 
-repository of raml files, including json schemas, traits and resource types centralized for re-usability
+Repository of raml files, including json schemas, traits and resource types centralized for re-usability.
+
+This is the master location for the traits and resource types, while each module is the master for its own schemas, examples, and actual RAML files.
