@@ -21,3 +21,11 @@ Resource types:
  - Get, Post, Delete, Put, File upload, etc.. options.
  
 This is the master location for the traits and resource types, while each module is the master for its own schemas, examples, and actual RAML files.
+
+## Additional information
+
+The [raml-module-builder](https://github.com/folio-org/raml-module-builder) framework.
+
+Other [modules](http://dev.folio.org/source-code/#server-side).
+
+Other FOLIO Developer documentation is at [dev.folio.org](http://dev.folio.org/)
