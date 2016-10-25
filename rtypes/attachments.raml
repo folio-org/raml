@@ -15,7 +15,7 @@
             binary/octet-stream:
               example: |
                 "package com.sample
-                import com.sling.rest.jaxrs.model.Patron;
+                import org.folio.rest.jaxrs.model.Patron;
                 rule \"Patron needs one ID at the least\"
                   no-loop
                     when
@@ -31,7 +31,7 @@
             text/plain:
               example: "unable to list <<resourcePathName>> -- malformed parameter 'query', syntax error at column 6"
         500:
-          description: "Internal server error, e.g due to misconfiguration"
+          description: "Internal server error, e.g. due to misconfiguration"
           body:
             text/plain:
               example: "internal server error, contact administrator"
