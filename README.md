@@ -32,4 +32,6 @@ The [raml-module-builder](https://github.com/folio-org/raml-module-builder) fram
 
 Other [modules](http://dev.folio.org/source-code/#server-side).
 
+[API reference documentation](http://dev.folio.org/doc/#api-reference).
+
 Other FOLIO Developer documentation is at [dev.folio.org](http://dev.folio.org/)
