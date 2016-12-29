@@ -21,6 +21,11 @@
             body:
               text/plain:
                 example: "unable to list <<resourcePathName>> -- malformed parameter 'query', syntax error at column 6"
+          401:
+            description: "Not authorized to perform requested action"
+            body:
+              text/plain:
+                example: "unable to list <<resourcePathName>> -- unauthorized"
           500:
             description: "Internal server error, e.g. due to misconfiguration"
             body:
@@ -48,6 +53,11 @@
               text/plain:
                 example: |
                   "unable to add <<resourcePathName|!singularize>> -- malformed JSON at 13:3"
+          401:
+            description: "Not authorized to perform requested action"
+            body:
+              text/plain:
+                example: "unable to creeate <<resourcePathName>> -- unauthorized"
           500:
             description: "Internal server error, e.g. due to misconfiguration"
             body:
