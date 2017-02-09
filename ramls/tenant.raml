@@ -12,10 +12,12 @@ traits:
     description: Add the needed DB schema for this new tenant
     is: [secured]
     responses:
-      200:
+      201:
         description: "tenant id added successfully, returns a list of commands that have failed while initializing the tenant"
         body:
           application/json:
+      204:
+        description: "tenant id exists, nothing will be added"
       400:
         description: "Bad request"
         body:
@@ -43,10 +45,8 @@ traits:
     description: drop tenant id
     is: [secured]
     responses:
-      200:
-        description: "true or false indicator"
-        body:
-          application/json:
+      204:
+        description: "Delete succeeded"
       400:
         description: "Bad request"
         body:
