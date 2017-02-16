@@ -6,11 +6,17 @@ version: v1
 
 traits:
   - secured: !include ../traits/auth.raml
-
+schemas:
+  - attributes: !include ../schemas/moduleInfo.schema
+  
 /_/tenant:
   post:
     description: Add the needed DB schema for this new tenant
     is: [secured]
+    body:
+      application/json:
+        schema?: attributes
+        example: !include ../examples/moduleInfo.sample
     responses:
       201:
         description: "tenant id added successfully, returns a list of commands that have failed while initializing the tenant"
