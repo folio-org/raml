@@ -7,15 +7,15 @@ version: v1
 traits:
   - secured: !include ../traits/auth.raml
 schemas:
-  - attributes: !include ../schemas/moduleInfo.schema
+  - tenantAttributes: !include ../schemas/moduleInfo.schema
   
 /_/tenant:
   post:
-    description: Add the needed DB schema for this new tenant
+    description: Provision a new / update an existing tenant
     is: [secured]
     body:
       application/json:
-        schema?: attributes
+        schema: tenantAttributes
         example: !include ../examples/moduleInfo.sample
     responses:
       201:
