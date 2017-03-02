@@ -1,16 +1,15 @@
 {
-  "$schema":"http://json-schema.org/draft-04/schema#",
-  "type":"object",
-  "properties":{
-     "module_from":{
-       "type":"string"
-     },
-     "module_to":{
-       "type":"string"
-     }
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "module_from": {
+      "type": "string"
+    },
+    "module_to": {
+      "type": "string"
+    }
   },
-  "required":[
+  "required": [
     "module_to"
   ]
 }
-
