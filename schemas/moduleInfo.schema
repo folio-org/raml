@@ -4,8 +4,8 @@
   "properties":{
      "module_from":{
        "type":"string"
-	 },
-	 "module_to":{
+     },
+     "module_to":{
        "type":"string"
      }
   },
