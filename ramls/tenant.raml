@@ -11,7 +11,7 @@ schemas:
   - errors: !include ../schemas/errors.schema
   - error: !include ../schemas/error.schema
   - parameters: !include ../schemas/parameters.schema
-  
+
 /_/tenant:
   post:
     description: Provision a new / update an existing tenant
@@ -36,7 +36,7 @@ schemas:
         body:
           application/json:
             schema: errors
-            example: !include ../examples/error.sample     
+            example: !include ../examples/error.sample
       500:
         description: "Internal server error"
         body:
