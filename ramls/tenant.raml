@@ -8,6 +8,9 @@ traits:
   - secured: !include ../traits/auth.raml
 schemas:
   - tenantAttributes: !include ../schemas/moduleInfo.schema
+  - errors: !include ../schemas/errors.schema
+  - error: !include ../schemas/error.schema
+  - parameters: !include ../schemas/parameters.schema
   
 /_/tenant:
   post:
@@ -28,6 +31,12 @@ schemas:
         description: "Bad request"
         body:
           text/plain:
+      422:
+        description: "Validation errors"
+        body:
+          application/json:
+            schema: errors
+            example: !include ../examples/error.sample     
       500:
         description: "Internal server error"
         body:
