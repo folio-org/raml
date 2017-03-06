@@ -1,5 +1,4 @@
-{
-  "errors": [
+[
     {
       "message": "may not be null",
       "type": "1",
@@ -12,4 +11,3 @@
       ]
     }
   ]
-}
