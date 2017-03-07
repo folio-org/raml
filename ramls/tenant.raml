@@ -6,6 +6,7 @@ version: v1
 
 traits:
   - secured: !include ../traits/auth.raml
+  - validate: !include ../traits/validation.raml
 schemas:
   - tenantAttributes: !include ../schemas/moduleInfo.schema
   - errors: !include ../schemas/errors.schema
@@ -15,7 +16,7 @@ schemas:
 /_/tenant:
   post:
     description: Provision a new / update an existing tenant
-    is: [secured]
+    is: [secured, validate]
     body:
       application/json:
         schema: tenantAttributes
@@ -31,12 +32,6 @@ schemas:
         description: "Bad request"
         body:
           text/plain:
-      422:
-        description: "Validation errors"
-        body:
-          application/json:
-            schema: errors
-            example: !include ../examples/errors.sample
       500:
         description: "Internal server error"
         body:
