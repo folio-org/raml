@@ -8,24 +8,24 @@
     "perms": {
       "type": "array",
       "items": {
-         "type" : "object",
-         "properties" : {
-           "permissionName": {
+        "type": "object",
+        "properties": {
+          "permissionName": {
+            "type": "string"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "subPermissions": {
+            "type": "array",
+            "items": {
               "type": "string"
-           },
-           "displayName": {
-              "type": "string"
-           },
-           "description": {
-              "type": "string"
-           },
-           "subPermissions": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-           }
-         }
+            }
+          }
+        }
       }
     }
   },
