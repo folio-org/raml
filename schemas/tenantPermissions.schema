@@ -12,16 +12,13 @@
          "properties" : {
            "permissionName": {
               "type": "string"
-           }
-         },{
+           },
            "displayName": {
               "type": "string"
-           }
-         },{
+           },
            "description": {
               "type": "string"
-           }
-         },{
+           },
            "subPermissions": {
               "type": "array",
               "items": {
