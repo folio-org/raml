@@ -1,0 +1,11 @@
+{
+  "moduleId" : "sample-module",
+    "perms" : [
+      {
+        "permissionName" : "everything",
+        "displayName" : "every possible permission",
+        "description" : "All permissions combined",
+        "subPermissions" : [ "sample.needed", "sample.extra" ]
+       }
+    ]
+}
