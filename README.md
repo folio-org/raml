@@ -34,4 +34,7 @@ Other [modules](http://dev.folio.org/source-code/#server-side).
 
 [API reference documentation](http://dev.folio.org/doc/#api-reference).
 
+See project [RMB](https://issues.folio.org/browse/RMB)
+at the [FOLIO issue tracker](http://dev.folio.org/community/guide-issues).
+
 Other FOLIO Developer documentation is at [dev.folio.org](http://dev.folio.org/)
