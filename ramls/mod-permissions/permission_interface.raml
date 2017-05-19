@@ -1,0 +1,45 @@
+#%RAML 0.8
+title: Permissions Interface
+version: v1
+baseUri: http://github.com/org/folio/mod-auth/_tenantPermissions
+
+documentation:
+  - title: tenant permissions API implementation
+    content: This API provides a callback point for Okapi when new permission sets are added to the tenant
+
+schemas:
+  - okapiPermission: !include ../../schemas/mod-permissions/okapiPermission.json
+  - okapiPermissionSet: !include ../../schemas/mod-permissions/okapiPermissionSet.json
+
+/_/tenantpermissions:
+  get:
+    description: Dummy get endpoint
+    body:
+      text/plain:
+        example: "Blah"
+    responses:
+      200:
+        body:
+          text/plain:
+            example: "Blah"
+  post:
+    description: Add new permissionSets to the tenant
+    body:
+      application/json:
+        schema: okapiPermissionSet
+    responses:
+      201:
+        body:
+          application/json:
+            schema: okapiPermissionSet
+      400:
+        description: "Bad request"
+        body:
+          text/plain:
+            example: "Bad request"
+      500:
+        description: "Internal server error"
+        body:
+          text/plain:
+            example: "Error"
+
