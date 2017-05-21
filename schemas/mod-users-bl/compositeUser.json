@@ -1,0 +1,20 @@
+{
+    "$schema" : "http://json-schema.org/draft-04/schema#",
+    "type" : "object",
+    "properties" : {
+        "user" : {
+            "type" : "object",
+            "$ref" : "../mod-users/userdata.json"
+        },
+        "patronGroup" : {
+            "type" : "object",
+            "$ref" : "../mod-users/usergroup.json"
+        },
+        "permissions" : {
+            "type" : "array",
+            "items" : {
+                "type" : "string"
+            }
+        }
+    }
+}

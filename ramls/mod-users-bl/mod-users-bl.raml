@@ -1,0 +1,49 @@
+#%RAML 0.8
+title: Mod-Users BL
+baseUri: http://github.com/org/folio/mod-users-bl
+
+documentation:
+    - title: Business Logic Users API
+      content: A front end for mod-users and mod-permissions
+
+schemas:
+    - compositeUser: !include ../../schemas/mod-users-bl/compositeUser.json
+
+resourceTypes:
+    - compositeUserResource:
+         get:
+            description: "Get a user by <<typeName>>"
+            responses:
+                200:
+                    body:
+                        application/json:
+                            schema: compositeUser
+                400:
+                    description: "Bad request"
+                    body:
+                        text/plain:
+                            example: "Bad request"
+                403:
+                    description: "Access denied"
+                    body:
+                        text/plain:
+                            example: "Access denied"
+                404:
+                    description: "User not found"
+                    body:
+                        text/plain:
+                            example: "User not found"
+                500:
+                    description: "Internal server error"
+                    body:
+                        text/plain:
+                            example: "Internal server error"
+
+/users:
+    /by-id:
+        /{userid}:
+            type: { compositeUserResource: { "typeName" : "id" } }
+    /by-username:
+        /{username}:
+            type: { compositeUserResource: { "typeName" : "username"} }
+
