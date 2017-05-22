@@ -25,7 +25,7 @@
     },
     "mutable": {
       "type": "boolean"
-    }
+    },
     "visible" : {
       "type" : "boolean"
     }
