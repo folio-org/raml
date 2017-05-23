@@ -8,11 +8,11 @@ documentation:
     content: This documents the API calls that can be made to query and manage users of the system
 
 schemas:
-  - userdata: !include ../../schemas/mod-users/userdata.json
+  - userdata.json: !include ../../schemas/mod-users/userdata.json
   - userdataCollection: !include ../../schemas/mod-users/userdataCollection.json
   - errors: !include ../../schemas/errors.schema
-  - error: !include ../../schemas/error.schema
-  - parameters: !include ../../schemas/parameters.schema
+  - error.schema: !include ../../schemas/error.schema
+  - parameters.schema: !include ../../schemas/parameters.schema
 
 traits:
   - secured: !include ../../traits/auth.raml
@@ -34,7 +34,7 @@ resourceTypes:
       exampleCollection: !include ../../examples/mod-users/user_collection.sample
       exampleItem: !include ../../examples/mod-users/user.sample
       schemaCollection: userdataCollection
-      schemaItem: userdata
+      schemaItem: userdata.json
   get:
     is: [
       searchable: {description: "with valid searchable fields", example: "active=true"},
@@ -49,6 +49,6 @@ resourceTypes:
     type:
       collection-item:
         exampleItem: !include ../../examples/mod-users/user.sample
-        schema: userdata
+        schema: userdata.json
     get:
       description: Get a single user

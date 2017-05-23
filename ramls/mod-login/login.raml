@@ -8,12 +8,12 @@ documentation:
     content: This module provides a username/password based login mechanism for FOLIO credentials
 
 schemas:
-  - credentials: !include ../../schemas/mod-login/credentials.json
+  - credentials.json: !include ../../schemas/mod-login/credentials.json
   - credentialsListObject: !include ../../schemas/mod-login/credentialsListObject.json
   - loginCredentials: !include ../../schemas/mod-login/loginCredentials.json
   - errors: !include ../../schemas/errors.schema
-  - error: !include ../../schemas/error.schema
-  - parameters: !include ../../schemas/parameters.schema
+  - error.schema: !include ../../schemas/error.schema
+  - parameters.schema: !include ../../schemas/parameters.schema
 
 traits:
   - validate: !include ../../traits/validation.raml
@@ -123,7 +123,7 @@ traits:
           200:
             body:
               application/json:
-                schema: credentials
+                schema: credentials.json
           404:
             description: "User not found"
             body:
