@@ -7,7 +7,7 @@
       "id": "usersData",
       "items": {
         "type": "object",
-        "$ref": "userdata"
+        "$ref": "userdata.json"
       }
     },
     "total_records": {

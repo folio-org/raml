@@ -9,7 +9,7 @@
             "type" : "array",
             "items" :  {
                 "type" : "object",
-                "$ref" : "okapiPermission"
+                "$ref" : "okapiPermission.json"
             }
         }
     }

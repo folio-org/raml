@@ -7,7 +7,7 @@
       "id": "permissionUsersListObject",
       "items": {
         "type": "object",
-        "$ref": "permissionUser"
+        "$ref": "permissionUser.json"
       }
     },
     "totalRecords": {
