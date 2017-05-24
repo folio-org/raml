@@ -24,6 +24,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "visible" : {
+            "type" : "boolean"
           }
         }
       }
