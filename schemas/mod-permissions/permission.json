@@ -29,5 +29,6 @@
     "visible" : {
       "type" : "boolean"
     }
-  }
+  },
+  "additionalProperties" : false
 }
