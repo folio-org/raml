@@ -1,25 +1,24 @@
 {
-    "title" : "Okapi Permission Object",
-    "type" : "object",
-    "properties" : {
-        "permissionName" : {
-            "type" : "string"
-        },
-        "displayName" : {
-            "type" : "string"
-        },
-        "description" : {
-            "type" : "string"
-        },
-        "subPermissions" : {
-            "type" : "array",
-            "items" : {
-                "type" : "string"
-            }
-        },
-        "visible" : {
-            "type" : "boolean"
-        }
+  "title": "Okapi Permission Object",
+  "type": "object",
+  "properties": {
+    "permissionName": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "subPermissions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "visible": {
+      "type": "boolean"
     }
+  }
 }
-
