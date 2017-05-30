@@ -7,7 +7,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "$ref": "usergroup"
+        "$ref": "usergroup.json"
       }
     },
     "total_records": {

@@ -8,7 +8,7 @@ documentation:
     content: This API provides a callback point for Okapi when new permission sets are added to the tenant
 
 schemas:
-  - okapiPermission: !include ../../schemas/mod-permissions/okapiPermission.json
+  - okapiPermission.json: !include ../../schemas/mod-permissions/okapiPermission.json
   - okapiPermissionSet: !include ../../schemas/mod-permissions/okapiPermissionSet.json
 
 /_/tenantpermissions:
@@ -23,12 +23,14 @@ schemas:
           text/plain:
             example: "Blah"
   post:
-    description: Add new permissionSets to the tenant
+    description: "Load new permissionSets into the permission module when a module gets enabled for a tenant"
     body:
       application/json:
         schema: okapiPermissionSet
+        example: !include ../../examples/tenantPermissions.sample
     responses:
       201:
+        description: "Permissions loaded successfully"
         body:
           application/json:
             schema: okapiPermissionSet

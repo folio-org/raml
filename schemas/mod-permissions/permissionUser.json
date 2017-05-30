@@ -7,5 +7,6 @@
     "permissions": {
       "type": "array"
     }
-  }
+  },
+  "additionalProperties" : false
 }

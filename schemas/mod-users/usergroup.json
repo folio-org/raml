@@ -13,5 +13,6 @@
     "id": {
       "type": "string"
     }
-  }
+  },
+  "additionalProperties" : false
 }
