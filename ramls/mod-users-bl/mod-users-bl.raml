@@ -8,11 +8,57 @@ documentation:
 
 schemas:
     - compositeUser: !include ../../schemas/mod-users-bl/compositeUser.json
+    - compositeUserListObject: !include ../../schemas/mod-users-bl/compositeUserListObject.json
 
+traits:
+    - queryable:
+        queryParameters:
+            query:
+                description: "A query string to filter users based on matching criteria in fields"
+                required: false
+                type: string
+    - sortable:
+        queryParameters:
+            orderBy:
+                description:
+                    Order by field
+                type: string
+                required: false
+            order:
+                description:
+                    Ascending or descending sort order
+                enum: [desc, asc]
+                default: desc
+                required: false
+    - pageable:
+        queryParameters:
+            offset:
+                description:
+                    How many elements to skip before returning the resultset
+                type: integer
+                required: false
+                default: 0
+            limit:
+                description:
+                    How many elements to include in the response
+                type: integer
+                required: false
+                default: 10
+                minimum: 0
+    - includeable:
+        queryParameters:
+            include:
+                description:
+                    Which related resources to return with the result
+                type: string
+                required: false
 resourceTypes:
     - compositeUserResource:
          get:
             description: "Get a user by <<typeName>>"
+            is: [
+                includeable
+            ]
             responses:
                 200:
                     body:
@@ -40,6 +86,34 @@ resourceTypes:
                             example: "Internal server error"
 
 /users:
+    get:
+        description: Get a number of user (and possibly related) records based on criteria in the user and related modules
+        is: [
+            queryable,
+            sortable,
+            pageable,
+            includeable
+        ]
+        responses:
+            200:
+                body:
+                    application/json:
+                        schema: compositeUserListObject
+            400:
+                description: "Bad request"
+                body:
+                    text/plain:
+                        example: "Bad request"
+            403:
+                description: "Access denied"
+                body:
+                    text/plain:
+                        example: "Access denied"
+            500:
+                description: "Internal server error"
+                body:
+                    text/plain:
+                        example: "Internal server error"
     /by-id:
         /{userid}:
             type: { compositeUserResource: { "typeName" : "id" } }
