@@ -8,16 +8,16 @@ documentation:
     content: This module is responsible for managing and retrieving permissions in the FOLIO system
 
 schemas:
-  - permission: !include ../../schemas/mod-permissions/permission.json
+  - permission.json: !include ../../schemas/mod-permissions/permission.json
   - permission-patch: !include ../../schemas/mod-permissions/permission.json
   - permissionNameObject: !include ../../schemas/mod-permissions/permissionNameObject.json
   - permissionListObject: !include ../../schemas/mod-permissions/permissionListObject.json
-  - permissionUser: !include ../../schemas/mod-permissions/permissionUser.json
+  - permissionUser.json: !include ../../schemas/mod-permissions/permissionUser.json
   - permissionUserListObject: !include ../../schemas/mod-permissions/permissionUserListObject.json
   - permissionNameListObject: !include ../../schemas/mod-permissions/permissionNameListObject.json
   - errors: !include ../../schemas/errors.schema
-  - error: !include ../../schemas/error.schema
-  - parameters: !include ../../schemas/parameters.schema
+  - error.schema: !include ../../schemas/error.schema
+  - parameters.schema: !include ../../schemas/parameters.schema
 
 traits:
   - validate: !include ../../traits/validation.raml
@@ -104,12 +104,12 @@ traits:
       is: [validate]
       body:
         application/json:
-          schema: permissionUser
+          schema: permissionUser.json
       responses:
         201:
           body:
             application/json:
-              schema: permissionUser
+              schema: permissionUser.json
         400:
           description: "Bad request"
           body:
@@ -127,7 +127,7 @@ traits:
           200:
             body:
               application/json:
-                schema: permissionUser
+                schema: permissionUser.json
           403:
             description: "Access Denied"
             body:
@@ -147,12 +147,12 @@ traits:
         description: Modify an existing user
         body:
           application/json:
-            schema: permissionUser
+            schema: permissionUser.json
         responses:
           200:
             body:
               application/json:
-                schema: permissionUser
+                schema: permissionUser.json
           400:
             description: "Bad request"
             body:
@@ -298,13 +298,13 @@ traits:
       is: [validate]
       body:
         application/json:
-          schema: permission
+          schema: permission.json
       responses:
         201:
           body:
             application/json:
               schema:
-                permission
+                permission.json
         400:
           description: "Bad request"
           body:
@@ -322,7 +322,7 @@ traits:
           200:
             body:
               application/json:
-                schema: permission
+                schema: permission.json
           404:
             description: "Permission not found"
             body:
@@ -337,12 +337,12 @@ traits:
         description: Modify an existing permission
         body:
           application/json:
-            schema: permission
+            schema: permission.json
         responses:
           200:
             body:
               application/json:
-                schema: permission
+                schema: permission.json
           400:
             description: "Bad request"
             body:

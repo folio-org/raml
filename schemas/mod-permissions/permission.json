@@ -25,6 +25,10 @@
     },
     "mutable": {
       "type": "boolean"
+    },
+    "visible" : {
+      "type" : "boolean"
     }
-  }
+  },
+  "additionalProperties" : false
 }
