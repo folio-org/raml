@@ -52,6 +52,21 @@
           "type": "string",
           "format": "date-time"
         },
+        "addresses": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "object",
+            "properties": {
+              "addressLine1": {
+                "type": "string"
+              },
+              "addressLine2": {
+                "type": "string"
+              }
+            }
+          }
+        },
         "preferredContact": {
           "type": "object",
           "properties": {
