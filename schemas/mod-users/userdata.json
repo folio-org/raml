@@ -64,7 +64,8 @@
               "addressLine2": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "preferredContact": {
