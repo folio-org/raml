@@ -58,11 +58,29 @@
           "items": {
             "type": "object",
             "properties": {
+              "country" : {
+                "type": "string"
+              },
               "addressLine1": {
                 "type": "string"
               },
               "addressLine2": {
                 "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "region": {
+                "type": "string"
+              },
+              "postalCode": {
+                "type": "string"
+              },
+              "addressType": {
+                "type": "string"
+              },
+              "primaryAddress": {
+                "type": "boolean"
               }
             },
             "additionalProperties": false
