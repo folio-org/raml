@@ -58,7 +58,10 @@
           "items": {
             "type": "object",
             "properties": {
-              "countryId" : {
+              "id": {
+                "type": "string"
+              },
+              "countryId": {
                 "type": "string"
               },
               "addressLine1": {
