@@ -58,7 +58,7 @@
           "items": {
             "type": "object",
             "properties": {
-              "country" : {
+              "countryId" : {
                 "type": "string"
               },
               "addressLine1": {
@@ -76,7 +76,7 @@
               "postalCode": {
                 "type": "string"
               },
-              "addressType": {
+              "addressTypeId": {
                 "type": "string"
               },
               "primaryAddress": {
