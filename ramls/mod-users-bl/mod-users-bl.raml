@@ -85,7 +85,7 @@ resourceTypes:
                         text/plain:
                             example: "Internal server error"
 
-/users:
+/bl-users:
     get:
         description: Get a number of user (and possibly related) records based on criteria in the user and related modules
         is: [
@@ -120,4 +120,24 @@ resourceTypes:
     /by-username:
         /{username}:
             type: { compositeUserResource: { "typeName" : "username"} }
+    /login:
+        post:
+            description: Allow a new user to login and return an authtoken, along with a composite user record
+            responses:
+                201:
+                    body:
+                        application/json:
+                            schema: compositeUser
+                    headers:
+                        x-okapi-token:
+                400:
+                    description: "Bad request"
+                    body:
+                        text/plain:
+                            example: "Bad request"
+                500:
+                    description: "Internal server error"
+                    body:
+                        text/plain:
+                            example: "Internal server error"
 
