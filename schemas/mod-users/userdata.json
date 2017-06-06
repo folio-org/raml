@@ -52,6 +52,9 @@
           "type": "string",
           "format": "date-time"
         },
+        "preferredContactTypeId": {
+          "type": "string"
+        },
         "preferredContact": {
           "type": "object",
           "properties": {
