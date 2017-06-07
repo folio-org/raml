@@ -52,6 +52,43 @@
           "type": "string",
           "format": "date-time"
         },
+        "addresses": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "countryId": {
+                "type": "string"
+              },
+              "addressLine1": {
+                "type": "string"
+              },
+              "addressLine2": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "region": {
+                "type": "string"
+              },
+              "postalCode": {
+                "type": "string"
+              },
+              "addressTypeId": {
+                "type": "string"
+              },
+              "primaryAddress": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
         "preferredContactTypeId": {
           "type": "string"
         }
