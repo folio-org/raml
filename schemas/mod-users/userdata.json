@@ -54,31 +54,6 @@
         },
         "preferredContactTypeId": {
           "type": "string"
-        },
-        "preferredContact": {
-          "type": "object",
-          "properties": {
-            "value": {
-              "type": "string",
-              "enum": [
-                "EMAIL",
-                "MAIL",
-                "TEXT",
-                "PHONE",
-                "MOBILE"
-              ]
-            },
-            "desc": {
-              "type": "string",
-              "enum": [
-                "Email",
-                "Mail (Primary Address)",
-                "Text message",
-                "Phone",
-                "Mobile phone"
-              ]
-            }
-          }
         }
       },
       "additionalProperties": false,
