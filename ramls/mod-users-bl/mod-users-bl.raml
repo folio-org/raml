@@ -53,12 +53,20 @@ traits:
                     Which related resources to return with the result
                 type: string
                 required: false
+    - permissionsExpandable:
+        queryParameters:
+            expandPerms:
+                description:
+                    Whether or not to expand permissions listings
+                type: boolean
+                required: false
 resourceTypes:
     - compositeUserResource:
          get:
             description: "Get a user by <<typeName>>"
             is: [
-                includeable
+                includeable,
+                permissionsExpandable
             ]
             responses:
                 200:
@@ -121,8 +129,13 @@ resourceTypes:
     /by-username:
         /{username}:
             type: { compositeUserResource: { "typeName" : "username"} }
+    /_self:
+        type: { compositeUserResource: { "typeName" : "self reference" } }
     /login:
         post:
+            is: [
+                permissionsExpandable
+            ]
             description: Allow a new user to login and return an authtoken, along with a composite user record
             body:
                 application/json:
