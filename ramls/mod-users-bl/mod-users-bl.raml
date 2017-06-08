@@ -9,6 +9,7 @@ documentation:
 schemas:
     - compositeUser: !include ../../schemas/mod-users-bl/compositeUser.json
     - compositeUserListObject: !include ../../schemas/mod-users-bl/compositeUserListObject.json
+    - loginCredentials: !include ../../schemas/mod-login/loginCredentials.json
 
 traits:
     - queryable:
@@ -123,6 +124,9 @@ resourceTypes:
     /login:
         post:
             description: Allow a new user to login and return an authtoken, along with a composite user record
+            body:
+                application/json:
+                    schema: loginCredentials
             responses:
                 201:
                     body:
