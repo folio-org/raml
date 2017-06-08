@@ -3,7 +3,7 @@
   "id": "7261ecaae3a74dc68b468e12a70b1aec",
   "active": true,
   "type": "patron",
-  "patronGroup": "on_campus",
+  "patronGroup": "4bb563d9-3f9d-4e1e-8d1d-04e75666d68f",
   "meta": {
     "creation_date": "2016-11-05T0723",
     "last_login_date": ""
