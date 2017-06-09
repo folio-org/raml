@@ -1,35 +1,34 @@
 {
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "type" : "object",
-    "properties" : {
-        "userId" : {
-            "type" : "string"
-        },
-        "user" : {
-            "type" : "object",
-            "$ref" : "../mod-users/userdata.json"
-        },
-        "patronId" : {
-            "type" : "string"
-        },
-        "patronGroup" : {
-            "type" : "object",
-            "$ref" : "../mod-users/usergroup.json"
-        },
-        "permissionsId" : {
-            "type" : "string"
-        },
-        "permissions" : {
-            "type" : "object",
-            "$ref" : "../mod-permissions/permissionUser.json"
-        },
-        "credentialsId" : {
-            "type" : "string"
-        },
-        "credentials" : {
-            "type" : "object",
-            "$ref" : "../mod-login/credentials.json"
-        }
-
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "user": {
+      "type": "object",
+      "$ref": "../mod-users/userdata.json"
+    },
+    "patronId": {
+      "type": "string"
+    },
+    "patronGroup": {
+      "type": "object",
+      "$ref": "../mod-users/usergroup.json"
+    },
+    "permissionsId": {
+      "type": "string"
+    },
+    "permissions": {
+      "type": "object",
+      "$ref": "../mod-permissions/permissionUser.json"
+    },
+    "credentialsId": {
+      "type": "string"
+    },
+    "credentials": {
+      "type": "object",
+      "$ref": "../mod-login/credentials.json"
     }
+  }
 }
