@@ -55,7 +55,7 @@ traits:
           required: false
   - permissionsExpandable:
       queryParameters:
-        expandPerms:
+        expandPermissions:
           description:
             Whether or not to expand permissions listings
           type: boolean
@@ -124,7 +124,7 @@ resourceTypes:
           text/plain:
             example: "Internal server error"
   /by-id:
-    /{userid}:
+    /{id}:
       type: { compositeUserResource: { "typeName" : "id" } }
   /by-username:
     /{username}:
