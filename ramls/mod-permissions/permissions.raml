@@ -15,6 +15,7 @@ schemas:
   - permissionUser.json: !include ../../schemas/mod-permissions/permissionUser.json
   - permissionUserListObject: !include ../../schemas/mod-permissions/permissionUserListObject.json
   - permissionNameListObject: !include ../../schemas/mod-permissions/permissionNameListObject.json
+  - permissionUpload.json: !include ../../schemas/mod-permissions/permissionUpload.json
   - errors: !include ../../schemas/errors.schema
   - error.schema: !include ../../schemas/error.schema
   - parameters.schema: !include ../../schemas/parameters.schema
@@ -298,13 +299,13 @@ traits:
       is: [validate]
       body:
         application/json:
-          schema: permission.json
+          schema: permissionUpload.json
       responses:
         201:
           body:
             application/json:
               schema:
-                permission.json
+                permissionUpload.json
         400:
           description: "Bad request"
           body:
@@ -337,12 +338,12 @@ traits:
         description: Modify an existing permission
         body:
           application/json:
-            schema: permission.json
+            schema: permissionUpload.json
         responses:
           200:
             body:
               application/json:
-                schema: permission.json
+                schema: permissionUpload.json
           400:
             description: "Bad request"
             body:
