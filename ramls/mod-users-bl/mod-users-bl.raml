@@ -12,47 +12,13 @@ schemas:
   - loginCredentials: !include ../../schemas/mod-login/loginCredentials.json
 
 traits:
-  - queryable:
-      queryParameters:
-        query:
-          description: "A query string to filter users based on matching criteria in fields"
-          required: false
-          type: string
-  - sortable:
-      queryParameters:
-        orderBy:
-          description:
-            Order by field
-          type: string
-          required: false
-        order:
-          description:
-            Ascending or descending sort order
-          enum: [desc, asc]
-          default: desc
-          required: false
-  - pageable:
-      queryParameters:
-        offset:
-          description:
-            How many elements to skip before returning the resultset
-          type: integer
-          required: false
-          default: 0
-        limit:
-          description:
-            How many elements to include in the response
-          type: integer
-          required: false
-          default: 10
-          minimum: 0
-  - includeable:
-      queryParameters:
-        include:
-          description:
-            Which related resources to return with the result
-          type: string
-          required: false
+  - secured: !include ../../traits/auth.raml
+  - orderable: !include ../../traits/orderable.raml
+  - pageable: !include ../../traits/pageable.raml
+  - searchable: !include ../../traits/searchable.raml
+  - language: !include ../../traits/language.raml
+  - validate: !include ../../traits/validation.raml
+  - includeable: !include ../../traits/includes.raml
   - permissionsExpandable:
       queryParameters:
         expandPermissions:
@@ -98,8 +64,7 @@ resourceTypes:
   get:
     description: Get a number of user (and possibly related) records based on criteria in the user and related modules
     is: [
-      queryable,
-      sortable,
+      searchable: {description: "with valid searchable fields", example: "active=true"},
       pageable,
       includeable
     ]
@@ -126,17 +91,17 @@ resourceTypes:
   /by-id:
     /{id}:
       type: { compositeUserResource: { "typeName" : "id" } }
+      is: [includeable]
   /by-username:
     /{username}:
       type: { compositeUserResource: { "typeName" : "username"} }
+      is: [includeable]
   /_self:
     type: { compositeUserResource: { "typeName" : "self reference" } }
   /login:
     post:
-      is: [
-        permissionsExpandable
-      ]
       description: Allow a new user to login and return an authtoken, along with a composite user record
+      is: [permissionsExpandable, includeable]
       body:
         application/json:
           schema: loginCredentials
