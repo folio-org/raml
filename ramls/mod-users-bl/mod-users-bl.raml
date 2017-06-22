@@ -7,7 +7,7 @@ documentation:
     content: A front end for mod-users and mod-permissions
 
 schemas:
-  - compositeUser: !include ../../schemas/mod-users-bl/compositeUser.json
+  - compositeUser.json: !include ../../schemas/mod-users-bl/compositeUser.json
   - compositeUserListObject: !include ../../schemas/mod-users-bl/compositeUserListObject.json
   - loginCredentials: !include ../../schemas/mod-login/loginCredentials.json
 
@@ -38,7 +38,7 @@ resourceTypes:
         200:
           body:
             application/json:
-              schema: compositeUser
+              schema: compositeUser.json
         400:
           description: "Bad request"
           body:
@@ -109,7 +109,7 @@ resourceTypes:
         201:
           body:
             application/json:
-              schema: compositeUser
+              schema: compositeUser.json
           headers:
             x-okapi-token:
         400:
