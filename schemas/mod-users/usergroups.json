@@ -10,7 +10,7 @@
         "$ref": "usergroup.json"
       }
     },
-    "total_records": {
+    "totalRecords": {
       "type": "integer"
     }
   }
