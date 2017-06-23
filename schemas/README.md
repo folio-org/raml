@@ -1,1 +1,1 @@
-As a workaround to FOLIO-573, when any schema file refers to an additional schema file, then use the filename of that referenced second schema as the "key" name in the RAML "schemas" section, and wherever that schema is utilised in RAML and schema files.
+When any schema file refers to an additional schema file, then also use that pathname of the referenced second schema as the "key" name in the RAML "schemas" section, and wherever that schema is utilised in RAML files. Also ensure that all such referenced files are below the parent file.
