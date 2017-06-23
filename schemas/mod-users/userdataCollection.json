@@ -10,12 +10,12 @@
         "$ref": "userdata.json"
       }
     },
-    "total_records": {
+    "totalRecords": {
       "type": "integer"
     }
   },
   "required": [
     "users",
-    "total_records"
+    "totalRecords"
   ]
 }
