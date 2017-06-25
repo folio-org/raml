@@ -10,7 +10,11 @@ schemas:
   - compositeUser.json: !include ../../schemas/mod-users-bl/compositeUser.json
   - compositeUserListObject: !include ../../schemas/mod-users-bl/compositeUserListObject.json
   - loginCredentials: !include ../../schemas/mod-login/loginCredentials.json
-
+  - ../mod-users/userdata.json: !include ../../schemas/mod-users/userdata.json
+  - ../mod-users/usergroup.json: !include ../../schemas/mod-users/usergroup.json
+  - ../mod-permissions/permissionUser.json: !include ../../schemas/mod-permissions/permissionUser.json
+  - ../mod-login/credentials.json: !include ../../schemas/mod-login/credentials.json
+  
 traits:
   - secured: !include ../../traits/auth.raml
   - orderable: !include ../../traits/orderable.raml
