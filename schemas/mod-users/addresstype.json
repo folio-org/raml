@@ -1,10 +1,11 @@
 {
+
+    "$schema" : "http://json-schema.org/draft-04/schema#",
     "title" : "Address Type Schema",
     "type" : "object",
     "properties" : {
         "addressType" : {
-            "type" : "string",
-            "required" : true
+            "type" : "string"
         },
         "desc" : {
             "type" : "string"
