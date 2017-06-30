@@ -1,0 +1,19 @@
+{
+    "title" : "Address Type Schema",
+    "type" : "object",
+    "properties" : {
+        "addressType" : {
+            "type" : "string",
+            "required" : true
+        },
+        "desc" : {
+            "type" : "string"
+        },
+        "id" : {
+            "type" : "string"
+        }
+    },
+    "additionalProperties" : false,
+    "required" : [ "id" ]
+}
+
