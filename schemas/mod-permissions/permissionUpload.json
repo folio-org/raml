@@ -22,16 +22,16 @@
     },
     "subPermissions": {
       "type": "array",
-      "items" : {
-          "type" : "string"
+      "items": {
+        "type": "string"
       }
     },
     "mutable": {
       "type": "boolean"
     },
-    "visible" : {
-      "type" : "boolean"
+    "visible": {
+      "type": "boolean"
     }
   },
-  "additionalProperties" : false
+  "additionalProperties": false
 }
