@@ -8,5 +8,5 @@
       "type": "array"
     }
   },
-  "additionalProperties" : false
+  "additionalProperties": false
 }

@@ -1,5 +1,5 @@
 {
-  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "User Schema",
   "type": "object",
   "properties": {
@@ -95,30 +95,29 @@
       },
       "additionalProperties": false,
       "required": [
-         "lastName"
+        "lastName"
       ]
-    },  
+    },
     "enrollmentDate": {
-       "type": "string",
-       "format": "date-time"
+      "type": "string",
+      "format": "date-time"
     },
     "expirationDate": {
-       "type": "string",
-       "format": "date-time"
+      "type": "string",
+      "format": "date-time"
     },
-    "createdDate" : {
-        "type" : "string",
-        "format" : "date-time"
-        
+    "createdDate": {
+      "type": "string",
+      "format": "date-time"
     },
-    "updatedDate" : {
-        "type" : "string",
-        "format" : "date-time"
+    "updatedDate": {
+      "type": "string",
+      "format": "date-time"
     }
   },
   "additionalProperties": false,
   "required": [
     "username",
     "id"
-   ]
+  ]
 }
