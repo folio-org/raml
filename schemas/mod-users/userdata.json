@@ -97,7 +97,7 @@
       "required": [
          "lastName"
       ]
-    },  
+    },
     "enrollmentDate": {
        "type": "string",
        "format": "date-time"
@@ -109,7 +109,7 @@
     "createdDate" : {
         "type" : "string",
         "format" : "date-time"
-        
+
     },
     "updatedDate" : {
         "type" : "string",
