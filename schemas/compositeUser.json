@@ -4,19 +4,19 @@
   "properties": {
     "user": {
       "type": "object",
-      "$ref": "../mod-users/userdata.json"
+      "$ref": "mod-users/userdata.json"
     },
     "patronGroup": {
       "type": "object",
-      "$ref": "../mod-users/usergroup.json"
+      "$ref": "mod-users/usergroup.json"
     },
     "permissions": {
       "type": "object",
-      "$ref": "../mod-permissions/permissionUser.json"
+      "$ref": "mod-permissions/permissionUser.json"
     },
     "credentials": {
       "type": "object",
-      "$ref": "../mod-login/credentials.json"
+      "$ref": "mod-login/credentials.json"
     }
   }
 }
