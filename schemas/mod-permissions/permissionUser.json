@@ -1,8 +1,8 @@
 {
   "type": "object",
   "properties": {
-   "id" : {
-  	  "type" : "string"
+    "id": {
+      "type": "string"
     },
     "userId": {
       "type": "string"
