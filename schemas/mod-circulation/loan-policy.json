@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "loanable": {
+      "type": "boolean"
+    },
+    "loansPolicy": {
+      "type": "object",
+      "properties": {
+        "profileId": {
+          "type": "string"
+        },
+        "period": {
+          "type": "object",
+          "$ref": "period.json"
+        },
+        "closedLibraryDueDateManagementId": {
+          "type": "string"
+        },
+        "existingRequestsPeriod": {
+          "type": "object",
+          "$ref": "period.json"
+        },
+        "gracePeriod": {
+          "type": "object",
+          "$ref": "period.json"
+        }
+      }
+    },
+    "renewable": {
+      "type": "boolean"
+    },
+    "renewalsPolicy": {
+      "type": "object",
+      "properties": {
+        "unlimited": {
+          "type": "boolean"
+        },
+        "numberAllowed": {
+          "type": "number"
+        },
+        "renewFromId": {
+          "type": "string"
+        },
+        "differentPeriod": {
+          "type": "boolean"
+        },
+        "period": {
+          "type": "object",
+          "$ref": "period.json"
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "loanable",
+    "renewable"
+  ]
+}
