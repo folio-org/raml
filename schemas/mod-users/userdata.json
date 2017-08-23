@@ -27,6 +27,12 @@
     "meta": {
       "type": "object"
     },
+    "proxyFor" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+	  }
+	},
     "personal": {
       "type": "object",
       "properties": {
