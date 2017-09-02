@@ -1,0 +1,32 @@
+{
+    "totalRecords": 25,
+    "responseTime": 8.9,
+    "facets": [
+      {
+        "facetValues": [
+          {
+            "count": 15,
+            "value": "Handey1"
+          },
+          {
+            "count": 10,
+            "value": "Handey"
+          }
+        ],
+        "type": "lastName"
+      },
+      {
+        "facetValues": [
+          {
+            "count": 18,
+            "value": "true"
+          },
+          {
+            "count": 7,
+            "value": "false"
+          }
+        ],
+        "type": "active"
+      }
+    ]
+  }
