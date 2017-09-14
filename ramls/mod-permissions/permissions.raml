@@ -69,6 +69,13 @@ traits:
           description: "A list of user names that any returned permissions must belong to."
           required: false
           type: string
+  - indexSelectable:
+      queryParameters:
+        indexField:
+          description: "Specify a field other than 'id' to look up the permission user by"
+          required: false
+          type: string
+          example: "userId"
 
 /perms:
   /users:
@@ -199,11 +206,9 @@ traits:
               required: false
               type: string
               example: "true"
-            indexField:
-              description: "Specify a field other than 'id' to look up the permission user by"
-              required: false
-              type: string
-              example: "userId"
+          is: [
+              indexSelectable
+          ]
           responses:
             200:
               description: "An object of returned permissions"
@@ -227,7 +232,7 @@ traits:
                   example: "Internal server error"
         post:
           description: Add a permission to a user
-          is: [validate]
+          is: [validate, indexSelectable]
           body:
             application/json:
               schema: permissionNameObject
@@ -250,6 +255,7 @@ traits:
         /{permissionname}:
           delete:
             description: Remove a permission from a user
+            is: [ indexSelectable ]
             responses:
               204:
                 body:
