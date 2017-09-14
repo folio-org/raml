@@ -199,6 +199,11 @@ traits:
               required: false
               type: string
               example: "true"
+            indexField:
+              description: "Specify a field other than 'id' to look up the permission user by"
+              required: false
+              type: string
+              example: "userId"
           responses:
             200:
               description: "An object of returned permissions"
