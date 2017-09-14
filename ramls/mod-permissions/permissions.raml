@@ -128,9 +128,10 @@ traits:
           body:
             text/plain:
               example: "Internal server error"
-    /{userid}:
+    /{id}:
       get:
         description: Get a permission user
+        is: [ indexSelectable ]
         responses:
           200:
             body:
