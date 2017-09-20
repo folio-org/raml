@@ -26,9 +26,9 @@
     "mutable": {
       "type": "boolean"
     },
-    "visible" : {
-      "type" : "boolean"
+    "visible": {
+      "type": "boolean"
     }
   },
-  "additionalProperties" : false
+  "additionalProperties": false
 }
