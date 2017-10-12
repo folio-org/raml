@@ -1,7 +1,7 @@
       queryParameters:
         query:
           description: |
-            JSON array [{"field1","value1","operator1"},{"field2","value2","operator2"},...,{"fieldN","valueN","operatorN"}] <<description>>
+            A query expressed as a CQL string: see zing.z3950.org/cql/intro.html
           example: |
-            <<example>>
+            (username="ab*" or personal.firstName="ab*" or personal.lastName="ab*") and active="true" sortby personal.lastName personal.firstName barcode
           required: false
