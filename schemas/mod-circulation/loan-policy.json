@@ -40,6 +40,8 @@
     "renewable": {
       "type": "boolean"
     },
+    "fixedDueDateScheduleId": {
+    },
     "renewalsPolicy": {
       "type": "object",
       "properties": {
@@ -58,6 +60,9 @@
         "period": {
           "type": "object",
           "$ref": "period.json"
+        },
+        "alternateFixedDueDateScheduleId": {
+          "type": "string"
         }
       }
     }
