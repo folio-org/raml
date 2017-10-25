@@ -41,6 +41,7 @@
       "type": "boolean"
     },
     "fixedDueDateScheduleId": {
+      "type": "string"
     },
     "renewalsPolicy": {
       "type": "object",
