@@ -34,14 +34,14 @@
         "gracePeriod": {
           "type": "object",
           "$ref": "period.json"
+        },
+        "fixedDueDateScheduleId": {
+          "type": "string"
         }
       }
     },
     "renewable": {
       "type": "boolean"
-    },
-    "fixedDueDateScheduleId": {
-      "type": "string"
     },
     "renewalsPolicy": {
       "type": "object",
