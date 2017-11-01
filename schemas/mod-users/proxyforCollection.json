@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "proxiesFor": {
+      "type": "array",
+      "id": "proxyFor",
+      "items": {
+        "type": "object",
+        "$ref": "proxyfor.json"
+      }
+    },
+    "totalRecords": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "proxiesFor",
+    "totalRecords"
+  ]
+}

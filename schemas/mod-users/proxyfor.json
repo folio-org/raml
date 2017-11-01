@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "ProxyFor Schema",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "proxyUserId": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "meta" : {
+      "type" : "object"
+	}
+  },
+  "additionalProperties": false
+}
