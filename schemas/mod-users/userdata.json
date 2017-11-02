@@ -27,6 +27,13 @@
     "meta": {
       "type": "object"
     },
+    "proxyFor": {
+      "description" : "Deprecated",	
+      "type": "array",
+	    "items": {
+	      "type": "string"
+	    }
+	  },
     "personal": {
       "type": "object",
       "properties": {
