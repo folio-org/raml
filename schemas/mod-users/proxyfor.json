@@ -14,7 +14,7 @@
     },
     "meta" : {
       "type" : "object"
-	}
+    }
   },
   "additionalProperties": false
 }
