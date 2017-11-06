@@ -28,12 +28,12 @@
       "type": "object"
     },
     "proxyFor": {
-      "description" : "Deprecated",	
+      "description" : "Deprecated",
       "type": "array",
-	    "items": {
-	      "type": "string"
-	    }
-	  },
+      "items": {
+      "type": "string"
+      }
+    },
     "personal": {
       "type": "object",
       "properties": {

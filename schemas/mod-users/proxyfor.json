@@ -12,9 +12,9 @@
     "id": {
       "type": "string"
     },
-    "meta" : {
-      "type" : "object"
-	}
+    "meta": {
+      "type": "object"
+    }
   },
   "additionalProperties": false
 }
