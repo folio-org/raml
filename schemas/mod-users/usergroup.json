@@ -13,7 +13,7 @@
       "type": "string"
     },
     "metadata": {
-      "$ref": "metadata.schema",
+      "$ref": "../metadata.schema",
       "readonly": true
     }
   },

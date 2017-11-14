@@ -14,7 +14,7 @@
       "type": "integer"
     },
     "resultInfo": {
-      "$ref": "resultInfo.schema",
+      "$ref": "../resultInfo.schema",
       "readonly": true
     }
   },
