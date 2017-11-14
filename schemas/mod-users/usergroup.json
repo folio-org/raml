@@ -19,6 +19,6 @@
   },
   "required": [
     "group",
-    "type"
+    "desc"
   ]
 }
