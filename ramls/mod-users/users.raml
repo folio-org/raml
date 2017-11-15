@@ -13,6 +13,7 @@ schemas:
   - errors: !include ../../schemas/errors.schema
   - error.schema: !include ../../schemas/error.schema
   - parameters.schema: !include ../../schemas/parameters.schema
+  - ../resultInfo.schema: !include ../../schemas/resultInfo.schema
 
 traits:
   - secured: !include ../../traits/auth.raml
@@ -21,6 +22,7 @@ traits:
   - searchable: !include ../../traits/searchable.raml
   - language: !include ../../traits/language.raml
   - validate: !include ../../traits/validation.raml
+  - facets: !include ../../traits/facets.raml
 
 resourceTypes:
   - collection: !include ../../rtypes/collection.raml
@@ -39,7 +41,8 @@ resourceTypes:
     is: [
       searchable: {description: "", example: "active=true sortBy username"},
       orderable: {fieldsList: "field A, field B"},
-      pageable
+      pageable,
+      facets
     ]
     description: Return a list of users
   post:

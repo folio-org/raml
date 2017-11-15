@@ -1,18 +1,24 @@
 {
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "User Group Schema",
   "type": "object",
   "properties": {
     "group": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "desc": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "id": {
       "type": "string"
+    },
+    "metadata": {
+      "$ref": "../metadata.schema",
+      "readonly": true
     }
   },
-  "additionalProperties": false
+  "required": [
+    "group",
+    "desc"
+  ]
 }
