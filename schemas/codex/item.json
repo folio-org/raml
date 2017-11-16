@@ -22,14 +22,6 @@
 		"series": {
 			"type": "string"
 		},
-		"creator": {
-			"type": "array",
-			"items": {
-				"type": "string"
-			},
-			"additionalitems": true,
-			"uniqueitems": true
-		},
 		"contributor": {
 			"type": "array",
 			"items": {
