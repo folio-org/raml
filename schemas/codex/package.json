@@ -45,7 +45,6 @@
 	},
 	"required": [
 		"id",
-		"id",
 		"items"
 	]
 }
