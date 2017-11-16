@@ -7,7 +7,7 @@
 		"id": {
 			"type": "string"
 		},
-		"instanceid": {
+		"instanceId": {
 			"type": "string"
 		},
 		"description": {
@@ -109,7 +109,7 @@
 	},
 	"required": [
 		"id",
-		"instanceid",
+		"instanceId",
 		"title"
 	]
 }
