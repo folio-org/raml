@@ -1,0 +1,115 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "Codex Item Schema",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"id": {
+			"type": "string"
+		},
+		"instanceid": {
+			"type": "string"
+		},
+		"description": {
+			"type": "string"
+		},
+		"title": {
+			"type": "string"
+		},
+		"altTitle": {
+			"type": "string"
+		},
+		"series": {
+			"type": "string"
+		},
+		"creator": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"additionalitems": true,
+			"uniqueitems": true
+		},
+		"contributor": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"additionalitems": true,
+			"uniqueitems": true
+		},
+		"publisher": {
+			"type": "string"
+		},
+		"date": {
+			"type": "string"
+		},
+		"type": {
+			"type": "string"
+		},
+		"format": {
+			"type": "string"
+		},
+		"identifier": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"value": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					}
+				}
+			},
+			"additionalitems": true,
+			"uniqueitems": true
+		},
+		"source": {
+			"type": "string"
+		},
+		"language": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"rights": {
+			"type": "string"
+		},
+		"copyNumber": {
+			"type": "number"
+		},
+		"barcode": {
+			"type": "string"
+		},
+		"vendorPackage": {
+			"type": "string"
+		},
+		"coverage": {
+			"type": "object"
+		},
+		"location": {
+			"type": "array",
+			"items": {
+				"type": "object"
+			},
+			"additionalitems": true
+		},
+		"itemStatus": {
+			"type": "string"
+		},
+		"isSelected": {
+			"type": "boolean"
+		},
+		"isCustomized": {
+			"type": "boolean"
+		}
+	},
+	"required": [
+		"id",
+		"instanceid",
+		"title"
+	]
+}
