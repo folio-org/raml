@@ -1,0 +1,59 @@
+{  
+   "instances":[  
+      {  
+         "id":"1",
+         "title":"first instance",
+         "altTitle":"first alternative title",
+         "series":"first series",
+         "contributor":[  
+
+         ],
+         "publisher":"first publisher",
+         "date":"first date",
+         "type":"first type",
+         "format":"first format",
+         "identifier":[  
+            {  
+               "type":"first_id_type",
+               "value":"first_id_value"
+            }
+         ],
+         "source":"first source",
+         "language":[  
+            "english",
+            "french"
+         ],
+         "rights":"first rights",
+         "version":"first version",
+         "lastModified":"first lastModified"
+      },
+      {  
+         "id":"2",
+         "title":"second instance",
+         "altTitle":"second alternative title",
+         "series":"second series",
+         "contributor":[  
+
+         ],
+         "publisher":"second publisher",
+         "date":"second date",
+         "type":"second type",
+         "format":"second format",
+         "identifier":[  
+            {  
+               "type":"second_id_type",
+               "value":"second_id_value"
+            }
+         ],
+         "source":"second source",
+         "language":[  
+            "english",
+            "french"
+         ],
+         "rights":"second rights",
+         "version":"second version",
+         "lastModified":"second lastModified"
+      }
+   ],
+   "totalRecords":2
+}

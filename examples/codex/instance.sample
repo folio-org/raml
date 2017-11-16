@@ -1,0 +1,27 @@
+{  
+   "id":"1",
+   "title":"first instance",
+   "altTitle":"first alternative title",
+   "series":"first series",
+   "contributor":[  
+
+   ],
+   "publisher":"first publisher",
+   "date":"first date",
+   "type":"first type",
+   "format":"first format",
+   "identifier":[  
+      {  
+         "type":"first_id_type",
+         "value":"first_id_value"
+      }
+   ],
+   "source":"first source",
+   "language":[  
+      "english",
+      "french"
+   ],
+   "rights":"first rights",
+   "version":"first version",
+   "lastModified":"first lastModified"
+}
