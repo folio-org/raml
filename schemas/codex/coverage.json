@@ -1,5 +1,5 @@
 {
-	"$schema": "http://json-schema.org/schema#",
+	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "Codex Coverage Schema",
 	"type": "object",
 	"additionalProperties": false,
@@ -19,8 +19,8 @@
 						"type": "string"
 					}
 				},
-				"additionalitems": true,
-				"uniqueitems": true
+				"additionalItems": true,
+				"uniqueItems": true
 			}
 		},
 		"statement": {
@@ -39,8 +39,8 @@
 					}
 				}
 			},
-			"additionalitems": true,
-			"uniqueitems": true
+			"additionalItems": true,
+			"uniqueItems": true
 		}
 	},
 	"required": [
