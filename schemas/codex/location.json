@@ -1,5 +1,5 @@
 {
-	"$schema": "http://json-schema.org/schema#",
+	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "Codex Location Schema",
 	"type": "object",
 	"additionalProperties": false,
@@ -21,8 +21,8 @@
 			"items": {
 				"type": "object"
 			},
-			"additionalitems": true,
-			"uniqueitems": true
+			"additionalItems": true,
+			"uniqueItems": true
 		},
 		"platform": {
 			"type": "string"

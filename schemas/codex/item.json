@@ -1,5 +1,5 @@
 {
-	"$schema": "http://json-schema.org/schema#",
+	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "Codex Item Schema",
 	"type": "object",
 	"additionalProperties": false,
@@ -35,8 +35,8 @@
 					}
 				}
 			},
-			"additionalitems": true,
-			"uniqueitems": true
+			"additionalItems": true,
+			"uniqueItems": true
 		},
 		"publisher": {
 			"type": "string"
@@ -63,8 +63,8 @@
 					}
 				}
 			},
-			"additionalitems": true,
-			"uniqueitems": true
+			"additionalItems": true,
+			"uniqueItems": true
 		},
 		"source": {
 			"type": "string"
@@ -95,7 +95,7 @@
 			"items": {
 				"type": "object"
 			},
-			"additionalitems": true
+			"additionalItems": true
 		},
 		"itemStatus": {
 			"type": "string"
