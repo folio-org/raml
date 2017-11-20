@@ -11,15 +11,15 @@ schemas:
   - instance.json: !include ../../schemas/codex/instance.json
   - instanceCollection: !include ../../schemas/codex/instanceCollection.json
   - errors: !include ../../schemas/errors.schema
-  - error.schema: !include ../..//schemas/error.schema
-  - parameters.schema: !include ../..//schemas/parameters.schema
+  - error.schema: !include ../../schemas/error.schema
+  - parameters.schema: !include ../../schemas/parameters.schema
   - metadata.schema: !include ../../schemas/metadata.schema
 
 traits:
   - validate: !include ../../traits/validation.raml
   - secured: !include ../../traits/auth.raml
   - language: !include ../../traits/language.raml
-  - pageable:  !include ../../traits/pageable.raml
+  - pageable: !include ../../traits/pageable.raml
   - searchable: !include ../../traits/searchable.raml
 
 resourceTypes:
