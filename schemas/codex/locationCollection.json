@@ -1,21 +1,21 @@
 {
-	"$schema": "http://json-schema.org/draft-04/schema#",
-	"type": "object",
-	"description": "Collection of locations",
-	"properties": {
-		"locations": {
-			"type": "array",
-			"locations": {
-				"type": "object",
-				"$ref": "location.json"
-			}
-		},
-		"totalRecords": {
-			"type": "integer"
-		}
-	},
-	"required": [
-		"locations",
-		"totalRecords"
-	]
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "Collection of locations",
+  "properties": {
+    "locations": {
+      "type": "array",
+      "locations": {
+        "type": "object",
+        "$ref": "location.json"
+      }
+    },
+    "totalRecords": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "locations",
+    "totalRecords"
+  ]
 }

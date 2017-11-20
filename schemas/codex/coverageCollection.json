@@ -1,21 +1,21 @@
 {
-	"$schema": "http://json-schema.org/draft-04/schema#",
-	"type": "object",
-	"description": "Collection of coverages",
-	"properties": {
-		"coverages": {
-			"type": "array",
-			"items": {
-				"type": "object",
-				"$ref": "coverage.json"
-			}
-		},
-		"totalRecords": {
-			"type": "integer"
-		}
-	},
-	"required": [
-		"coverages",
-		"totalRecords"
-	]
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "Collection of coverages",
+  "properties": {
+    "coverages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "$ref": "coverage.json"
+      }
+    },
+    "totalRecords": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "coverages",
+    "totalRecords"
+  ]
 }
