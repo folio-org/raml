@@ -4,8 +4,8 @@ baseUri: https://github.com/folio-org/mod-kb-ebsco-codex
 version: v1
 
 documentation:
-  - title: mod-kb-ebsco-codex API
-    content: This documents the Codex API provided by mod-kb-ebsco
+  - title: Codex API
+    content: This documents the Folio codex API
 
 schemas:
   - instance.json: !include ../../schemas/codex/instance.json
@@ -23,71 +23,28 @@ traits:
   - searchable: !include ../../traits/searchable.raml
 
 resourceTypes:
-  - collection: !include ../../rtypes/collection.raml
-  - collection-item: !include ../../rtypes/item-collection.raml
+  - collection-get: !include ../../rtypes/collection-get.raml
+  - collection-item-get: !include ../../rtypes/item-collection-get.raml
 
-/instances:
-  displayName: Instances
-  description: Instance collection
+/codex-instances:
+  displayName: Codex instances
+  description: Codex instance collection
   type:
-    collection:
+    collection-get:
       schemaCollection: instanceCollection
       schemaItem: instance.json
       exampleCollection: !include ../../examples/codex/instanceCollection.sample
       exampleItem: !include ../../examples/codex/instance.sample
-  post:
-    is: [
-      validate
-    ]
-    queryParameters:
-      vendorId:
-        type: string
-        required: true
-      packageId:
-        type: string
-        required: true
   get:
     is: [
-      searchable: {description: "with valid searchable fields: for example link = 1234", example: "link=/users/1234"},
+      searchable: {description: "with valid searchable fields: for example title = earth", example: "title=earth"},
       pageable,
       validate
     ]
-    responses:
   /{id}:
-    displayName: Notes
-    description: Get, Delete or Update a specific note
+    displayName: Codex instance
+    description: Get a specific codex instance
     type:
-      collection-item:
+      collection-item-get:
         schema: instance.json
         exampleItem: !include ../../examples/codex/instance.sample
-    get:
-      responses:
-        400:
-          description: "Bad request"
-          body:
-            text/plain:
-        401:
-          description: "Not authorized to perform requested action"
-          body:
-            text/plain:
-    put:
-      is: [validate]
-      responses:
-        400:
-          description: "Bad request"
-          body:
-            text/plain:
-        401:
-          description: "Not authorized to perform requested action"
-          body:
-            text/plain:
-    delete:
-      responses:
-        400:
-          description: "Bad request"
-          body:
-            text/plain:
-        401:
-          description: "Not authorized to perform requested action"
-          body:
-            text/plain:
