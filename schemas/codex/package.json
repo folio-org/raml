@@ -1,50 +1,50 @@
 {
-	"$schema": "http://json-schema.org/draft-04/schema#",
-	"title": "Codex Package Schema",
-	"type": "object",
-	"properties": {
-		"id": {
-			"type": "string"
-		},
-		"identifier": {
-			"type": "string"
-		},
-		"name": {
-			"type": "string"
-		},
-		"description": {
-			"type": "string"
-		},
-		"type": {
-			"type": "string"
-		},
-		"vendorId": {
-			"type": "string"
-		},
-		"vendor": {
-			"type": "string"
-		},
-		"platform": {
-			"type": "string"
-		},
-		"items": {
-			"type": "array"
-		},
-		"itemCount": {
-			"type": "integer"
-		},
-		"selectedCount": {
-			"type": "integer"
-		},
-		"coverage": {
-			"type": "object"
-		},
-		"isSelected": {
-			"type": "boolean"
-		}
-	},
-	"required": [
-		"id",
-		"items"
-	]
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Codex Package Schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "identifier": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "vendorId": {
+      "type": "string"
+    },
+    "vendor": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array"
+    },
+    "itemCount": {
+      "type": "integer"
+    },
+    "selectedCount": {
+      "type": "integer"
+    },
+    "coverage": {
+      "type": "object"
+    },
+    "isSelected": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "items"
+  ]
 }

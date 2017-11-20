@@ -1,88 +1,88 @@
 {
-	"$schema": "http://json-schema.org/draft-04/schema#",
-	"title": "Codex Instance Schema",
-	"type": "object",
-	"additionalProperties": false,
-	"properties": {
-		"id": {
-			"type": "string"
-		},
-		"title": {
-			"type": "string"
-		},
-		"altTitle": {
-			"type": "string"
-		},
-		"series": {
-			"type": "string"
-		},
-		"contributor": {
-			"type": "array",
-			"items": {
-				"type": "object",
-				"properties": {
-					"type": {
-						"type": "string"
-					},
-					"name": {
-						"type": "string"
-					}
-				}
-			},
-			"additionalItems": true,
-			"uniqueItems": true
-		},
-		"publisher": {
-			"type": "string"
-		},
-		"date": {
-			"type": "string"
-		},
-		"type": {
-			"type": "string"
-		},
-		"format": {
-			"type": "string"
-		},
-		"identifier": {
-			"type": "array",
-			"items": {
-				"type": "object",
-				"properties": {
-					"value": {
-						"type": "string"
-					},
-					"type": {
-						"type": "string"
-					}
-				}
-			},
-			"additionalItems": true,
-			"uniqueItems": true
-		},
-		"source": {
-			"type": "string"
-		},
-		"language": {
-			"type": "array",
-			"items": {
-				"type": "string"
-			}
-		},
-		"rights": {
-			"type": "string"
-		},
-		"version": {
-			"type": "string"
-		},
-		"lastModified": {
-			"type": "string"
-		}
-	},
-	"required": [
-		"id",
-		"title",
-		"type",
-		"source"
-	]
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Codex Instance Schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "altTitle": {
+      "type": "string"
+    },
+    "series": {
+      "type": "string"
+    },
+    "contributor": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalItems": true,
+      "uniqueItems": true
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string"
+    },
+    "identifier": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalItems": true,
+      "uniqueItems": true
+    },
+    "source": {
+      "type": "string"
+    },
+    "language": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rights": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "lastModified": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "type",
+    "source"
+  ]
 }
