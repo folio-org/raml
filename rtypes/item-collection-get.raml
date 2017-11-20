@@ -1,0 +1,30 @@
+
+    description: Entity representing a <<resourcePathName|!singularize>>
+    is: [secured, language]
+
+    get:
+      description: |
+        Retrieve <<resourcePathName|!singularize>> item with given {<<resourcePathName|!singularize>>Id}
+      responses:
+        200:
+          description: "Returns item with a given ID"
+          body:
+            application/json:
+              example: <<exampleItem>>
+              schema: <<schema>>
+        401:
+          description: "Not authorized to perform requested action"
+          body:
+            text/plain:
+              example: "unable to get retrieve <<resourcePathName|!singularize>> -- unauthorized"
+        404:
+          description: "Item with a given ID not found"
+          body:
+            text/plain:
+              example: |
+                "<<resourcePathName|!singularize>> not found"
+        500:
+          description: "Internal server error, e.g. due to misconfiguration"
+          body:
+            text/plain:
+              example: "internal server error, contact administrator"
