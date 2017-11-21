@@ -13,7 +13,6 @@ schemas:
   - errors: !include ../../schemas/errors.schema
   - error.schema: !include ../../schemas/error.schema
   - parameters.schema: !include ../../schemas/parameters.schema
-  - metadata.schema: !include ../../schemas/metadata.schema
 
 traits:
   - validate: !include ../../traits/validation.raml
@@ -32,9 +31,7 @@ resourceTypes:
   type:
     collection-get:
       schemaCollection: instanceCollection
-      schemaItem: instance.json
       exampleCollection: !include ../../examples/codex/instanceCollection.sample
-      exampleItem: !include ../../examples/codex/instance.sample
   get:
     is: [
       searchable: {description: "with valid searchable fields: for example title = earth", example: "title=earth"},
