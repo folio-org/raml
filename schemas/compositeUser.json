@@ -17,6 +17,14 @@
     "credentials": {
       "type": "object",
       "$ref": "mod-login/credentials.json"
-    }
+    },
+    "proxiesFor" : {
+      "type" : "array",
+      "id" : "proxyFor",
+      "items": {
+        "type" : "object",
+        "$ref" : "mod-users/proxyfor.json"
+	  }
+	}
   }
 }
