@@ -18,13 +18,13 @@
       "type": "object",
       "$ref": "mod-login/credentials.json"
     },
-    "proxiesFor" : {
-      "type" : "array",
-      "id" : "proxyFor",
+    "proxiesFor": {
+      "type": "array",
+      "id": "proxyFor",
       "items": {
-        "type" : "object",
-        "$ref" : "mod-users/proxyfor.json"
-	  }
-	}
+        "type": "object",
+        "$ref": "mod-users/proxyfor.json"
+      }
+    }
   }
 }
