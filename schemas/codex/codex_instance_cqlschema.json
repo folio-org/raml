@@ -2,50 +2,57 @@
   "name": "CODEX Instance CQL Schema",
   "description": "Supported indexes and operators in CODEX instance search",
   "indexes": [
-  { 
-    "name" : "title",
-    "type" : "string",
-    "capability" : ["search", "sort"]
-  },
-  { 
-    "name" : "publisher",
-    "type" : "string"
-  },
-  { 
-    "name" : "subject",
-    "type" : "string"
-  },
-  { 
-    "name" : "identifier",
-    "type" : "string"
-  },
-  { 
-    "name" : "location",
-    "type" : "string",
-    "capability" : ["filter"]
-  },
-  { 
-    "name" : "type",
-    "type" : "string",
-    "capability" : ["filter"]
-  }
+    {
+      "name": "title",
+      "type": "string",
+      "capability": [
+        "search",
+        "sort"
+      ]
+    },
+    {
+      "name": "publisher",
+      "type": "string"
+    },
+    {
+      "name": "subject",
+      "type": "string"
+    },
+    {
+      "name": "identifier",
+      "type": "string"
+    },
+    {
+      "name": "location",
+      "type": "string",
+      "capability": [
+        "filter"
+      ]
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "capability": [
+        "filter"
+      ]
+    }
   ],
   "operators": [
-  {
-    "type" : "AND",
-    "supported" : false
-  },
-  {
-    "type" : "OR",
-    "supported" : false
-  },
-  {
-    "type" : "NOT",
-    "supported" : false
-  },
-  {
-    "type" : "PROX",
-    "supported" : false
-  }
+    {
+      "type": "AND",
+      "supported": false
+    },
+    {
+      "type": "OR",
+      "supported": false
+    },
+    {
+      "type": "NOT",
+      "supported": false
+    },
+    {
+      "type": "PROX",
+      "supported": false
+    }
   ]
 }
