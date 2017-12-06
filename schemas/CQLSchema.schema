@@ -38,17 +38,17 @@
       "items": {
         "type": "object",
         "properties": {
-          "type" : {"type": "string", "enum": ["AND", "OR", "NOT", "PROX"]},
-          "supported": {"type": "boolean"},
+          "type": {"type": "string", "enum": ["AND", "OR", "NOT", "PROX"]},
+          "supported": {"type": "boolean"}
         },
         "additionalProperties": false,
         "required": ["type", "supported"]
       },
       "default": [
-      	{"type": "AND", "supported": true},
-      	{"type": "OR", "supported": true},
-      	{"type": "NOT", "supported": true},
-      	{"type": "PROX", "supported": false}
+        {"type": "AND", "supported": true},
+        {"type": "OR", "supported": true},
+        {"type": "NOT", "supported": true},
+        {"type": "PROX", "supported": false}
       ],
       "uniqueItems": true
     }
