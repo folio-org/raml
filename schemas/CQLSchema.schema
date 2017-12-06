@@ -45,10 +45,10 @@
         "required": ["type", "supported"]
       },
       "default": [
-      	{"type": "AND", "supported": true},
-      	{"type": "OR", "supported": true},
-      	{"type": "NOT", "supported": true},
-      	{"type": "PROX", "supported": false}
+        {"type": "AND", "supported": true},
+        {"type": "OR", "supported": true},
+        {"type": "NOT", "supported": true},
+        {"type": "PROX", "supported": false}
       ],
       "uniqueItems": true
     }
