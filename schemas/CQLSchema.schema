@@ -38,8 +38,8 @@
       "items": {
         "type": "object",
         "properties": {
-          "type" : {"type": "string", "enum": ["AND", "OR", "NOT", "PROX"]},
-          "supported": {"type": "boolean"},
+          "type": {"type": "string", "enum": ["AND", "OR", "NOT", "PROX"]},
+          "supported": {"type": "boolean"}
         },
         "additionalProperties": false,
         "required": ["type", "supported"]
