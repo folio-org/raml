@@ -11,7 +11,7 @@
     "createdByUserId": {
       "description": "ID of the user who created the record",
       "type": "string",
-      "pattern": "^[a-f0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
     },
     "createdByUsername": {
       "description": "Username of the user who created the record (when available)",
@@ -25,7 +25,7 @@
     "updatedByUserId": {
       "description": "ID of the user who last updated the record",
       "type": "string",
-      "pattern": "^[a-f0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
     },
     "updatedByUsername": {
       "description": "Username of the user who last updated the record (when available)",
