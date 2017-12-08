@@ -26,7 +26,27 @@
             },
             "default": ["search"],
             "uniqueItems": true
+          },
+          "modifiers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {"type": "string"},
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "additionalProperties": false,
+              "required": ["name"]
+            },
+            "uniqueItems": true
           }
+
         },
         "additionalProperties": false,
         "required": ["name"]
