@@ -18,6 +18,13 @@
             "enum": ["string", "number"], 
             "default": "string"
           },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "string",
+            },
+            "uniqueItems": true
+          },
           "capability": {
             "type": "array",
             "items": {
@@ -46,7 +53,6 @@
             },
             "uniqueItems": true
           }
-
         },
         "additionalProperties": false,
         "required": ["name"]
