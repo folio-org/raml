@@ -38,6 +38,14 @@
       "capability": [
         "filter"
       ]
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "capability": [
+        "filter"
+      ],
+      "values": ["kb", "local"]
     }
   ],
   "operators": [
