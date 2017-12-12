@@ -45,7 +45,7 @@
       "capability": [
         "filter"
       ],
-      "values": ["kb", "local"]
+      "values": ["kb", "local", "all"]
     }
   ],
   "operators": [
