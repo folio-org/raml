@@ -46,6 +46,15 @@
         "filter"
       ],
       "values": ["kb", "local", "all"]
+    },
+    {
+      "name": "selected",
+      "type": "string",
+      "description": "KB-specifc to filter resources selected/non-selected/both by the library",
+      "capability": [
+        "filter"
+      ],
+      "values": ["both", "yes", "no"]
     }
   ],
   "operators": [
