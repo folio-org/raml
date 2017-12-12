@@ -5,16 +5,20 @@
   "additionalProperties": false,
   "properties": {
     "id": {
-      "type": "string"
+      "type": "string",
+      "description": "the ID of the original record within its own database: since these come from various sources they may take different forms, e.g. integer, UUID"
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "description": "the primary title (or label) associated with the resource"
     },
     "altTitle": {
-      "type": "string"
+      "type": "string",
+      "description": "an alternative title for the resource. (e.g. original language version title of a movie)"
     },
     "series": {
-      "type": "string"
+      "type": "string",
+      "description": "a series title associated with the resource (e.g. Harry Potter)"
     },
     "contributor": {
       "type": "array",
@@ -36,10 +40,26 @@
       "type": "string"
     },
     "date": {
-      "type": "string"
+      "type": "string",
+      "description": "the date of publication of the resource"
     },
     "type": {
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "newsletter",
+        "report",
+        "proceedings",
+        "website",
+        "newspaper",
+        "unspecified",
+        "book",
+        "bookseries",
+        "database",
+        "thesisdissertation",
+        "streamingaudio",
+        "streamingvideo",
+        "audiobook"
+      ]
     },
     "format": {
       "type": "string"
@@ -50,27 +70,33 @@
         "type": "object",
         "properties": {
           "value": {
-            "type": "string"
+            "type": "string",
+            "description": "identifier type : e.g. ISSN"
           },
           "type": {
-            "type": "string"
+            "type": "string",
+            "description": "identifier value"
           }
         }
       },
       "additionalItems": true,
-      "uniqueItems": true
+      "uniqueItems": true,
+      "description": "an extensible set of name-value pairs of identifiers associated with the resource"
     },
     "source": {
-      "type": "string"
+      "type": "string",
+      "description": "a label indicating the source of the recent, e.g. kb, local"
     },
     "language": {
       "type": "array",
+      "description": "the set of languages used by the resource",
       "items": {
         "type": "string"
       }
     },
     "rights": {
-      "type": "string"
+      "type": "string",
+      "description": "access rights associated with the resource"
     },
     "version": {
       "type": "string"
