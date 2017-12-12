@@ -35,6 +35,7 @@
     {
       "name": "type",
       "type": "string",
+      "description": "Resource type filter, see CODEX instance schema for the list of allowed values",
       "capability": [
         "filter"
       ]
@@ -45,7 +46,16 @@
       "capability": [
         "filter"
       ],
-      "values": ["kb", "local"]
+      "values": ["kb", "local", "all"]
+    },
+    {
+      "name": "selected",
+      "type": "string",
+      "description": "KB-specifc to filter resources selected/non-selected/both by the library",
+      "capability": [
+        "filter"
+      ],
+      "values": ["both", "yes", "no"]
     }
   ],
   "operators": [
