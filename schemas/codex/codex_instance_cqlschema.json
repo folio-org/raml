@@ -35,6 +35,7 @@
     {
       "name": "type",
       "type": "string",
+      "description": "Resource type filter, see CODEX instance schema for the list of allowed values",
       "capability": [
         "filter"
       ]
