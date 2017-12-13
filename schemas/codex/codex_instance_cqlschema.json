@@ -1,6 +1,9 @@
 {
   "name": "CODEX Instance CQL Schema",
-  "description": "Supported indexes and operators in CODEX instance search",
+  "description": "Required indexes and operators in CODEX instance search. Providers should report any unsupported indexes/relations as errors.",
+  "prefix": "codex",
+  "uri": "folio.org/codex",
+  "default": true,
   "indexes": [
     {
       "name": "title",
@@ -47,15 +50,6 @@
         "filter"
       ],
       "values": ["kb", "local", "all"]
-    },
-    {
-      "name": "selected",
-      "type": "string",
-      "description": "KB-specifc to filter resources selected/non-selected/both by the library",
-      "capability": [
-        "filter"
-      ],
-      "values": ["both", "yes", "no"]
     }
   ],
   "operators": [

@@ -6,6 +6,12 @@
   "properties": {
     "name": {"type": "string"},
     "description": {"type": "string"},
+    "prefix": {"type": "string"},
+    "uri": {"type": "string"},
+    "default": {
+      "type": "boolean", 
+      "description": "If context set is default, the server will determine it automatically"
+    },
     "indexes": {
       "type": "array",
       "items": {
@@ -80,5 +86,5 @@
     }
   },
   "additionalProperties": false,
-  "required": ["name", "indexes"]
+  "required": ["name", "prefix", "uri", "default", "indexes"]
 }
