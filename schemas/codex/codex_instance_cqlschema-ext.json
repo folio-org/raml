@@ -12,7 +12,7 @@
       "capability": [
         "filter"
       ],
-      "values": ["both", "yes", "no"]
+      "values": ["all", "true", "false"]
     }
   ]
 }
