@@ -1,6 +1,9 @@
 {
   "name": "CODEX Instance CQL Schema",
   "description": "Supported indexes and operators in CODEX instance search",
+  "prefix": "codex",
+  "uri": "folio.org/codex",
+  "default": true,
   "indexes": [
     {
       "name": "title",
