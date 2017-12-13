@@ -8,7 +8,7 @@
     {
       "name": "selected",
       "type": "string",
-      "description": "KB-specifc to filter resources selected/non-selected/both by the library",
+      "description": "KB-specific to filter resources selected/non-selected/both by the library",
       "capability": [
         "filter"
       ],
