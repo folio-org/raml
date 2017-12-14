@@ -9,7 +9,7 @@
     "prefix": {"type": "string"},
     "uri": {"type": "string"},
     "default": {
-      "type": "boolean", 
+      "type": "boolean",
       "description": "If context set is default, the server will determine it automatically"
     },
     "indexes": {
@@ -20,8 +20,8 @@
           "name": {"type": "string"},
           "description": {"type": "string"},
           "type": {
-            "type": "string", 
-            "enum": ["string", "number"], 
+            "type": "string",
+            "enum": ["string", "number"],
             "default": "string"
           },
           "values": {

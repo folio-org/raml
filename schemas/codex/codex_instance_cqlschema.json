@@ -24,8 +24,8 @@
     {
       "name": "identifier",
       "type": "string",
-       "modifiers": [
-        {"name": "type", "values": ["isbn", "issn"]}
+        "modifiers": [
+          {"name": "type", "values": ["isbn", "issn"]}
       ]
     },
     {
