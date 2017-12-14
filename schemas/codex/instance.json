@@ -47,19 +47,25 @@
     "type": {
       "type": "string",
       "enum": [
-        "newsletter",
-        "report",
-        "proceedings",
-        "website",
-        "newspaper",
-        "unspecified",
-        "book",
+        "audio",
+        "audiobooks",
+        "books",
         "bookseries",
-        "database",
-        "thesisdissertation",
-        "streamingaudio",
-        "streamingvideo",
-        "audiobook"
+        "databases",
+        "ebooks",
+        "kits",
+        "maps",
+        "music",
+        "newspapers",
+        "newsletters",
+        "periodicals",
+        "posters",
+        "reports",
+        "proceedings",
+        "thesisanddissertation",
+        "unspecified",
+        "video",
+        "webresources"
       ]
     },
     "format": {
