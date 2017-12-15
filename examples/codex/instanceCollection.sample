@@ -8,7 +8,7 @@
       "contributor": [],
       "publisher": "first publisher",
       "date": "first date",
-      "type": "newsletter",
+      "type": "newsletters",
       "format": "first format",
       "identifier": [
         {
@@ -33,7 +33,7 @@
       "contributor": [],
       "publisher": "second publisher",
       "date": "second date",
-      "type": "report",
+      "type": "reports",
       "format": "second format",
       "identifier": [
         {
