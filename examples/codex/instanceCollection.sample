@@ -51,5 +51,43 @@
       "lastModified": "second lastModified"
     }
   ],
-  "totalRecords": 2
+  "totalRecords": 2,
+  "resultInfo" : {
+    "responseTime": 8.9,
+    "facets": [
+     {
+     "facetValues": [
+        {
+          "count": 15,
+          "value": "Handey1"
+        },
+        {
+          "count": 10,
+          "value": "Handey"
+        }
+      ],
+      "type": "lastName"
+     },
+     {
+     "facetValues": [
+        {
+          "count": 18,
+          "value": "true"
+        },
+        {
+          "count": 7,
+          "value": "false"
+        }
+      ],
+      "type": "active"
+    } ],
+    "diagnostics" : [ {
+      "source" : "mock1",
+      "code" : "200"
+    }, {
+      "source" : "mock2",
+      "code" : "400",
+      "message" : "unsupported index foo.bar"
+    } ]
+  }
 }
