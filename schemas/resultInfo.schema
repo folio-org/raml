@@ -32,6 +32,23 @@
         },
         "additionalProperties": false
       }
+    },
+    "diagnostics" : {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties" : {
+          "source": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "message" : {
+            "type": "string"
+          }
+        }
+      }
     }
   },
   "additionalProperties": false

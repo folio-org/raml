@@ -13,6 +13,9 @@
     },
     "totalRecords": {
       "type": "integer"
+    },
+    "resultInfo" : {
+      "$ref" : "resultInfo.schema"
     }
   },
   "required": [
