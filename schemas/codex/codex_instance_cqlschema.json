@@ -14,6 +14,14 @@
       ]
     },
     {
+      "name": "contributor",
+      "type": "string",
+      "capability": [
+        "search",
+        "sort"
+      ]
+    },
+    {
       "name": "publisher",
       "type": "string"
     },
@@ -50,6 +58,13 @@
         "filter"
       ],
       "values": ["kb", "local", "all"]
+    },
+    {
+      "name": "language",
+      "type": "string",
+      "capability": [
+        "filter"
+      ]
     }
   ],
   "operators": [
