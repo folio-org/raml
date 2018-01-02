@@ -6,6 +6,14 @@
   "default": true,
   "indexes": [
     {
+      "name": "id",
+      "type": "string",
+      "capability": [
+        "search",
+        "sort"
+      ]
+    },
+    {
       "name": "title",
       "type": "string",
       "capability": [
