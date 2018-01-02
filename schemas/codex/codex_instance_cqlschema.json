@@ -65,7 +65,15 @@
       "capability": [
         "filter"
       ]
+    },
+    {
+      "name": "classification",
+      "type": "string",
+      "capability": [
+        "filter"
+      ]
     }
+
   ],
   "operators": [
     {
