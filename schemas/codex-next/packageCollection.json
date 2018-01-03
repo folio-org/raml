@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
+  "additionalProperties": false,
   "description": "Collection of packages",
   "properties": {
     "packages": {
@@ -10,12 +11,12 @@
         "$ref": "package.json"
       }
     },
-    "totalRecords": {
-      "type": "integer"
+    "resultInfo" : {
+      "$ref" : "../resultInfo.schema"
     }
   },
   "required": [
     "packages",
-    "totalRecords"
+    "resultInfo"
   ]
 }

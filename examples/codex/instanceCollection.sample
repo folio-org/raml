@@ -51,8 +51,8 @@
       "lastModified": "second lastModified"
     }
   ],
-  "totalRecords": 2,
   "resultInfo" : {
+    "totalRecords": 2,
     "responseTime": 8.9,
     "facets": [
      {
