@@ -6,7 +6,23 @@
   "default": true,
   "indexes": [
     {
+      "name": "id",
+      "type": "string",
+      "capability": [
+        "search",
+        "sort"
+      ]
+    },
+    {
       "name": "title",
+      "type": "string",
+      "capability": [
+        "search",
+        "sort"
+      ]
+    },
+    {
+      "name": "contributor",
       "type": "string",
       "capability": [
         "search",
@@ -36,7 +52,7 @@
       ]
     },
     {
-      "name": "type",
+      "name": "resourceType",
       "type": "string",
       "description": "Resource type filter, see CODEX instance schema for the list of allowed values",
       "capability": [
@@ -50,7 +66,22 @@
         "filter"
       ],
       "values": ["kb", "local", "all"]
+    },
+    {
+      "name": "language",
+      "type": "string",
+      "capability": [
+        "filter"
+      ]
+    },
+    {
+      "name": "classification",
+      "type": "string",
+      "capability": [
+        "filter"
+      ]
     }
+
   ],
   "operators": [
     {
