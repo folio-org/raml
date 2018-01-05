@@ -6,6 +6,13 @@
   "default": true,
   "indexes": [
     {
+      "name": "cql.allRecords",
+      "type": "string",
+      "capability": [
+        "search"
+      ]
+    },
+    {
       "name": "id",
       "type": "string",
       "capability": [
