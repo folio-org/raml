@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
+  "additionalProperties": false,
   "description": "Collection of locations",
   "properties": {
     "locations": {
@@ -10,12 +11,12 @@
         "$ref": "location.json"
       }
     },
-    "totalRecords": {
-      "type": "integer"
+    "resultInfo" : {
+      "$ref" : "../resultInfo.schema"
     }
   },
   "required": [
     "locations",
-    "totalRecords"
+    "resultInfo"
   ]
 }

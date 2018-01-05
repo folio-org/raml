@@ -11,12 +11,12 @@
         "$ref": "instance.json"
       }
     },
-    "totalRecords": {
-      "type": "integer"
+    "resultInfo" : {
+      "$ref" : "../resultInfo.schema"
     }
   },
   "required": [
     "instances",
-    "totalRecords"
+    "resultInfo"
   ]
 }
