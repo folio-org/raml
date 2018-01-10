@@ -11,8 +11,8 @@
         "$ref": "item.json"
       }
     },
-    "resultInfo" : {
-      "$ref" : "../resultInfo.schema"
+    "resultInfo": {
+      "$ref": "../resultInfo.schema"
     }
   },
   "required": [

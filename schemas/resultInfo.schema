@@ -33,18 +33,18 @@
         "additionalProperties": false
       }
     },
-    "diagnostics" : {
+    "diagnostics": {
       "type": "array",
       "items": {
         "type": "object",
-        "properties" : {
+        "properties": {
           "source": {
             "type": "string"
           },
           "code": {
             "type": "string"
           },
-          "message" : {
+          "message": {
             "type": "string"
           }
         }
