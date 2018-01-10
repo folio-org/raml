@@ -40,8 +40,14 @@
     {
       "name": "identifier",
       "type": "string",
-        "modifiers": [
-          {"name": "type", "values": ["isbn", "issn"]}
+      "modifiers": [
+        {
+          "name": "type",
+          "values": [
+            "isbn",
+            "issn"
+          ]
+        }
       ]
     },
     {
@@ -65,7 +71,11 @@
       "capability": [
         "filter"
       ],
-      "values": ["kb", "local", "all"]
+      "values": [
+        "kb",
+        "local",
+        "all"
+      ]
     },
     {
       "name": "language",
@@ -81,7 +91,6 @@
         "filter"
       ]
     }
-
   ],
   "operators": [
     {
