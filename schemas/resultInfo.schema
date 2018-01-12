@@ -46,6 +46,15 @@
           },
           "message": {
             "type": "string"
+          },
+          "module": {
+            "type": "string"
+          },
+          "recordCount": {
+            "type": "integer"
+          },
+          "query": {
+            "type": "string"
           }
         }
       }
