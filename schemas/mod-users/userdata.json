@@ -120,7 +120,11 @@
     "updatedDate": {
       "type": "string",
       "format": "date-time"
-    }
+    },
+    "metadata" : {
+      "type" : "object",
+      "$ref" : "../metadata.schema"
+	}
   },
   "additionalProperties": false,
   "required": [
