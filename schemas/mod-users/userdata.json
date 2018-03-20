@@ -28,10 +28,10 @@
       "type": "object"
     },
     "proxyFor": {
-      "description" : "Deprecated",
+      "description": "Deprecated",
       "type": "array",
       "items": {
-      "type": "string"
+        "type": "string"
       }
     },
     "personal": {
@@ -124,7 +124,7 @@
     "metadata" : {
       "type" : "object",
       "$ref" : "../metadata.schema"
-	}
+    }
   },
   "additionalProperties": false,
   "required": [
