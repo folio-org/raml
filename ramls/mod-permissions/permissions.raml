@@ -19,6 +19,8 @@ schemas:
   - errors: !include ../../schemas/errors.schema
   - error.schema: !include ../../schemas/error.schema
   - parameters.schema: !include ../../schemas/parameters.schema
+  - ../metadata.schema: !include ../../schemas/metadata.schema
+
 
 traits:
   - validate: !include ../../traits/validation.raml
@@ -154,6 +156,7 @@ traits:
                 example: "Internal server error"
       put:
         description: Modify an existing user
+        is: [validate]
         body:
           application/json:
             schema: permissionUser.json
@@ -348,6 +351,7 @@ traits:
                 example: "Internal server error"
       put:
         description: Modify an existing permission
+        is: [validate]
         body:
           application/json:
             schema: permissionUpload.json
@@ -377,6 +381,11 @@ traits:
           204:
             body:
               text/plain: !!null
+          400:
+            description: "Bad request"
+            body:
+              text/plain:
+                example: "Bad request"
           404:
             description: "Permission not found"
             body:
