@@ -23,12 +23,22 @@
     "subPermissions": {
       "type": "array"
     },
+    "childOf" : {
+      "type": "array"
+	},
+	"grantedTo" : {
+      "type": "array"
+	},
     "mutable": {
       "type": "boolean"
     },
-    "visible": {
-      "type": "boolean"
-    }
+    "visible" : {
+      "type" : "boolean"
+    },
+    "metadata" : {
+      "type" : "object",
+      "$ref" : "../metadata.schema"
+	}
   },
-  "additionalProperties": false
+  "additionalProperties" : false
 }
