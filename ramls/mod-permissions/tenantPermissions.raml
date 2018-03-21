@@ -10,6 +10,11 @@ documentation:
 schemas:
   - okapiPermission.json: !include ../../schemas/mod-permissions/okapiPermission.json
   - okapiPermissionSet: !include ../../schemas/mod-permissions/okapiPermissionSet.json
+  - errors: !include ../../schemas/errors.schema
+  - error.schema: !include ../../schemas/error.schema
+
+traits:
+  - validate: !include ../../traits/validation.raml
 
 /_/tenantpermissions:
   get:
@@ -24,6 +29,7 @@ schemas:
             example: "Blah"
   post:
     description: "Load new permissionSets into the permission module when a module gets enabled for a tenant"
+    is: [validate]
     body:
       application/json:
         schema: okapiPermissionSet
