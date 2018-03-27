@@ -35,6 +35,9 @@
     "visible" : {
       "type" : "boolean"
     },
+    "dummy" : {
+      "type" : "boolean"
+	},
     "metadata" : {
       "type" : "object",
       "$ref" : "../metadata.schema"
