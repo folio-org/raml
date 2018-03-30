@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
+  "id": "/raml-util/schemas/error.schema",
   "properties": {
     "message": {
       "type": "string"
