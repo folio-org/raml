@@ -11,6 +11,10 @@
     },
     "id": {
       "type": "string"
+    },
+    "metadata" : {
+      "$ref" : "../metadata.schema",
+      "readonly" : true
     }
   },
   "additionalProperties": false,
