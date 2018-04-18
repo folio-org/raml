@@ -126,7 +126,6 @@
       "$ref" : "../metadata.schema"
     },
     "tags": {
-      "type" : "object",
       "$ref" : "../tags.schema"
     }
   },

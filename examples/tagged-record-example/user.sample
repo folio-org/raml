@@ -14,10 +14,8 @@
     "email": "jhandey@biglibrary.org",
     "phone": "2125551212"
   },
-  "tags": {
-    "taglist": [
-      "foo-tag",
-      "fizz-tag"
-    ]
-  }
+  "tags": [
+    "foo-tag",
+    "fizz-tag"
+  ]
 }
