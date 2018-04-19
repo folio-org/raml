@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "User Schema",
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "externalSystemId": {
+      "type": "string"
+    },
+    "barcode": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "type": {
+      "type": "string"
+    },
+    "patronGroup": {
+      "type": "string"
+    },
+    "meta": {
+      "type": "object"
+    },
+    "proxyFor": {
+      "description" : "Deprecated",
+      "type": "array",
+      "items": {
+      "type": "string"
+      }
+    },
+    "personal": {
+      "type": "object",
+      "properties": {
+        "lastName": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "mobilePhone": {
+          "type": "string"
+        },
+        "dateOfBirth": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "addresses": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "countryId": {
+                "type": "string"
+              },
+              "addressLine1": {
+                "type": "string"
+              },
+              "addressLine2": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "region": {
+                "type": "string"
+              },
+              "postalCode": {
+                "type": "string"
+              },
+              "addressTypeId": {
+                "type": "string"
+              },
+              "primaryAddress": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "preferredContactTypeId": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "lastName"
+      ]
+    },
+    "enrollmentDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expirationDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "createdDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "metadata" : {
+      "type" : "object",
+      "$ref" : "../metadata.schema"
+    },
+    "tags": {
+      "type" : "object",
+      "$ref" : "../tags.schema"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "id"
+  ]
+}

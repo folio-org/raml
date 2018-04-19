@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "users": {
+      "type": "array",
+      "id": "usersData",
+      "items": {
+        "type": "object",
+        "$ref": "userdata.json"
+      }
+    },
+    "totalRecords": {
+      "type": "integer"
+    },
+    "resultInfo": {
+      "$ref": "../resultInfo.schema",
+      "readonly": true
+    }
+  },
+  "required": [
+    "users",
+    "totalRecords"
+  ]
+}
