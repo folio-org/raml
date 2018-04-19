@@ -15,7 +15,7 @@
     "phone": "2125551212"
   },
   "tags": {
-    "taglist": [
+    "tagList": [
       "foo-tag",
       "fizz-tag"
     ]

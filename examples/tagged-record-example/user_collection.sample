@@ -19,7 +19,7 @@
         "email": "jhandey@biglibrary.org"
       },
       "tags": {
-        "taglist": [
+        "tagList": [
           "foo-tag",
           "fizz-tag"
         ]
