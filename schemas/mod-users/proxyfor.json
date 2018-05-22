@@ -34,6 +34,10 @@
     },
     "meta": {
       "type": "object"
+    },
+    "metadata" : {
+      "$ref" : "../metadata.schema",
+      "readonly" : true
     }
   },
   "additionalProperties": false
