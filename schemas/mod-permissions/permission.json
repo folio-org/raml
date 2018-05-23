@@ -37,7 +37,7 @@
     },
     "dummy" : {
       "type" : "boolean"
-	},
+    },
     "metadata" : {
       "type" : "object",
       "$ref" : "../metadata.schema"
