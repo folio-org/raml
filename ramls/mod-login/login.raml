@@ -1,6 +1,6 @@
 #%RAML 0.8
 title: Login
-version: v1
+version: v1.1
 baseUri: http://github.com/org/folio/mod-auth/login_module
 
 documentation:
@@ -10,10 +10,12 @@ documentation:
 schemas:
   - credentials.json: !include ../../schemas/mod-login/credentials.json
   - credentialsListObject: !include ../../schemas/mod-login/credentialsListObject.json
-  - loginCredentials: !include ../../schemas/mod-login/loginCredentials.json
+  - loginCredentials.json: !include ../../schemas/mod-login/loginCredentials.json
+  - updateCredentials.json: !include ../../schemas/mod-login/updateCredentials.json
   - errors: !include ../../schemas/errors.schema
   - error.schema: !include ../../schemas/error.schema
   - parameters.schema: !include ../../schemas/parameters.schema
+  - ../metadata.schema: !include ../../schemas/metadata.schema
 
 traits:
   - validate: !include ../../traits/validation.raml
@@ -54,19 +56,50 @@ traits:
       description: Get a new login token
       body:
         application/json:
-          schema: loginCredentials
+          schema: loginCredentials.json
       responses:
         201:
           headers:
             x-okapi-token:
           body:
             application/json:
-              schema: loginCredentials
+              schema: loginCredentials.json
         400:
           description: "Bad request"
           body:
             text/plain:
               example: "Bad request"
+        500:
+          description: "Internal server error"
+          body:
+            text/plain:
+              example: "Internal server error"
+  /update:
+    post:
+      description: Self-update existing credentials
+      body:
+        application/json:
+          schema: updateCredentials.json
+      responses:
+        204:
+          description: "Successful update"
+          body:
+            text/plain: !!null
+        400:
+          description: "Bad request"
+          body:
+            text/plain:
+              example: "Bad request"
+        401:
+          description: "Unauthorized"
+          body:
+            text/plain:
+              example: "Unauthorized"
+        422:
+          description: "Unprocessable Entity"
+          body:
+            application/json:
+              schema: errors
         500:
           description: "Internal server error"
           body:
@@ -100,7 +133,7 @@ traits:
       is: [validate]
       body:
         application/json:
-          schema: loginCredentials
+          schema: loginCredentials.json
       responses:
         201:
           body:
@@ -138,12 +171,12 @@ traits:
         description: Modify a user's login credentials
         body:
           application/json:
-            schema: loginCredentials
+            schema: loginCredentials.json
         responses:
           200:
             body:
               application/json:
-                schema: loginCredentials
+                schema: loginCredentials.json
           404:
             description: "User not found"
             body:
