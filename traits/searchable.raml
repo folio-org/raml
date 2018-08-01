@@ -1,15 +1,8 @@
+#%RAML 1.0 Trait
       queryParameters:
         query:
           description: |
-            A query expressed as a CQL string
-            (see [dev.folio.org/reference/glossary#cql](https://dev.folio.org/reference/glossary#cql))
-            using valid searchable fields.
-            The first example below shows the general form of a full CQL query,
-            but those fields might not be relevant in this context.
-
-            <<description>>
+            JSON array [{"field1","value1","operator1"},{"field2","value2","operator2"},...,{"fieldN","valueN","operatorN"}] <<description>>
           example: |
-            (username=="ab*" or personal.firstName=="ab*" or personal.lastName=="ab*") and active=="true" sortby personal.lastName personal.firstName barcode
-
             <<example>>
           required: false

@@ -1,7 +1,10 @@
-    responses:
-      422:
-        description: "Validation errors"
-        body:
-          application/json:
-            schema: errors
-            example: !include ../examples/errors.sample
+#%RAML 1.0 Trait
+responses:
+  422:
+    description: "Validation errors"
+    body:
+      application/json:
+        schema: errors
+        example: 
+          strict: false
+          value: !include ../examples/errors.sample
