@@ -9,7 +9,9 @@
             body:
               application/json:
                 schema: <<schema>>
-                example: <<exampleCollection>>
+                example: 
+                  strict: false
+                  value: <<exampleCollection>>                   
           400:
             description: "Bad request, e.g. malformed request body or query parameter. Details of the error (e.g. name of the parameter or line/character number with malformed data) provided in the response."
             body:
