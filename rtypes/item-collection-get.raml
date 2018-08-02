@@ -10,8 +10,10 @@
           description: "Returns item with a given ID"
           body:
             application/json:
-              example: <<exampleItem>>
               schema: <<schema>>
+              example: 
+                strict: false
+                value: <<exampleItem>>                  
         401:
           description: "Not authorized to perform requested action"
           body:
