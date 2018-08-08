@@ -31,6 +31,10 @@
     },
     "visible": {
       "type": "boolean"
+    },
+    "metadata" : {
+      "type" : "object",
+      "$ref" : "../metadata.schema"
     }
   },
   "additionalProperties": false
