@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Login Attempts Schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    },
+    "lastAttempt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "attemptCount": {
+      "type": "integer"
+    }
+  }
+}
