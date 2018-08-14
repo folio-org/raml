@@ -1,38 +1,38 @@
-#%RAML 0.8
+#%RAML 1.0
 title: Codex API
 baseUri: https://github.com/folio-org/mod-codex-ekb
 version: v1
 
 documentation:
-  - title: Codex API
-    content: This documents the FOLIO codex API
+ - title: Codex API
+   content: This documents the FOLIO codex API
 
-schemas:
-  - instance.json: !include ../../schemas/codex/instance.json
-  - instanceCollection: !include ../../schemas/codex/instanceCollection.json
-  - errors: !include ../../schemas/errors.schema
-  - error.schema: !include ../../schemas/error.schema
-  - parameters.schema: !include ../../schemas/parameters.schema
-  - ../resultInfo.schema: !include ../../schemas/resultInfo.schema
+types:
+  instance: !include ../../schemas/codex/instance.json
+  instanceCollection: !include ../../schemas/codex/instanceCollection.json
+  errors: !include ../../schemas/errors.schema
+  error: !include ../../schemas/error.schema
+  parameters: !include ../../schemas/parameters.schema
+  resultInfo: !include ../../schemas/resultInfo.schema
 
 traits:
-  - validate: !include ../../traits/validation.raml
-  - secured: !include ../../traits/auth.raml
-  - language: !include ../../traits/language.raml
-  - pageable: !include ../../traits/pageable.raml
-  - searchable: !include ../../traits/searchable.raml
+  validate: !include ../../traits/validation.raml
+  secured: !include ../../traits/auth.raml
+  language: !include ../../traits/language.raml
+  pageable: !include ../../traits/pageable.raml
+  searchable: !include ../../traits/searchable.raml
 
 resourceTypes:
-  - collection-get: !include ../../rtypes/collection-get.raml
-  - collection-item-get: !include ../../rtypes/item-collection-get.raml
+  collection-get: !include ../../rtypes/collection-get.raml
+  collection-item-get: !include ../../rtypes/item-collection-get.raml
 
 /codex-instances:
   displayName: Codex instances
   description: Codex instance collection
   type:
     collection-get:
-      schemaCollection: instanceCollection
-      exampleCollection: !include ../../examples/codex/instanceCollection.sample
+      schema: instanceCollection
+      exampleItem: !include ../../examples/codex/instanceCollection.sample
   get:
     is: [
       searchable: {description: "with valid searchable fields: for example title = earth", example: "title=earth"},
@@ -44,5 +44,5 @@ resourceTypes:
     description: Get a specific codex instance
     type:
       collection-item-get:
-        schema: instance.json
+        schema: instance
         exampleItem: !include ../../examples/codex/instance.sample

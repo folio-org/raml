@@ -8,11 +8,11 @@
       "type": "array",
       "items": {
         "type": "object",
-        "$ref": "instance.json"
+        "$ref": "instance"
       }
     },
     "resultInfo": {
-      "$ref": "../resultInfo.schema"
+      "$ref": "resultInfo"
     }
   },
   "required": [
