@@ -7,7 +7,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "$ref": "error"
+        "$ref": "error.schema"
       }
     },
     "total_records": {
