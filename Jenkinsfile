@@ -29,8 +29,10 @@ pipeline {
                           credentialsId: 'jenkins-aws', 
                           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
           sh 'aws s3 sync folio-api-docs s3://foliodocs/api'
+        }
       }
     }
+    
 
   } // end stages
 
