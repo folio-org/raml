@@ -1,6 +1,8 @@
 
 pipeline {
 
+  options(buildDiscarder(logRotator(numToKeepStr: '30', artifactNumToKeepStr: '30'))
+
   agent {
     node {
       label 'jenkins-slave-all'
