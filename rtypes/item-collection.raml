@@ -12,9 +12,9 @@
           body:
             application/json:
               type: <<schema>>
-              example: 
+              example:
                 strict: false
-                value: <<exampleItem>>              
+                value: <<exampleItem>>
         404:
           description: "Item with a given ID not found"
           body:
@@ -56,9 +56,9 @@
       body:
         application/json:
           type: <<schema>>
-          example: 
+          example:
             strict: false
-            value: <<exampleItem>>             
+            value: <<exampleItem>>
       responses:
         204:
           description: "Item successfully updated"
