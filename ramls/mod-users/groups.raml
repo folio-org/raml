@@ -1,4 +1,4 @@
-#%RAML 0.8
+#%RAML 1.0
 title: User Groups
 version: v1.0.1
 baseUri: http://github.com/org/folio/mod-users
@@ -7,28 +7,20 @@ documentation:
   - title: mod-users Groups API
     content: This documents the API calls that can be made to query and manage user groups of the system
 
-schemas:
-  - usergroup.json: !include ../../schemas/mod-users/usergroup.json
-  - usergroups: !include ../../schemas/mod-users/usergroups.json
-  - userdata.json: !include ../../schemas/mod-users/userdata.json
-  - userdataCollection: !include ../../schemas/mod-users/userdataCollection.json
-  - errors: !include ../../schemas/errors.schema
-  - error.schema: !include ../../schemas/error.schema
-  - parameters.schema: !include ../../schemas/parameters.schema
-  - ../resultInfo.schema: !include ../../schemas/resultInfo.schema
-  - ../metadata.schema: !include ../../schemas/metadata.schema
-  - ../tags.schema: !include ../../schemas/tags.schema
+types:
+  usergroup: !include ../../schemas/mod-users/usergroup.json
+  usergroups: !include ../../schemas/mod-users/usergroups.json
+  errors: !include ../../schemas/errors.schema
 
 traits:
-  - secured: !include ../../traits/auth.raml
-  - pageable: !include ../../traits/pageable.raml
-  - searchable: !include ../../traits/searchable.raml
-  - language: !include ../../traits/language.raml
-  - validate: !include ../../traits/validation.raml
+  pageable: !include ../../traits/pageable.raml
+  searchable: !include ../../traits/searchable.raml
+  language: !include ../../traits/language.raml
+  validate: !include ../../traits/validation.raml
 
 resourceTypes:
-  - collection: !include ../../rtypes/collection.raml
-  - collection-item: !include ../../rtypes/item-collection.raml
+  collection: !include ../../rtypes/collection.raml
+  collection-item: !include ../../rtypes/item-collection.raml
 
 /groups:
   type:
@@ -36,7 +28,7 @@ resourceTypes:
       exampleCollection: !include ../../examples/mod-users/groups.sample
       exampleItem: !include ../../examples/mod-users/group.sample
       schemaCollection: usergroups
-      schemaItem: usergroup.json
+      schemaItem: usergroup
   get:
     is: [
       searchable: {description: "", example: "group=*grad*"},
@@ -50,4 +42,4 @@ resourceTypes:
     type:
       collection-item:
         exampleItem: !include ../../examples/mod-users/group.sample
-        schema: usergroup.json
+        schema: usergroup
