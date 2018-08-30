@@ -1,4 +1,4 @@
-#%RAML 0.8
+#%RAML 1.0
 title: Users
 version: v1
 baseUri: http://github.com/org/folio/mod-users
@@ -7,30 +7,24 @@ documentation:
   - title: mod-users API
     content: This documents the API calls that can be made to query and manage users of the system
 
-schemas:
-  - userdata.json: !include ../../schemas/mod-users/userdata.json
-  - userdataCollection: !include ../../schemas/mod-users/userdataCollection.json
-  - errors: !include ../../schemas/errors.schema
-  - error.schema: !include ../../schemas/error.schema
-  - parameters.schema: !include ../../schemas/parameters.schema
-  - ../resultInfo.schema: !include ../../schemas/resultInfo.schema
-  - ../metadata.schema: !include ../../schemas/metadata.schema
-  - ../tags.schema: !include ../../schemas/tags.schema
+types:
+  userdata: !include ../../schemas/mod-users/userdata.json
+  userdataCollection: !include ../../schemas/mod-users/userdataCollection.json
+  errors: !include ../../schemas/errors.schema
 
 traits:
-  - secured: !include ../../traits/auth.raml
-  - orderable: !include ../../traits/orderable.raml
-  - pageable: !include ../../traits/pageable.raml
-  - searchable: !include ../../traits/searchable.raml
-  - language: !include ../../traits/language.raml
-  - validate: !include ../../traits/validation.raml
-  - facets: !include ../../traits/facets.raml
+  orderable: !include ../../traits/orderable.raml
+  pageable: !include ../../traits/pageable.raml
+  searchable: !include ../../traits/searchable.raml
+  language: !include ../../traits/language.raml
+  validate: !include ../../traits/validation.raml
+  facets: !include ../../traits/facets.raml
 
 resourceTypes:
-  - collection: !include ../../rtypes/collection.raml
-  - collection-item: !include ../../rtypes/item-collection.raml
-  - get-only: !include ../../rtypes/get-only.raml
-  - post-empty-body: !include ../../rtypes/post-empty-body.raml
+  collection: !include ../../rtypes/collection.raml
+  collection-item: !include ../../rtypes/item-collection.raml
+  get-only: !include ../../rtypes/get-only.raml
+  post-empty-body: !include ../../rtypes/post-empty-body.raml
 
 /users:
   type:
@@ -38,7 +32,7 @@ resourceTypes:
       exampleCollection: !include ../../examples/mod-users/user_collection.sample
       exampleItem: !include ../../examples/mod-users/user.sample
       schemaCollection: userdataCollection
-      schemaItem: userdata.json
+      schemaItem: userdata
   get:
     is: [
       searchable: {description: "", example: "active=true sortBy username"},
@@ -54,6 +48,6 @@ resourceTypes:
     type:
       collection-item:
         exampleItem: !include ../../examples/mod-users/user.sample
-        schema: userdata.json
+        schema: userdata
     get:
       description: Get a single user
