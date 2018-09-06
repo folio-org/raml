@@ -21,7 +21,16 @@ pipeline {
       }
     }
 
+    stage('Lint raml-cop') {
+      steps {
+        runLintRamlCop()
+      }
+    }
+
     stage('Publish API Docs') {
+      when {
+        branch 'master'
+      }
       steps {
         sh 'python3 /usr/local/bin/generate_api_docs.py -r raml -l info -o folio-api-docs'
         withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', 
