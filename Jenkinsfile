@@ -21,6 +21,12 @@ pipeline {
       }
     }
 
+    stage('Lint raml-cop') {
+      steps {
+        runLintRamlCop()
+      }
+    }
+
     stage('Publish API Docs') {
       steps {
         sh 'python3 /usr/local/bin/generate_api_docs.py -r raml -l info -o folio-api-docs'
