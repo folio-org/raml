@@ -8,7 +8,7 @@ documentation:
     content: This documents the API calls that can be made to query and manage user address types of the system
 
 types:
-  addresstype: !include ../../schemas/mod-users/addresstype.json
+  addressType: !include ../../schemas/mod-users/addresstype.json
   addresstypeCollection: !include ../../schemas/mod-users/addresstypeCollection.json
   errors: !include ../../schemas/errors.schema
 
@@ -28,7 +28,7 @@ resourceTypes:
       exampleCollection: !include ../../examples/mod-users/addresstypeCollection.sample
       exampleItem: !include ../../examples/mod-users/addresstype.sample
       schemaCollection: addresstypeCollection
-      schemaItem: addresstype
+      schemaItem: addressType
   get:
     is: [
       searchable: {description: "", example: "addressType=primary"},
@@ -42,4 +42,4 @@ resourceTypes:
     type:
       collection-item:
         exampleItem: !include ../../examples/mod-users/addresstype.sample
-        schema: addresstype
+        schema: addressType

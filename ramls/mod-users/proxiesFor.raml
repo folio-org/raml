@@ -8,7 +8,7 @@ documentation:
     content: This documents the API calls that can be made to query and manage proxy relationships for users
 
 types:
-  proxyfor.json: !include ../../schemas/mod-users/proxyfor.json
+  proxiesFor: !include ../../schemas/mod-users/proxyfor.json
   proxyforCollection: !include ../../schemas/mod-users/proxyforCollection.json
   errors: !include ../../schemas/errors.schema
 
@@ -28,7 +28,7 @@ resourceTypes:
       exampleCollection: !include ../../examples/mod-users/proxyforCollection.sample
       exampleItem: !include ../../examples/mod-users/proxyfor.sample
       schemaCollection: proxyforCollection
-      schemaItem: proxyfor.json
+      schemaItem: proxiesFor
   get:
     is : [
       searchable: {description: "with valid searchable fields", example: "name=aaa"},
@@ -42,7 +42,7 @@ resourceTypes:
     type:
       collection-item:
         exampleItem: !include ../../examples/mod-users/proxyfor.sample
-        schema: proxyfor.json
+        schema: proxiesFor
 
 
 

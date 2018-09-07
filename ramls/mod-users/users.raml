@@ -8,7 +8,7 @@ documentation:
     content: This documents the API calls that can be made to query and manage users of the system
 
 types:
-  userdata: !include ../../schemas/mod-users/userdata.json
+  user: !include ../../schemas/mod-users/userdata.json
   userdataCollection: !include ../../schemas/mod-users/userdataCollection.json
   errors: !include ../../schemas/errors.schema
 
@@ -32,7 +32,7 @@ resourceTypes:
       exampleCollection: !include ../../examples/mod-users/user_collection.sample
       exampleItem: !include ../../examples/mod-users/user.sample
       schemaCollection: userdataCollection
-      schemaItem: userdata
+      schemaItem: user
   get:
     is: [
       searchable: {description: "", example: "active=true sortBy username"},
@@ -48,6 +48,6 @@ resourceTypes:
     type:
       collection-item:
         exampleItem: !include ../../examples/mod-users/user.sample
-        schema: userdata
+        schema: user
     get:
       description: Get a single user
