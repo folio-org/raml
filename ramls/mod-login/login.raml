@@ -12,6 +12,7 @@ types:
   credentialsListObject: !include ../../schemas/mod-login/credentialsListObject.json
   loginCredentials: !include ../../schemas/mod-login/loginCredentials.json
   updateCredentials: !include ../../schemas/mod-login/updateCredentials.json
+  loginAttempts: !include ../../schemas/mod-login/loginAttempts.json
   errors: !include ../../schemas/errors.schema
 
 traits:
@@ -46,6 +47,25 @@ traits:
         required: false
         type: string
 /authn:
+  /loginAttempts:
+    /{id}:
+      get:
+        description: Get login attempts for a single user
+        responses:
+          200:
+            body:
+              application/json:
+                schema: loginAttempts
+          404:
+            description: "User not found"
+            body:
+              text/plain:
+                example: "User not found"
+          500:
+            description: "Internal server error"
+            body:
+              text/plain:
+                example: "Internal server error"
   /login:
     post:
       description: Get a new login token
