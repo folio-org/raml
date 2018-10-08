@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Codex Instance Schema",
+  "description": "Codex Instance Schema",
   "type": "object",
   "additionalProperties": false,
   "properties": {
@@ -22,15 +23,18 @@
     },
     "contributor": {
       "type": "array",
+      "description": "list of contributors to the resource",
       "items": {
         "type": "object",
         "additionalProperties": false,
         "properties": {
           "type": {
-            "type": "string"
+            "type": "string",
+            "description": "type of contributor to the resource"
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "name of contributor to the resource"
           }
         }
       },
@@ -38,7 +42,8 @@
       "uniqueItems": true
     },
     "publisher": {
-      "type": "string"
+      "type": "string",
+      "description": "name of publisher of the resource"
     },
     "date": {
       "type": "string",
@@ -46,6 +51,7 @@
     },
     "type": {
       "type": "string",
+      "description": "content type of the resource",
       "enum": [
         "audio",
         "audiobooks",
@@ -69,7 +75,8 @@
       ]
     },
     "format": {
-      "type": "string"
+      "type": "string",
+      "description": "format of the resource"
     },
     "identifier": {
       "type": "array",
@@ -107,10 +114,12 @@
       "description": "access rights associated with the resource"
     },
     "version": {
-      "type": "string"
+      "type": "string",
+      "description": "version of the resource"
     },
     "lastModified": {
-      "type": "string"
+      "type": "string",
+      "description": "date/time when this resource was last modified"
     }
   },
   "required": [

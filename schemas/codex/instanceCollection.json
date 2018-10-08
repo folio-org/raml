@@ -6,6 +6,7 @@
   "properties": {
     "instances": {
       "type": "array",
+      "description": "Collection of instances",
       "items": {
         "type": "object",
         "$ref": "instance.json"
