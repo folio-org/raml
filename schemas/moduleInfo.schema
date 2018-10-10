@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Information for module operations for a tenant",
   "type": "object",
   "properties": {
     "module_from": {
