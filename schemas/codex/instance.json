@@ -41,6 +41,26 @@
       "additionalItems": true,
       "uniqueItems": true
     },
+    "subject": {
+      "type": "array",
+      "description": "list of subjects this resource belongs to",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "type of subject"
+          },
+          "name": {
+            "type": "string",
+            "description": "name of subject"
+          }
+        }
+      },
+      "additionalItems": true,
+      "uniqueItems": true
+    },
     "publisher": {
       "type": "string",
       "description": "name of publisher of the resource"
