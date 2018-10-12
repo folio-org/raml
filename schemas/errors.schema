@@ -4,6 +4,7 @@
   "type": "object",
   "properties": {
     "errors": {
+      "description": "List of errors",
       "id": "errors",
       "type": "array",
       "items": {

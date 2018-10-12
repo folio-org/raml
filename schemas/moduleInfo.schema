@@ -4,9 +4,11 @@
   "type": "object",
   "properties": {
     "module_from": {
+      "description": "The module ID that is being upgraded or disabled",
       "type": "string"
     },
     "module_to": {
+      "description": "The module ID that is being upgraded or enabled",
       "type": "string"
     }
   },
