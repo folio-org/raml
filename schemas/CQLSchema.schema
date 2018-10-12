@@ -4,10 +4,18 @@
   "description": "JSON schema for capturing CQL search schemas",
   "type": "object",
   "properties": {
-    "name": {"type": "string"},
-    "description": {"type": "string"},
-    "prefix": {"type": "string"},
-    "uri": {"type": "string"},
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "prefix": {
+      "type": "string"
+    },
+    "uri": {
+      "type": "string"
+    },
     "default": {
       "type": "boolean",
       "description": "If context set is default, the server will determine it automatically"
@@ -17,11 +25,18 @@
       "items": {
         "type": "object",
         "properties": {
-          "name": {"type": "string"},
-          "description": {"type": "string"},
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
           "type": {
             "type": "string",
-            "enum": ["string", "number"],
+            "enum": [
+              "string",
+              "number"
+            ],
             "default": "string"
           },
           "values": {
@@ -35,9 +50,15 @@
             "type": "array",
             "items": {
               "type": "string",
-              "enum": ["search", "sort", "filter"]
+              "enum": [
+                "search",
+                "sort",
+                "filter"
+              ]
             },
-            "default": ["search"],
+            "default": [
+              "search"
+            ],
             "uniqueItems": true
           },
           "modifiers": {
@@ -45,7 +66,9 @@
             "items": {
               "type": "object",
               "properties": {
-                "name": {"type": "string"},
+                "name": {
+                  "type": "string"
+                },
                 "values": {
                   "type": "array",
                   "items": {
@@ -55,13 +78,17 @@
                 }
               },
               "additionalProperties": false,
-              "required": ["name"]
+              "required": [
+                "name"
+              ]
             },
             "uniqueItems": true
           }
         },
         "additionalProperties": false,
-        "required": ["name"]
+        "required": [
+          "name"
+        ]
       },
       "uniqueItems": true
     },
@@ -70,21 +97,52 @@
       "items": {
         "type": "object",
         "properties": {
-          "type": {"type": "string", "enum": ["AND", "OR", "NOT", "PROX"]},
-          "supported": {"type": "boolean"}
+          "type": {
+            "type": "string",
+            "enum": [
+              "AND",
+              "OR",
+              "NOT",
+              "PROX"
+            ]
+          },
+          "supported": {
+            "type": "boolean"
+          }
         },
         "additionalProperties": false,
-        "required": ["type", "supported"]
+        "required": [
+          "type",
+          "supported"
+        ]
       },
       "default": [
-        {"type": "AND", "supported": true},
-        {"type": "OR", "supported": true},
-        {"type": "NOT", "supported": true},
-        {"type": "PROX", "supported": false}
+        {
+          "type": "AND",
+          "supported": true
+        },
+        {
+          "type": "OR",
+          "supported": true
+        },
+        {
+          "type": "NOT",
+          "supported": true
+        },
+        {
+          "type": "PROX",
+          "supported": false
+        }
       ],
       "uniqueItems": true
     }
   },
   "additionalProperties": false,
-  "required": ["name", "prefix", "uri", "default", "indexes"]
+  "required": [
+    "name",
+    "prefix",
+    "uri",
+    "default",
+    "indexes"
+  ]
 }
