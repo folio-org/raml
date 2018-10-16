@@ -31,6 +31,12 @@
           "type": {
             "type": "string",
             "description": "type of contributor to the resource"
+<<<<<<< HEAD
+          },
+          "name": {
+            "type": "string",
+            "description": "name of contributor to the resource"
+=======
           },
           "name": {
             "type": "string",
@@ -55,6 +61,7 @@
           "name": {
             "type": "string",
             "description": "name of subject"
+>>>>>>> 8aa6c599dcfa60290eb99d1caa30a8247c5a89ed
           }
         }
       },
