@@ -5,7 +5,7 @@
 # - searchable: !include traits/searchable.raml
 
     description: Collection of <<resourcePathName|!singularize>> items.
-    is: [secured, language]
+    is: [language]
 
     get:
       description: Get the file content
@@ -41,12 +41,14 @@
         Use the "multipart-form/data" content type to upload a file which content will become the file-content
       body:
         multipart/form-data:
-          formParameters:
+          properties:
             file:
               description: The file to be uploaded
               required: true
               type: file
-              example: <<exampleItem>>
+              example:
+                strict: false
+                value: <<exampleItem>>
 
       responses:
         204:

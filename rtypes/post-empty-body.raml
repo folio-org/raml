@@ -1,5 +1,5 @@
 
-      is: [secured, language]
+      is: [language]
       post:
         responses:
           201:
@@ -9,8 +9,10 @@
                 description: URI to the created <<resourcePathName|!singularize>> item
             body:
               application/json:
-                example: <<exampleItem>>
-                schema: <<schema>>
+                type: <<schema>>
+                example:
+                  strict: false
+                  value: <<exampleItem>>
           400:
             description: "Bad request, e.g. malformed request body or query parameter. Details of the error (e.g. name of the parameter or line/character number with malformed data) provided in the response."
             body:

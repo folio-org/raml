@@ -1,26 +1,25 @@
-#%RAML 0.8
+#%RAML 1.0
 
 title: Tenant API
 baseUri: http://localhost:8081/{version}
 version: v1
 
 traits:
-  - secured: !include ../traits/auth.raml
-  - validate: !include ../traits/validation.raml
-schemas:
-  - tenantAttributes: !include ../schemas/moduleInfo.schema
-  - errors: !include ../schemas/errors.schema
-  - error.schema: !include ../schemas/error.schema
-  - parameters.schema: !include ../schemas/parameters.schema
+  validate: !include ../traits/validation.raml
+types:
+  tenantAttributes: !include ../schemas/moduleInfo.schema
+  errors: !include ../schemas/errors.schema
 
 /_/tenant:
   post:
     description: Provision a new / update an existing tenant
-    is: [secured, validate]
+    is: [validate]
     body:
       application/json:
-        schema: tenantAttributes
-        example: !include ../examples/moduleInfo.sample
+        type: tenantAttributes
+        example:
+          strict: false
+          value: !include ../examples/moduleInfo.sample
     responses:
       201:
         description: "tenant id added successfully, returns a list of commands that have failed while initializing the tenant"
@@ -39,7 +38,6 @@ schemas:
             example: "Internal server error, contact administrator"
   get:
     description: Does tenant id already exist
-    is: [secured]
     responses:
       200:
         description: "true or false indicator"
@@ -53,7 +51,6 @@ schemas:
             example: "Internal server error, contact administrator"
   delete:
     description: drop tenant id
-    is: [secured]
     responses:
       204:
         description: "Delete succeeded"

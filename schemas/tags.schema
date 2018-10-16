@@ -3,11 +3,12 @@
   "title": "tags",
   "description": "List of simple tags that can be added to an object",
   "type": "object",
-    "properties": {
-      "tagList": {
-        "type": "array",
-        "items": {
-          "type": "string"
+  "properties": {
+    "tagList": {
+      "description": "List of tags",
+      "type": "array",
+      "items": {
+        "type": "string"
       }
     }
   },

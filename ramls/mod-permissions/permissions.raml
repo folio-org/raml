@@ -1,4 +1,4 @@
-#%RAML 0.8
+#%RAML 1.0
 title: Permissions
 version: v1
 baseUri: http://github.com/org/folio/mod-auth/permissions
@@ -7,77 +7,72 @@ documentation:
   - title: mod-permissions API
     content: This module is responsible for managing and retrieving permissions in the FOLIO system
 
-schemas:
-  - permission.json: !include ../../schemas/mod-permissions/permission.json
-  - permission-patch: !include ../../schemas/mod-permissions/permission.json
-  - permissionNameObject: !include ../../schemas/mod-permissions/permissionNameObject.json
-  - permissionListObject: !include ../../schemas/mod-permissions/permissionListObject.json
-  - permissionUser.json: !include ../../schemas/mod-permissions/permissionUser.json
-  - permissionUserListObject: !include ../../schemas/mod-permissions/permissionUserListObject.json
-  - permissionNameListObject: !include ../../schemas/mod-permissions/permissionNameListObject.json
-  - permissionUpload.json: !include ../../schemas/mod-permissions/permissionUpload.json
-  - errors: !include ../../schemas/errors.schema
-  - error.schema: !include ../../schemas/error.schema
-  - parameters.schema: !include ../../schemas/parameters.schema
-  - ../metadata.schema: !include ../../schemas/metadata.schema
-
+types:
+  permission: !include ../../schemas/mod-permissions/permission.json
+  permissionNameObject: !include ../../schemas/mod-permissions/permissionNameObject.json
+  permissionListObject: !include ../../schemas/mod-permissions/permissionListObject.json
+  permissionUser: !include ../../schemas/mod-permissions/permissionUser.json
+  permissionUserListObject: !include ../../schemas/mod-permissions/permissionUserListObject.json
+  permissionNameListObject: !include ../../schemas/mod-permissions/permissionNameListObject.json
+  permissionUpload: !include ../../schemas/mod-permissions/permissionUpload.json
+  errors: !include ../../schemas/errors.schema
 
 traits:
-  - validate: !include ../../traits/validation.raml
-  - pageable:
-      queryParameters:
-        length:
-          description: "The maximum number of results to return."
-          required: false
-          type: integer
-          example: 10
-          minimum: 1
-          default: 10
-          maximum: 1000
-        start:
-          description: "The starting index in a list of results (starts at one)."
-          required: false
-          type: integer
-          minimum: 1
-          default: 1
-          maximum: 1000
-  - sortable:
-      queryParameters:
-        sortBy:
-          description: "A comma-separated list of fieldnames to sort by"
-          required: false
-          type: string
-  - queryable:
-      queryParameters:
-        query:
-          description: "A query string to filter users based on matching criteria in fields."
-          required: false
-          type: string
-  - byPermission:
-      queryParameters:
-        hasPermissions:
-          description: "A list of permissions that any returned users must possess."
-          required: false
-          type: string
-  - byMember:
-      queryParameters:
-        memberOf:
-          description: "A list of permission names that any returned permission must be a sub-permission of."
-          required: false
-          type: string
-  - byOwner:
-      queryParameters:
-        ownedBy:
-          description: "A list of user names that any returned permissions must belong to."
-          required: false
-          type: string
-  - indexSelectable:
-      queryParameters:
-        indexField:
-          description: "Specify a field other than 'id' to look up the permission user by"
-          required: false
-          type: string
-          example: "userId"
+  validate: !include ../../traits/validation.raml
+  pageable:
+    queryParameters:
+      length:
+        description: "The maximum number of results to return."
+        required: false
+        type: integer
+        example: 10
+        minimum: 1
+        default: 10
+        maximum: 1000
+      start:
+        description: "The starting index in a list of results (starts at one)."
+        required: false
+        type: integer
+        minimum: 1
+        default: 1
+        maximum: 1000
+  sortable:
+    queryParameters:
+      sortBy:
+        description: "A comma-separated list of fieldnames to sort by"
+        required: false
+        type: string
+  queryable:
+    queryParameters:
+      query:
+        description: "A query string to filter users based on matching criteria in fields."
+        required: false
+        type: string
+  byPermission:
+    queryParameters:
+      hasPermissions:
+        description: "A list of permissions that any returned users must possess."
+        required: false
+        type: string
+  byMember:
+    queryParameters:
+      memberOf:
+        description: "A list of permission names that any returned permission must be a sub-permission of."
+        required: false
+        type: string
+  byOwner:
+    queryParameters:
+      ownedBy:
+        description: "A list of user names that any returned permissions must belong to."
+        required: false
+        type: string
+  indexSelectable:
+    queryParameters:
+      indexField:
+        description: "Specify a field other than 'id' to look up the permission user by"
+        required: false
+        type: string
+        example: "userId"
 
 /perms:
   /users:
@@ -93,7 +88,7 @@ traits:
         200:
           body:
             application/json:
-              schema: permissionUserListObject
+              type: permissionUserListObject
         400:
           description: "Bad request"
           body:
@@ -114,12 +109,12 @@ traits:
       is: [validate]
       body:
         application/json:
-          schema: permissionUser.json
+          type: permissionUser
       responses:
         201:
           body:
             application/json:
-              schema: permissionUser.json
+              type: permissionUser
         400:
           description: "Bad request"
           body:
@@ -138,7 +133,7 @@ traits:
           200:
             body:
               application/json:
-                schema: permissionUser.json
+                type: permissionUser
           403:
             description: "Access Denied"
             body:
@@ -159,12 +154,12 @@ traits:
         is: [validate]
         body:
           application/json:
-            schema: permissionUser.json
+            type: permissionUser
         responses:
           200:
             body:
               application/json:
-                schema: permissionUser.json
+                type: permissionUser
           400:
             description: "Bad request"
             body:
@@ -218,7 +213,7 @@ traits:
               description: "An object of returned permissions"
               body:
                 application/json:
-                  schema: permissionNameListObject
+                  type: permissionNameListObject
             403:
               description: "Access Denied"
               body:
@@ -239,13 +234,13 @@ traits:
           is: [validate, indexSelectable]
           body:
             application/json:
-              schema: permissionNameObject
+              type: permissionNameObject
           responses:
             200:
               description: "The added permission"
               body:
                 application/json:
-                  schema: permissionNameObject
+                  type: permissionNameObject
             400:
               description: "Bad request"
               body:
@@ -303,7 +298,7 @@ traits:
         200:
           body:
             application/json:
-              schema: permissionListObject
+              type: permissionListObject
         400:
           description: "Bad request"
           body:
@@ -319,13 +314,13 @@ traits:
       is: [validate]
       body:
         application/json:
-          schema: permissionUpload.json
+          type: permissionUpload
       responses:
         201:
           body:
             application/json:
-              schema:
-                permissionUpload.json
+              type:
+                permissionUpload
         400:
           description: "Bad request"
           body:
@@ -343,7 +338,7 @@ traits:
           200:
             body:
               application/json:
-                schema: permission.json
+                type: permission
           404:
             description: "Permission not found"
             body:
@@ -359,12 +354,12 @@ traits:
         is: [validate]
         body:
           application/json:
-            schema: permissionUpload.json
+            type: permissionUpload
         responses:
           200:
             body:
               application/json:
-                schema: permissionUpload.json
+                type: permissionUpload
           400:
             description: "Bad request"
             body:

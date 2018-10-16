@@ -1,8 +1,10 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "A set of errors",
   "type": "object",
   "properties": {
     "errors": {
+      "description": "List of errors",
       "id": "errors",
       "type": "array",
       "items": {

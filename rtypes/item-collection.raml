@@ -1,6 +1,7 @@
-
+#%RAML 1.0 ResourceType
+# item-collection.raml
     description: Entity representing a <<resourcePathName|!singularize>>
-    is: [secured, language]
+    is: [language]
 
     get:
       description: |
@@ -10,8 +11,10 @@
           description: "Returns item with a given ID"
           body:
             application/json:
-              example: <<exampleItem>>
-              schema: <<schema>>
+              type: <<schema>>
+              example:
+                strict: false
+                value: <<exampleItem>>
         404:
           description: "Item with a given ID not found"
           body:
@@ -52,8 +55,10 @@
         Update <<resourcePathName|!singularize>> item with given {<<resourcePathName|!singularize>>Id}
       body:
         application/json:
-          schema: <<schema>>
-          example: <<exampleItem>>
+          type: <<schema>>
+          example:
+            strict: false
+            value: <<exampleItem>>
       responses:
         204:
           description: "Item successfully updated"

@@ -1,6 +1,6 @@
 
     description: Entity representing a <<resourcePathName|!singularize>>
-    is: [secured, language]
+    is: [language]
 
     get:
       description: |
@@ -10,8 +10,10 @@
           description: "Returns item with a given ID"
           body:
             application/json:
-              example: <<exampleItem>>
-              schema: <<schema>>
+              type: <<schema>>
+              example:
+                strict: false
+                value: <<exampleItem>>
         400:
           description: "Bad request"
           body:
