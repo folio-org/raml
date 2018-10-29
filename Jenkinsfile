@@ -29,7 +29,7 @@ pipeline {
 
     stage('Publish API Docs') {
       when {
-        branch 'master'
+        branch 'raml1.0'
       }
       steps {
         sh 'python3 /usr/local/bin/generate_api_docs.py -r raml -l info -o folio-api-docs'
