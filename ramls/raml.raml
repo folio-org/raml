@@ -26,12 +26,12 @@ types:
             example: "Internal server error, contact administrator"
   /{name}:
     get:
-      description: Get RAML by name
+      description: Get RAML as JSON by name
       responses:
         200:
-          description: "Individual RAML"
+          description: "Individual RAML as JSON"
           body:
-            text/plain:
+            application/json:
         404:
           description: "RAML with a given name not found"
           body:
