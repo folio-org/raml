@@ -1,0 +1,38 @@
+#%RAML 1.0
+
+title: JSON Schema API
+version: v1
+baseUri: http://localhost:8081/{version}
+
+documentation:
+  - title: JSON Schema API
+    content: This documents the API calls that can be made to get JSON Schemas of a module defined by X-Okapi-Module-Id header
+
+types:
+  errors: !include ../schemas/errors.schema
+
+/_/jsonSchemas:
+  get:
+    description: Get JSON Schema names for the given module defined by header X-Okapi-Module-Id
+    queryParameters:
+      path:
+        displayName: JSON Schema Path
+        type: string
+        description: Path to specific JSON Schema
+        example: schemas/metadata.schema
+        required: false
+    responses:
+      200:
+        description: "JSON Schema"
+        body:
+          application/json:
+          application/schema+json:
+      404:
+          description: "JSON Schema with a given path not found"
+          body:
+            text/plain:
+      500:
+        description: "Internal server error"
+        body:
+          text/plain:
+            example: "Internal server error, contact administrator"
