@@ -1,15 +1,21 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "description": "Information for module operations for a tenant",
+  "title":  "Tenant Init Information",
+  "description": "This is the structure that's POSTed when a module is told about a tenant using it",
   "type": "object",
   "properties": {
     "module_from": {
-      "description": "The module ID that is being upgraded or disabled",
+      "description": "Module ID that is present doing upgrade (original module)",
       "type": "string"
     },
     "module_to": {
-      "description": "The module ID that is being upgraded or enabled",
+      "description": "Module ID to be used now (first or upgrade)",
       "type": "string"
+    },
+    "parameters": {
+      "description": "Parameters that controls what tenant init (eg reference data)",
+      "type": "object",
+      "$ref": "parameters.schema"
     }
   },
   "required": [
