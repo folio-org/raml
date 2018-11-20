@@ -5,11 +5,11 @@
   "type": "object",
   "properties": {
     "module_from": {
-      "description": "Module ID that is present doing upgrade (original module)",
+      "description": "The module ID that is being upgraded or disabled",
       "type": "string"
     },
     "module_to": {
-      "description": "Module ID to be used now (first or upgrade)",
+      "description": "The module ID that is being upgraded or enabled",
       "type": "string"
     },
     "parameters": {
