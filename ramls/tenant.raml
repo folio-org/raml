@@ -21,6 +21,10 @@ types:
           strict: false
           value: !include ../examples/moduleInfo.sample
     responses:
+      200:
+        description: "tenant id upgraded successfully, returns a list of commands that have failed while initializing the tenant"
+        body:
+          application/json:
       201:
         description: "tenant id added successfully, returns a list of commands that have failed while initializing the tenant"
         body:

@@ -1,4 +1,7 @@
 {
-  "module_to": "ID9",
-  "module_from": "ID8"
+  "module_to": "module-1.1",
+  "module_from": "module-1.0",
+  "parameters": [
+    "ref" : "core,
+  ]
 }
