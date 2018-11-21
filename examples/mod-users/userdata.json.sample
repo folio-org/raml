@@ -1,0 +1,169 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "User Schema",
+    "description": "A user",
+    "type": "object",
+    "properties": {
+        "username": {
+            "description": "A unique name belonging to a user. Typically used for login",
+            "type": "string"
+        },
+        "id": {
+            "description": "A globally unique (UUID) identifier for the user",
+            "type": "string"
+        },
+        "externalSystemId": {
+            "description": "An ID that corresponds to an external authority",
+            "type": "string"
+        },
+        "barcode": {
+            "description": "The library barcode for this user",
+            "type": "string"
+        },
+        "active": {
+            "description": "A flag to determine if a user can log in, take out loans, etc.",
+            "type": "boolean"
+        },
+        "type": {
+            "description": "The class of user",
+            "type": "string"
+        },
+        "patronGroup": {
+            "description": "A UUID corresponding to the group the user belongs to",
+            "type": "string"
+        },
+        "meta": {
+            "description": "Deprecated",
+            "type": "object"
+        },
+        "proxyFor": {
+            "description": "Deprecated",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "personal": {
+            "description": "Personal information about the user",
+            "type": "object",
+            "properties": {
+                "lastName": {
+                    "description": "The user's surname",
+                    "type": "string"
+                },
+                "firstName": {
+                    "description": "The user's given name",
+                    "type": "string"
+                },
+                "middleName": {
+                    "description": "The user's middle name (if any)",
+                    "type": "string"
+                },
+                "email": {
+                    "description": "The user's email address",
+                    "type": "string"
+                },
+                "phone": {
+                    "description": "The user's primary phone number",
+                    "type": "string"
+                },
+                "mobilePhone": {
+                    "description": "The user's mobile phone number",
+                    "type": "string"
+                },
+                "dateOfBirth": {
+                    "type": "string",
+                    "description": "The user's birth date",
+                    "format": "date-time"
+                },
+                "addresses": {
+                    "description": "Physical addresses associated with the user",
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "description": "A unique id for this address",
+                                "type": "string"
+                            },
+                            "countryId": {
+                                "description": "The country code for this address",
+                                "type": "string"
+                            },
+                            "addressLine1": {
+                                "description": "Address, Line 1",
+                                "type": "string"
+                            },
+                            "addressLine2": {
+                                "description": "Address, Line 2",
+                                "type": "string"
+                            },
+                            "city": {
+                                "description": "City name",
+                                "type": "string"
+                            },
+                            "region": {
+                                "description": "Region",
+                                "type": "string"
+                            },
+                            "postalCode": {
+                                "description": "Postal Code",
+                                "type": "string"
+                            },
+                            "addressTypeId": {
+                                "description": "A UUID that corresponds with an address type object",
+                                "type": "string"
+                            },
+                            "primaryAddress": {
+                                "description": "Is this the user's primary address?",
+                                "type": "boolean"
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                },
+                "preferredContactTypeId": {
+                    "description": "Id of user's preferred contact type",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "lastName"
+            ]
+        },
+        "enrollmentDate": {
+            "description": "The date in which the user joined the organization",
+            "type": "string",
+            "format": "date-time"
+        },
+        "expirationDate": {
+            "description": "The date for when the user becomes inactive",
+            "type": "string",
+            "format": "date-time"
+        },
+        "createdDate": {
+            "description": "Deprecated",
+            "type": "string",
+            "format": "date-time"
+        },
+        "updatedDate": {
+            "description": "Deprecated",
+            "type": "string",
+            "format": "date-time"
+        },
+        "metadata": {
+            "type": "object",
+            "$ref": "http://localhost:9130/_/jsonSchemas?path=raml-util/schemas/metadata.schema"
+        },
+        "tags": {
+            "type": "object",
+            "$ref": "http://localhost:9130/_/jsonSchemas?path=raml-util/schemas/tags.schema"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "id"
+    ]
+}

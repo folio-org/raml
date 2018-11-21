@@ -13,20 +13,35 @@ types:
 
 /_/jsonSchemas:
   get:
-    description: Get JSON Schema names for the given module defined by header X-Okapi-Module-Id
+    description: |
+      Get JSON Schemas for the given module defined by header X-Okapi-Module-Id.
+      Without path query param will return list of JSON Schema paths.
+      With path query param will return the specific JSON Schema with resolvable references.
     queryParameters:
       path:
         displayName: JSON Schema Path
         type: string
         description: Path to specific JSON Schema
-        example: schemas/metadata.schema
+        example: userdata.json
         required: false
     responses:
       200:
         description: "JSON Schema"
         body:
           application/json:
+            example: |
+              [
+                "userdataCollection.json",
+                "usergroups.json",
+                "proxyfor.json",
+                "userdata.json",
+                "proxyforCollection.json",
+                "usergroup.json",
+                "addresstype.json",
+                "addresstypeCollection.json"
+              ]
           application/schema+json:
+            example: !include ../examples/mod-users/userdata.json.sample
       404:
           description: "JSON Schema with a given path not found"
           body:
