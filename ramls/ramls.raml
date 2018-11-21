@@ -1,0 +1,49 @@
+#%RAML 1.0
+
+title: RAML API
+version: v1
+baseUri: http://localhost:8081/{version}
+
+documentation:
+  - title: RAML API
+    content: This documents the API calls that can be made to get RAML of a module defined by X-Okapi-Module-Id header
+
+types:
+  errors: !include ../schemas/errors.schema
+
+/_/ramls:
+  get:
+    description: |
+      Get RAMLs for the given module defined by header X-Okapi-Module-Id.
+      Without path query param will return list of RAML paths.
+      With path query param will return the specific RAML with resolvable references.
+    queryParameters:
+      path:
+        displayName: RAML Path
+        type: string
+        description: Path to specific RAML
+        example: users.raml
+        required: false
+    responses:
+      200:
+        description: "RAML"
+        body:
+          application/json:
+            example: |
+              [
+                "proxiesFor.raml",
+                "users.raml",
+                "addressTypes.raml",
+                "groups.raml"
+              ]
+          application/raml+yaml:
+            example: !include ../examples/mod-users/users.raml.sample
+      404:
+          description: "RAML with a given path not found"
+          body:
+            text/plain:
+      500:
+        description: "Internal server error"
+        body:
+          text/plain:
+            example: "Internal server error, contact administrator"
