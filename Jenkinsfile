@@ -27,6 +27,12 @@ pipeline {
       }
     }
 
+    stage('Lint raml schema') {
+      steps {
+        runLintRamlSchema()
+      }
+    }
+
     stage('Publish API Docs') {
       when {
         branch 'raml1.0'
