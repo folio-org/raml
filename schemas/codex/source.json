@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Codex Source Schema",
+  "description": "Codex Source Schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "short identifier for the module -- for example (kb, localekb)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Module name and version -- for example (mod-codex-ekb-1.1.0, mod-agreements-1.0.2)"
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ]
+}

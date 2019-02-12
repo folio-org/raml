@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Content Type Schema",
+  "description": "Content Type Schema",
+  "type": "string",
+  "additionalProperties": false,
+  "enum": [
+    "Aggregated Full Text",
+    "Abstract and Index",
+    "E-Book",
+    "E-Journal",
+    "Print",
+    "Unknown",
+    "Online Reference"
+  ]
+}

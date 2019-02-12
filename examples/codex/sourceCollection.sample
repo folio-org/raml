@@ -1,0 +1,12 @@
+{
+  "source": [
+    {
+      "id": "ekb",
+      "name": "mod-codex-ekb-1.1.0"
+    },
+    {
+      "id": "localekb",
+      "name": "mod-agreements-1.0.2"
+    }
+  ]
+}

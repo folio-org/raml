@@ -1,0 +1,18 @@
+{
+  "name": "CODEX Package CQL Schema Extended",
+  "description": "Additional indexes and operators in CODEX package search, support for them is optional. Indexes/relation that are not supported should be ignored by providers",
+  "prefix": "ext",
+  "uri": "folio.org/codex-ext",
+  "default": false,
+  "indexes": [
+    {
+      "name": "selected",
+      "type": "string",
+      "description": "KB-specific to filter resources selected/non-selected/both by the library",
+      "capability": [
+        "filter"
+      ],
+      "values": ["all", "true", "false"]
+    }
+  ]
+}

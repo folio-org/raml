@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "description": "Collection of packages",
+  "properties": {
+    "packages": {
+      "type": "array",
+      "description": "Collection of packages",
+      "packages": {
+        "type": "object",
+        "$ref": "package.json"
+      }
+    },
+    "resultInfo": {
+      "$ref": "../resultInfo.schema"
+    }
+  },
+  "required": [
+    "packages",
+    "resultInfo"
+  ]
+}
