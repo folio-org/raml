@@ -77,7 +77,7 @@
               "properties": {
                 "name": {
                   "type": "string",
-                   "description": "Name of Index modifier",
+                   "description": "Name of Index modifier"
                 },
                 "values": {
                   "type": "array",
