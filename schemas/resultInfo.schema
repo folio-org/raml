@@ -27,7 +27,6 @@
                   "type": "integer",
                   "description": "Count of facet values"
                 },
-                "description": "Facet value",
                 "value": {}
               }
             },
