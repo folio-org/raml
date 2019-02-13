@@ -68,7 +68,7 @@
           },
           "query": {
             "type": "string",
-             "description": "CQL Query associated with results"
+            "description": "CQL Query associated with results"
           }
         }
       }

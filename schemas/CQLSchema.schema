@@ -26,7 +26,7 @@
     },
     "indexes": {
       "type": "array",
-       "description": "Array of CQL Indexes"
+      "description": "Array of CQL Indexes",
       "items": {
         "type": "object",
         "properties": {
