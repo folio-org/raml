@@ -5,16 +5,20 @@
   "type": "object",
   "properties": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "description": "Name of the property",
     },
     "description": {
-      "type": "string"
+      "type": "string",
+      "description": "Description of the property"
     },
     "prefix": {
-      "type": "string"
+      "type": "string",
+      "description": "Prefix of the property"
     },
     "uri": {
-      "type": "string"
+      "type": "string",
+      "uri": "Uri of the property"
     },
     "default": {
       "type": "boolean",
@@ -22,6 +26,7 @@
     },
     "indexes": {
       "type": "array",
+       "description": "Array of CQL Indexes"
       "items": {
         "type": "object",
         "properties": {
@@ -29,7 +34,8 @@
             "type": "string"
           },
           "description": {
-            "type": "string"
+            "type": "string",
+            "description": "Description of the Index"
           },
           "type": {
             "type": "string",
@@ -41,6 +47,7 @@
           },
           "values": {
             "type": "array",
+            "description": "Index values array"
             "items": {
               "type": "string"
             },
@@ -48,6 +55,7 @@
           },
           "capability": {
             "type": "array",
+            "description": "Array of index capabilities",
             "items": {
               "type": "string",
               "enum": [
@@ -63,14 +71,17 @@
           },
           "modifiers": {
             "type": "array",
-            "items": {
+              "description": "Array of Index modifiers",
+              "items": {
               "type": "object",
               "properties": {
                 "name": {
-                  "type": "string"
+                  "type": "string",
+                   "description": "Name of Index modifier",
                 },
                 "values": {
                   "type": "array",
+                  "description": "Modifier values array"
                   "items": {
                     "type": "string"
                   },
@@ -94,11 +105,13 @@
     },
     "operators": {
       "type": "array",
+      "description": "Array of supported operators",
       "items": {
         "type": "object",
         "properties": {
           "type": {
             "type": "string",
+            "description": "Type of operator",
             "enum": [
               "AND",
               "OR",
@@ -107,7 +120,8 @@
             ]
           },
           "supported": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Boolean indicator if operator is supported",
           }
         },
         "additionalProperties": false,

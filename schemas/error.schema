@@ -4,16 +4,20 @@
   "type": "object",
   "properties": {
     "message": {
-      "type": "string"
+      "type": "string",
+      "description": "Error message text"
     },
     "type": {
-      "type": "string"
+      "type": "string",
+      "description": "Error message type"
     },
     "code": {
-      "type": "string"
+      "type": "string",
+      "description": "Error message code"
     },
     "parameters": {
       "type": "object",
+      "description": "Error message parameters",
       "$ref": "parameters.schema"
     }
   },
