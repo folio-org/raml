@@ -47,7 +47,7 @@
           },
           "values": {
             "type": "array",
-            "description": "Index values array"
+            "description": "Index values array",
             "items": {
               "type": "string"
             },
@@ -81,7 +81,7 @@
                 },
                 "values": {
                   "type": "array",
-                  "description": "Modifier values array"
+                  "description": "Modifier values array",
                   "items": {
                     "type": "string"
                   },
@@ -121,7 +121,7 @@
           },
           "supported": {
             "type": "boolean",
-            "description": "Boolean indicator if operator is supported",
+            "description": "Boolean indicator if operator is supported"
           }
         },
         "additionalProperties": false,
