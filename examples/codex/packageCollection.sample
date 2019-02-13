@@ -11,7 +11,7 @@
       "platform": "",
       "itemCount": 100,
       "coverage":{"beginCoverage":"2018-08-13","endCoverage":"2018-09-13"},
-      "isSelected": true,
+      "isSelected": "Yes",
       "source": "ekb",
       "lastModified": "2019-02-11"
     },
@@ -26,7 +26,7 @@
       "platform": "Gale|Cengage platform",
       "itemCount": 100,
       "coverage":{"beginCoverage":"2018-08-13","endCoverage":"2018-09-13"},
-      "isSelected": true,
+      "isSelected": "NotSpecified",
       "source": "localkb",
       "lastModified": "2019-02-11"
     }

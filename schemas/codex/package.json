@@ -48,8 +48,9 @@
       "$ref" : "coverage.json"
     },
     "isSelected": {
-      "type": "boolean",
-      "description": "Selection state (`is it held?`) of the package itself, rather than its contents. Mostly relevant for e-resources"
+      "type": "object",
+      "description": "Selection state (`is it held?`) of the package itself, rather than its contents. Mostly relevant for e-resources",
+      "$ref" : "selectionStatus.json"
     },
     "source": {
       "type": "string",

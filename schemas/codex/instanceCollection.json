@@ -13,6 +13,7 @@
       }
     },
     "resultInfo": {
+      "description": "Result information schema",
       "$ref": "../resultInfo.schema"
     }
   },

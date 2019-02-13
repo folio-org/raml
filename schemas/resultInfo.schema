@@ -16,12 +16,14 @@
       "description": "Array of facets",
       "items": {
         "type": "object",
+        "description": "A facet",
         "properties": {
           "facetValues": {
             "type": "array",
             "description": "Array of facet values",
             "items": {
               "type": "object",
+              "description": "A facet value",
               "properties": {
                 "count": {
                   "type": "integer",
@@ -34,7 +36,7 @@
           },
           "type": {
             "type": "string",
-             "description": "Type of facet"
+            "description": "Type of facet"
           }
         },
         "additionalProperties": false
@@ -45,6 +47,7 @@
       "description": "Array of diagnostic information",
       "items": {
         "type": "object",
+        "description": "Diagnostic information",
         "properties": {
           "source": {
             "type": "string",
@@ -64,7 +67,7 @@
           },
           "recordCount": {
             "type": "integer",
-             "description": "Record Count"
+             "description": "Record Count for disagnostics"
           },
           "query": {
             "type": "string",
