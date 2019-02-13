@@ -6,7 +6,7 @@
   "properties": {
     "name": {
       "type": "string",
-      "description": "Name of the property",
+      "description": "Name of the property"
     },
     "description": {
       "type": "string",

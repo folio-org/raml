@@ -27,13 +27,15 @@
                   "type": "integer",
                   "description": "Count of facet values"
                 },
+                "description": "Facet value",
                 "value": {}
               }
             },
             "additionalProperties": false
           },
           "type": {
-            "type": "string"
+            "type": "string",
+             "description": "Type of facet"
           }
         },
         "additionalProperties": false
@@ -41,6 +43,7 @@
     },
     "diagnostics": {
       "type": "array",
+      "description": "Array of diagnostic information",
       "items": {
         "type": "object",
         "properties": {
