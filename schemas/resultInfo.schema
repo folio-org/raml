@@ -69,7 +69,7 @@
           },
           "recordCount": {
             "type": "integer",
-             "description": "Record Count for disagnostics"
+             "description": "Record Count for diagnostics"
           },
           "query": {
             "type": "string",
