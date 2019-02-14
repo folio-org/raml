@@ -7,11 +7,15 @@
   "properties": {
     "beginCoverage": {
       "type": "string",
+      "format": "date",
+      "customPattern" : "yyyy-MM-dd",
       "description": "Begin Coverage Date",
       "example": "2018-01-01"
     },
     "endCoverage": {
       "type": "string",
+      "format": "date",
+      "customPattern" : "yyyy-MM-dd",
       "description": "End Coverage Date",
       "example": "2018-12-01"
     }
