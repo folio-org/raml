@@ -1,5 +1,5 @@
 {
-  "name": "CODEX Pckage CQL Schema",
+  "name": "CODEX Package CQL Schema",
   "description": "Required indexes and operators in CODEX package search. Providers should report any unsupported indexes/relations as errors.",
   "prefix": "codex",
   "uri": "folio.org/codex",
