@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Selection Status Schema",
+  "description": "Selection Status Schema",
+  "type": "string",
+  "additionalProperties": false,
+  "enum": [
+    "Yes",
+    "No",
+    "NotSpecified"
+  ]
+}

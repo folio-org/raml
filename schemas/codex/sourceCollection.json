@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "description": "Collection of sources",
+  "properties": {
+    "sources": {
+      "type": "array",
+      "description": "Collection of sources",
+      "packages": {
+        "type": "object",
+        "$ref": "source.json"
+      }
+    }
+  },
+  "required": [
+    "sources"
+  ]
+}

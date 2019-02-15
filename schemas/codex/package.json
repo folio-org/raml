@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Codex Package Schema",
+  "description": "Codex Package Schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The internal ID of the Package record as known by the source, unique and can have different formats"
+    },
+    "identifier": {
+      "type": "string",
+      "description": "An external identifier used to track the Package (e.g. a barcode)"
+    },
+    "name": {
+      "type": "string",
+      "description": "A name (or label) associated with the Package"
+    },
+    "description": {
+      "type": "string",
+      "description": "A free-form description of the Package"
+    },
+    "type": {
+      "type": "string",
+      "description": "The type of package - what sort of collection does it represent. (e.g. DVD box set; boundwidth; archival cardboard box; etc..)",
+      "$ref" : "packageType.json"
+    },
+    "providerId": {
+      "type": "string",
+      "description": "Link to provider object associated with this resource (could be in another domain)"
+    },
+    "provider": {
+      "type": "string",
+      "description": "Name of provider for display purposes"
+    },
+    "platform": {
+      "type": "string",
+      "description": "Platform hosting the e-resource"
+    },
+    "itemCount": {
+      "type": "integer",
+      "description": "Number of items in the package"
+    },
+    "coverage": {
+      "type": "object",
+      "description": "Coverage date for the package itself, rather than its contents",
+      "$ref" : "coverage.json"
+    },
+    "isSelected": {
+      "type": "object",
+      "description": "Selection state (`is it held?`) of the package itself, rather than its contents. Mostly relevant for e-resources",
+      "$ref" : "selectionStatus.json"
+    },
+    "source": {
+      "type": "string",
+      "description": "a label indicating the source of the package, e.g. kb, local"
+    },
+    "lastModified": {
+      "type": "string",
+      "description": "date when this package was last modified"
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ]
+}

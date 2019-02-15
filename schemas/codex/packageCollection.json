@@ -2,14 +2,14 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,
-  "description": "Collection of instances",
+  "description": "Collection of packages",
   "properties": {
-    "instances": {
+    "packages": {
       "type": "array",
-      "description": "Collection of instances",
-      "items": {
+      "description": "Collection of packages",
+      "packages": {
         "type": "object",
-        "$ref": "instance.json"
+        "$ref": "package.json"
       }
     },
     "resultInfo": {
@@ -18,7 +18,7 @@
     }
   },
   "required": [
-    "instances",
+    "packages",
     "resultInfo"
   ]
 }

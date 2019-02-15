@@ -1,0 +1,15 @@
+{
+  "id": "bfcefc83-4a2f-44f0-ac1f-ba2424cea48a",
+  "identifier": "",
+  "name": "Academic OneFile",
+  "description": "Academic OneFile description",
+  "type": "Online Reference",
+  "providerId": "18",
+  "provider": "Gale|Cengage",
+  "platform": "Gale|Cengage platform",
+  "itemCount": 100,
+  "coverage":{"beginCoverage":"2018-08-13","endCoverage":"2018-09-13"},
+  "source": "localkb",
+  "isSelected": "NotSpecified",
+  "lastModified": "2019-02-11"
+}

@@ -1,0 +1,57 @@
+#%RAML 1.0
+title: Codex Packages API
+baseUri: https://github.com/folio-org/mod-codex-ekb
+version: v1
+
+documentation:
+ - title: Codex Packages API
+   content: This documents the FOLIO codex packages API
+
+types:
+  package: !include ../../schemas/codex/package.json
+  packageCollection: !include ../../schemas/codex/packageCollection.json
+  errors: !include ../../schemas/errors.schema
+  sourceCollection: !include ../../schemas/codex/sourceCollection.json
+
+traits:
+  validate: !include ../../traits/validation.raml
+  language: !include ../../traits/language.raml
+  pageable: !include ../../traits/pageable.raml
+  searchable: !include ../../traits/searchable.raml
+
+resourceTypes:
+  collection-get: !include ../../rtypes/collection-get.raml
+  collection-item-get: !include ../../rtypes/item-collection-get.raml
+  item-get: !include ../../rtypes/get-only.raml
+
+/codex-packages:
+  displayName: Codex packages
+  description: Codex packages collection
+  type:
+    collection-get:
+      schemaCollection: packageCollection
+      exampleCollection: !include ../../examples/codex/packageCollection.sample
+  get:
+    is: [
+      searchable: {description: "with valid searchable fields: for example name = academic", example: "name=academic"},
+      pageable,
+      validate
+    ]
+  /{id}:
+    displayName: Codex package
+    description: Get a specific codex package
+    type:
+      collection-item-get:
+        schema: package
+        exampleItem: !include ../../examples/codex/package.sample
+
+/codex-packages-sources:
+  displayName: Codex packages sources
+  description: Codex packages sources
+  type:
+    item-get:
+        schema: sourceCollection
+        exampleCollection: !include ../../examples/codex/sourceCollection.sample
+  get:
+    displayName: Codex sources
+    description: GET a list of source modules that implement codex-packages interface

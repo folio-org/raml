@@ -1,0 +1,55 @@
+{
+  "name": "CODEX Package CQL Schema",
+  "description": "Required indexes and operators in CODEX package search. Providers should report any unsupported indexes/relations as errors.",
+  "prefix": "codex",
+  "uri": "folio.org/codex",
+  "default": true,
+  "indexes": [
+    {
+      "name": "name",
+      "type": "string",
+      "capability": [
+        "search",
+        "sort"
+      ]
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "description": "Package type filter, see CODEX package schema for the list of allowed values",
+      "capability": [
+        "filter"
+      ]
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "capability": [
+        "filter"
+      ],
+      "values": [
+        "kb",
+        "localkb",
+        "all"
+      ]
+    }
+  ],
+  "operators": [
+    {
+      "type": "AND",
+      "supported": false
+    },
+    {
+      "type": "OR",
+      "supported": false
+    },
+    {
+      "type": "NOT",
+      "supported": false
+    },
+    {
+      "type": "PROX",
+      "supported": false
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "instances": [
+    {
+      "id": "18-134",
+      "identifier": "",
+      "name": "Academic ASAP",
+      "description": "",
+      "type": "Aggregated Full Text",
+      "providerId": "18",
+      "provider": "Gale|Cengage",
+      "platform": "",
+      "itemCount": 100,
+      "coverage":{"beginCoverage":"2018-08-13","endCoverage":"2018-09-13"},
+      "isSelected": "Yes",
+      "source": "ekb",
+      "lastModified": "2019-02-11"
+    },
+    {
+      "id": "bfcefc83-4a2f-44f0-ac1f-ba2424cea48a",
+      "identifier": "",
+      "name": "Academic OneFile",
+      "description": "Academic OneFile description",
+      "type": "Online Reference",
+      "providerId": "bfcefc83-4a2f-44f0-ac1f-ba2424cea48b",
+      "provider": "Gale|Cengage",
+      "platform": "Gale|Cengage platform",
+      "itemCount": 100,
+      "coverage":{"beginCoverage":"2018-08-13","endCoverage":"2018-09-13"},
+      "isSelected": "NotSpecified",
+      "source": "localkb",
+      "lastModified": "2019-02-11"
+    }
+  ],
+  "resultInfo" : {
+    "totalRecords" : 2,
+    "facets" : [ ],
+    "diagnostics" : [ {
+      "source" : "mod-agreements-1.0.2",
+      "code" : "200",
+      "recordCount" : 1,
+      "query" : "(name = a) sortby name"
+    }, {
+      "source" : "mod-codex-ekb-1.1.0",
+      "code" : "200",
+      "recordCount" : 1,
+      "query" : "(name = a) sortby name"
+    }
+  }
+}

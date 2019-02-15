@@ -4,31 +4,41 @@
   "type": "object",
   "properties": {
     "totalRecords": {
-      "type": "integer"
+      "type": "integer",
+      "description": "Total number of records"
     },
     "responseTime": {
-      "type": "number"
+      "type": "number",
+      "description": "Response time"
     },
     "facets": {
       "type": "array",
+      "description": "Array of facets",
       "items": {
         "type": "object",
+        "description": "A facet",
         "properties": {
           "facetValues": {
             "type": "array",
+            "description": "Array of facet values",
             "items": {
               "type": "object",
+              "description": "A facet value",
               "properties": {
                 "count": {
-                  "type": "integer"
+                  "type": "integer",
+                  "description": "Count of facet values"
                 },
-                "value": {}
+                "value": {
+                  "description": "Value Object"
+                }
               }
             },
             "additionalProperties": false
           },
           "type": {
-            "type": "string"
+            "type": "string",
+            "description": "Type of facet"
           }
         },
         "additionalProperties": false
@@ -36,26 +46,34 @@
     },
     "diagnostics": {
       "type": "array",
+      "description": "Array of diagnostic information",
       "items": {
         "type": "object",
+        "description": "Diagnostic information",
         "properties": {
           "source": {
-            "type": "string"
+            "type": "string",
+            "description": "Source reporting the diagnostic information"
           },
           "code": {
-            "type": "string"
+            "type": "string",
+            "description": "Diagnostic Code"
           },
           "message": {
-            "type": "string"
+            "type": "string",
+            "description": "Diagnostic Message"
           },
           "module": {
-            "type": "string"
+            "type": "string",
+             "description": "Module reporting diagnostic information"
           },
           "recordCount": {
-            "type": "integer"
+            "type": "integer",
+             "description": "Record Count for diagnostics"
           },
           "query": {
-            "type": "string"
+            "type": "string",
+            "description": "CQL Query associated with results"
           }
         }
       }
