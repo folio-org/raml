@@ -7,7 +7,7 @@
     "packages": {
       "type": "array",
       "description": "Collection of packages",
-      "packages": {
+      "items": {
         "type": "object",
         "$ref": "package.json"
       }

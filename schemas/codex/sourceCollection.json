@@ -7,7 +7,7 @@
     "sources": {
       "type": "array",
       "description": "Collection of sources",
-      "packages": {
+      "items": {
         "type": "object",
         "$ref": "source.json"
       }
