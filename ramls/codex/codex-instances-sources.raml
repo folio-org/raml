@@ -1,0 +1,30 @@
+#%RAML 1.0
+title: Codex Instances Sources
+baseUri: https://github.com/folio-org/mod-codex-ekb
+version: v1
+
+documentation:
+ - title: Codex Instances Sources API
+   content: This documents the FOLIO codex instances sources API
+
+types:
+  sourceCollection: !include ../../schemas/codex/sourceCollection.json
+
+traits:
+  language: !include ../../traits/language.raml
+
+resourceTypes:
+  get-only: !include ../../rtypes/get-only.raml
+
+
+/codex-instances-sources:
+  displayName: Codex instances sources
+  description: Codex instances sources
+  type:
+    get-only:
+        schema: sourceCollection
+        exampleCollection: !include ../../examples/codex/sourceCollection.sample
+  get:
+    displayName: Codex instances sources
+    description: GET a list of source modules that implement codex-instances-sources interface
+
