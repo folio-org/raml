@@ -10,7 +10,7 @@
       "format": "date-time"
     },
     "createdByUserId": {
-      "description": "ID of the user who created the record",
+      "description": "ID of the user who created the record (when available)",
       "type": "string",
       "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
     },
@@ -24,7 +24,7 @@
       "format": "date-time"
     },
     "updatedByUserId": {
-      "description": "ID of the user who last updated the record",
+      "description": "ID of the user who last updated the record (when available)",
       "type": "string",
       "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
     },
@@ -35,7 +35,6 @@
   },
   "additionalProperties": false,
   "required": [
-    "createdDate",
-    "createdByUserId"
+    "createdDate"
   ]
 }
