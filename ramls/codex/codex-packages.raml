@@ -1,5 +1,5 @@
 #%RAML 1.0
-title: Codex Packages API
+title: Codex Packages
 baseUri: https://github.com/folio-org/mod-codex-ekb
 version: v1
 
@@ -20,16 +20,15 @@ traits:
   searchable: !include ../../traits/searchable.raml
 
 resourceTypes:
-  collection-get: !include ../../rtypes/collection-get.raml
+  get-only: !include ../../rtypes/get-only.raml
   collection-item-get: !include ../../rtypes/item-collection-get.raml
-  item-get: !include ../../rtypes/get-only.raml
 
 /codex-packages:
   displayName: Codex packages
   description: Codex packages collection
   type:
-    collection-get:
-      schemaCollection: packageCollection
+    get-only:
+      schema: packageCollection
       exampleCollection: !include ../../examples/codex/packageCollection.sample
   get:
     is: [
@@ -37,6 +36,13 @@ resourceTypes:
       pageable,
       validate
     ]
+    responses:
+      401:
+        description: "Not authorized to perform requested action"
+        body:
+          text/plain:
+            example: |
+              "unable to list packages -- unauthorized"
   /{id}:
     displayName: Codex package
     description: Get a specific codex package
@@ -49,7 +55,7 @@ resourceTypes:
   displayName: Codex packages sources
   description: Codex packages sources
   type:
-    item-get:
+    get-only:
         schema: sourceCollection
         exampleCollection: !include ../../examples/codex/sourceCollection.sample
   get:
