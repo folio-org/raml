@@ -39,15 +39,15 @@ pipeline {
       }
       steps {
         sh 'python3 /usr/local/bin/generate_api_docs.py -r raml -l info -o folio-api-docs'
-        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', 
-                          accessKeyVariable: 'AWS_ACCESS_KEY_ID', 
-                          credentialsId: 'jenkins-aws', 
+        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding',
+                          accessKeyVariable: 'AWS_ACCESS_KEY_ID',
+                          credentialsId: 'jenkins-aws',
                           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
           sh 'aws s3 sync folio-api-docs s3://foliodocs/api'
         }
       }
     }
-    
+
 
   } // end stages
 
