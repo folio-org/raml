@@ -21,7 +21,7 @@
             application/json:
               example:
                 strict: false
-                value: !include ../raml-util/examples/errors.sample
+                value: !include ../examples/errors.sample
             text/plain:
               example: |
                 "<<resourcePathName|!singularize>> not found"
@@ -31,7 +31,7 @@
             application/json:
               example:
                 strict: false
-                value: !include ../raml-util/examples/errors.sample
+                value: !include ../examples/errors.sample
             text/plain:
               example: "internal server error, contact administrator"
     delete:
@@ -46,7 +46,7 @@
             application/json:
               example:
                 strict: false
-                value: !include ../raml-util/examples/errors.sample
+                value: !include ../examples/errors.sample
             text/plain:
               example: |
                 "<<resourcePathName|!singularize>> not found"
@@ -56,7 +56,7 @@
             application/json:
               example:
                 strict: false
-                value: !include ../raml-util/examples/errors.sample
+                value: !include ../examples/errors.sample
             text/plain:
               example: |
                 "unable to delete <<resourcePathName|!singularize>> -- constraint violation"
@@ -66,7 +66,7 @@
             application/json:
               example:
                 strict: false
-                value: !include ../raml-util/examples/errors.sample
+                value: !include ../examples/errors.sample
             text/plain:
               example: "Internal server error, contact administrator"
 
@@ -88,7 +88,7 @@
             application/json:
               example:
                 strict: false
-                value: !include ../raml-util/examples/errors.sample
+                value: !include ../examples/errors.sample
             text/plain:
               example: |
                 "<<resourcePathName|!singularize>> not found"
@@ -98,7 +98,7 @@
             application/json:
               example:
                 strict: false
-                value: !include ../raml-util/examples/errors.sample
+                value: !include ../examples/errors.sample
             text/plain:
               example: |
                 "unable to update <<resourcePathName|!singularize>> -- malformed JSON at 13:4"
@@ -108,7 +108,7 @@
             application/json:
               example:
                 strict: false
-                value: !include ../raml-util/examples/errors.sample
+                value: !include ../examples/errors.sample
             text/plain:
               example: "internal server error, contact administrator"
 

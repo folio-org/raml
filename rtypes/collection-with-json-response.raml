@@ -25,7 +25,7 @@
               application/json:
                 example:
                   strict: false
-                  value: !include ../raml-util/examples/errors.sample
+                  value: !include ../examples/errors.sample
               text/plain:
                 example: "unable to list <<resourcePathName>> -- malformed parameter 'query', syntax error at column 6"
           401:
@@ -34,7 +34,7 @@
               application/json:
                 example:
                   strict: false
-                  value: !include ../raml-util/examples/errors.sample
+                  value: !include ../examples/errors.sample
               text/plain:
                 example: "unable to list <<resourcePathName>> -- unauthorized"
           500:
@@ -43,7 +43,7 @@
               application/json:
                 example:
                   strict: false
-                  value: !include ../raml-util/examples/errors.sample
+                  value: !include ../examples/errors.sample
               text/plain:
                 example: "internal server error, contact administrator"
 
@@ -70,7 +70,7 @@
               application/json:
                 example:
                   strict: false
-                  value: !include ../raml-util/examples/errors.sample
+                  value: !include ../examples/errors.sample
               text/plain:
                 example: |
                   "unable to add <<resourcePathName|!singularize>> -- malformed JSON at 13:3"
@@ -80,7 +80,7 @@
               application/json:
                 example:
                   strict: false
-                  value: !include ../raml-util/examples/errors.sample
+                  value: !include ../examples/errors.sample
               text/plain:
                 example: "unable to create <<resourcePathName>> -- unauthorized"
           500:
@@ -89,6 +89,6 @@
               application/json:
                 example:
                   strict: false
-                  value: !include ../raml-util/examples/errors.sample
+                  value: !include ../examples/errors.sample
               text/plain:
                 example: "Internal server error, contact administrator"
