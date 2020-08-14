@@ -5,7 +5,15 @@
   "properties": {
     "totalRecords": {
       "type": "integer",
-      "description": "Total number of records"
+      "description": "Estimated or exact total number of records"
+    },
+    "totalRecordsEstimated": {
+      "type": "boolean",
+      "description": "True if totalRecords is an estimation, false if it is the exact number"
+    },
+    "totalRecordsRounded": {
+      "type": "integer",
+      "description": "The rounded value of totalRecords if totalRecords is an estimation"
     },
     "responseTime": {
       "type": "number",
