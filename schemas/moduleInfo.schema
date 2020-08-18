@@ -5,11 +5,11 @@
   "type": "object",
   "properties": {
     "module_from": {
-      "description": "The module ID that is being upgraded or disabled",
+      "description": "The old module ID, for example mod-sample-1.0.2, that has been installed and is either to be disabled or upgraded to a new module ID",
       "type": "string"
     },
     "module_to": {
-      "description": "The module ID that is being upgraded or enabled",
+      "description": "The new module ID, for example mod-sample-1.3.1, to be installed or to be updated to from an old module ID",
       "type": "string"
     },
     "parameters": {
