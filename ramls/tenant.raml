@@ -22,17 +22,17 @@ types:
           value: !include ../examples/moduleInfo.sample
     responses:
       200:
-        description: "tenant id upgraded successfully, returns a list of commands that have failed while initializing the tenant"
+        description: "tenant upgraded successfully to new module ID"
         body:
           application/json:
       201:
-        description: "tenant id added successfully, returns a list of commands that have failed while initializing the tenant"
+        description: "tenant enabled successfully for the module ID"
         body:
           application/json:
       204:
-        description: "tenant id exists, nothing will be added"
+        description: "tenant enabled successfully for the module ID (there was nothing to do)"
       400:
-        description: "Bad request"
+        description: "Bad request or failing operation; SQL commands that failed when initalizing or upgrading the tenant are listed as JSON array elements."
         body:
           text/plain:
       500:
