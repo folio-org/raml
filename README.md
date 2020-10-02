@@ -1,4 +1,4 @@
-# RAML - RESTful API Maprkup Language
+# RAML - RESTful API Markup Language
 
 Copyright (C) 2016-2019 The Open Library Foundation
 
