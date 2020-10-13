@@ -1,4 +1,4 @@
-# raml
+# Shared RAML and schema files (raml-util)
 
 Copyright (C) 2016-2020 The Open Library Foundation
 
