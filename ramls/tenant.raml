@@ -2,18 +2,19 @@
 
 title: Tenant API
 baseUri: http://localhost:8081/{version}
-version: v1
+version: v2
 
 traits:
   validate: !include ../traits/validation.raml
+  internal: !include ../traits/internal-error.raml
 types:
   tenantAttributes: !include ../schemas/moduleInfo.schema
   errors: !include ../schemas/errors.schema
 
 /_/tenant:
   post:
-    description: Provision a new / update an existing tenant
-    is: [validate]
+    description: Initiate tenant operation (create, upgrade, delete)
+    is: [validate,internal]
     body:
       application/json:
         type: tenantAttributes
@@ -21,49 +22,45 @@ types:
           strict: false
           value: !include ../examples/moduleInfo.sample
     responses:
-      200:
-        description: "tenant upgraded successfully to new module ID"
-        body:
-          application/json:
       201:
         description: "tenant enabled successfully for the module ID"
         body:
           application/json:
-      204:
-        description: "tenant enabled successfully for the module ID (there was nothing to do)"
+        headers:
+          Location:
+            description: URI of the operation
       400:
-        description: "Bad request or failing operation; SQL commands that failed when initalizing or upgrading the tenant are listed as JSON array elements."
+        description: "Bad user request"
         body:
           text/plain:
-      500:
-        description: "Internal server error"
-        body:
-          text/plain:
-            example: "Internal server error, contact administrator"
-  get:
-    description: Does tenant id already exist
-    responses:
-      200:
-        description: "true or false indicator"
-        body:
-          text/plain:
-            example: "Text....."
-      500:
-        description: "Internal server error"
-        body:
-          text/plain:
-            example: "Internal server error, contact administrator"
-  delete:
-    description: drop tenant id
-    responses:
-      204:
-        description: "Delete succeeded"
-      400:
-        description: "Bad request"
-        body:
-          text/plain:
-      500:
-        description: "Internal server error"
-        body:
-          text/plain:
-            example: "Internal server error, contact administrator"
+  /{operation_id}:
+    get:
+      description: Get operation status
+      is: [internal]
+      responses:
+        200:
+          description: Operation in progress
+          body:
+            application/json:
+        400:
+          description: Operation failed
+          body:
+            application/json:
+        404:
+          description: Not found
+          body:
+            text/plain:
+    delete:
+      description: Delete operation
+      is: [internal]
+      responses:
+        204:
+          description: Deleted ok
+        400:
+          description: Cannot be deleted
+          body:
+            text/plain:
+        404:
+          description: Not found
+          body:
+            text/plain:
