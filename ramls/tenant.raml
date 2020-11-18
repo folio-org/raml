@@ -39,11 +39,11 @@ types:
       is: [internal]
       responses:
         200:
-          description: Operation in progress
+          description: Operation returned OK
           body:
             application/json:
         400:
-          description: Operation failed
+          description: User error
           body:
             application/json:
         404:
@@ -57,7 +57,7 @@ types:
         204:
           description: Deleted ok
         400:
-          description: Cannot be deleted
+          description: User error
           body:
             text/plain:
         404:
