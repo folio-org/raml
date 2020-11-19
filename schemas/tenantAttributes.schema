@@ -18,7 +18,6 @@
     },
     "parameters": {
       "description": "Parameters that controls what tenant init (eg reference data)",
-      "type": "object",
       "$ref": "parameters.schema"
     }
   }

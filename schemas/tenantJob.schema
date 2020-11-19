@@ -13,7 +13,6 @@
       "type": "string"
     },
     "tenantAttributes": {
-      "type": "object",
       "description" : "Module information - content to initiate operation",
       "$ref" : "tenantAttributes.schema"
     },
