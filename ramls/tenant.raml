@@ -27,6 +27,8 @@ types:
         body:
           application/json:
             type: tenantJob
+            example:
+              value: !include ../examples/tenantJob.sample
         headers:
           Location:
             description: URI of the job
@@ -52,6 +54,8 @@ types:
           body:
             application/json:
               type: tenantJob
+              example:
+                value: !include ../examples/tenantJob.sample
         400:
           description: User error
           body:
