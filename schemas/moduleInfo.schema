@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "moduleInfo.schema",
   "title":  "Tenant Init Information",
   "description": "This is the structure that's POSTed when a module is told about a tenant using it",
   "type": "object",
