@@ -1,6 +1,5 @@
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title":  "Tenant operation",
+{ "$schema": "http://json-schema.org/draft-04/schema#",
+  "title":  "Tenant job attributes",
   "description": "This is the structure that's POSTed when a module is told about a tenant using it",
   "type": "object",
   "properties": {
