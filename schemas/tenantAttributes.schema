@@ -1,7 +1,7 @@
 { "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "tenantAttributes.schema",
   "title":  "Tenant job attributes",
-  "description": "This is the structure that's POSTed when a module is told about a tenant using it",
+  "description": "Configuration how to install, upgrade or delete a module for a tenant",
   "type": "object",
   "properties": {
     "module_from": {
