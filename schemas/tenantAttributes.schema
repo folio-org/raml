@@ -1,0 +1,24 @@
+{ "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "tenantAttributes.schema",
+  "title":  "Tenant job attributes",
+  "description": "Configuration how to install, upgrade or delete a module for a tenant",
+  "type": "object",
+  "properties": {
+    "module_from": {
+      "description": "Existing module ID. If omitted, the module is not enabled already",
+      "type": "string"
+    },
+    "module_to": {
+      "description": "Target module ID. If omitted, the existing module is disabled.",
+      "type": "string"
+    },
+    "purge": {
+      "description": "On disable should data also be purged",
+      "type": "boolean"
+    },
+    "parameters": {
+      "description": "Parameters that controls what tenant init (eg reference data)",
+      "$ref": "parameters.schema"
+    }
+  }
+}

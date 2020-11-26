@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "parameters.schema",
   "description": "List of key/value parameters of an error",
   "type": "array",
   "items": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "error.schema",
   "description": "An error",
   "type": "object",
   "properties": {
@@ -16,7 +17,6 @@
       "description": "Error message code"
     },
     "parameters": {
-      "type": "object",
       "description": "Error message parameters",
       "$ref": "parameters.schema"
     }

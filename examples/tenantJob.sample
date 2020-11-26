@@ -1,0 +1,17 @@
+{
+  "id": "53bd40c8-a420-4ddb-b829-4496ff5e5be4",
+  "tenant": "diku",
+  "tenantAttributes" : {
+    "module_to": "mod-sample-1.3.1",
+    "module_from": "mod-sample-1.0.2",
+    "parameters": [
+      { "key": "loadReference", "value": "true" }
+    ]
+  },
+  "complete": true,
+  "error": "SQL error",
+  "messages": [
+    "first error",
+    "second error"
+  ]
+}
