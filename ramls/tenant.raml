@@ -15,6 +15,9 @@ types:
 /_/tenant:
   post:
     description: Create tenant job (create, upgrade, delete)
+      An implementation may choose to return 204 if the job is
+      completed by the initial operation; or it may return 201
+      and start the operation in the background.
     is: [validate,internal]
     body:
       application/json:
@@ -22,6 +25,8 @@ types:
         example:
           value: !include ../examples/tenantAttributes.sample
     responses:
+      204:
+        description: "Job completed"
       201:
         description: "Tenant job created"
         body:
