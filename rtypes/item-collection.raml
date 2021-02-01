@@ -75,10 +75,10 @@
               example: |
                 "unable to update <<resourcePathName|!singularize>> -- malformed JSON at 13:4"
         409:
-          description: "Conflict, constraint or optimistic locking failed"
+          description: "Optimistic locking failed"
           body:
             text/plain:
-              example: "optimistic locking failed"
+              example: "version conflict"
         500:
           description: "Internal server error, e.g. due to misconfiguration"
           body:
