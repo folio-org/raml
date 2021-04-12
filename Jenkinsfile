@@ -21,15 +21,15 @@ pipeline {
       }
     }
 
-    stage('Lint raml-cop') {
+    stage('API lint') {
       steps {
-        runLintRamlCop()
+        runApiLint('RAML', 'ramls', 'ramls.raml jsonSchemas.raml')
       }
     }
 
-    stage('Lint raml schema') {
+    stage('API schema lint') {
       steps {
-        runLintRamlSchema()
+        runApiSchemaLint('.', 'codex-next')
       }
     }
 
