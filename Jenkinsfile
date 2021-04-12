@@ -41,7 +41,7 @@ pipeline {
         }
       }
       steps {
-        runApiDoc('RAML', 'ramls')
+        runApiDoc('RAML', 'ramls', '')
       }
     }
 
