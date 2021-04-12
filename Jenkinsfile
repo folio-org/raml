@@ -21,12 +21,6 @@ pipeline {
       }
     }
 
-    stage('Lint raml-cop') {
-      steps {
-        runLintRamlCop()
-      }
-    }
-
     stage('API lint') {
       steps {
         runApiLint('RAML', 'ramls', 'ramls.raml jsonSchemas.raml')
