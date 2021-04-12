@@ -33,9 +33,9 @@ pipeline {
       }
     }
 
-    stage('Lint raml schema') {
+    stage('API schema lint') {
       steps {
-        runLintRamlSchema()
+        runApiSchemaLint('.', 'codex-next')
       }
     }
 
