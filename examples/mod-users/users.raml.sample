@@ -16,7 +16,6 @@ traits:
   orderable: !include http://localhost:9130/_/ramls?path=raml-util/traits/orderable.raml
   pageable: !include http://localhost:9130/_/ramls?path=raml-util/traits/pageable.raml
   searchable: !include http://localhost:9130/_/ramls?path=raml-util/traits/searchable.raml
-  language: !include http://localhost:9130/_/ramls?path=raml-util/traits/language.raml
   validate: !include http://localhost:9130/_/ramls?path=raml-util/traits/validation.raml
   facets: !include http://localhost:9130/_/ramls?path=raml-util/traits/facets.raml
 
