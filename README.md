@@ -16,7 +16,6 @@ in each such repository as its "raml-util" directory.
 Trait examples:
 
  - Authorization
- - Language
  - Pagination
  - etc.
 
