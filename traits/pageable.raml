@@ -18,7 +18,8 @@
           maximum: 2147483647
         totalRecords:
           description: How to calculate the totalRecords property. "exact" for the correct number, "estimated" for an estimation, "auto" to automatically select "exact" or "estimated", "none" for suppressing the totalRecords property. For details see https://github.com/folio-org/raml-module-builder#estimated-totalrecords
-          enum: [exact, estimated, none, auto]
+          type: string
+          pattern: "exact|estimated|none|auto"
           required: false
           example: none
           default: auto
