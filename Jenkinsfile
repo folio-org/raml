@@ -7,7 +7,7 @@ pipeline {
 
   agent {
     node {
-      label 'jenkins-slave-all'
+      label 'jenkins-agent-java11'
     }
   }
 
@@ -21,33 +21,29 @@ pipeline {
       }
     }
 
-    stage('Lint raml-cop') {
+    stage('API lint') {
       steps {
-        runLintRamlCop()
+        runApiLint('RAML', 'ramls', 'ramls.raml jsonSchemas.raml')
       }
     }
 
-    stage('Lint raml schema') {
+    stage('API schema lint') {
       steps {
-        runLintRamlSchema()
+        runApiSchemaLint('.', 'codex-next')
       }
     }
 
-    stage('Publish API Docs') {
+    stage('Generate API docs') {
       when {
-        branch 'raml1.0'
-      }
-      steps {
-        sh 'python3 /usr/local/bin/generate_api_docs.py -r raml -l info -o folio-api-docs'
-        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', 
-                          accessKeyVariable: 'AWS_ACCESS_KEY_ID', 
-                          credentialsId: 'jenkins-aws', 
-                          secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-          sh 'aws s3 sync folio-api-docs s3://foliodocs/api'
+        anyOf {
+          branch 'master'
+          branch 'raml1.0'
         }
       }
+      steps {
+        runApiDoc('RAML', 'ramls', '')
+      }
     }
-    
 
   } // end stages
 

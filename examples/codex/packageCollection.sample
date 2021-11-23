@@ -10,7 +10,10 @@
       "provider": "Gale|Cengage",
       "platform": "",
       "itemCount": 100,
-      "coverage":{"beginCoverage":"2018-08-13","endCoverage":"2018-09-13"},
+      "coverage": {
+        "beginCoverage": "2018-08-13",
+        "endCoverage": "2018-09-13"
+      },
       "isSelected": "Yes",
       "source": "ekb",
       "lastModified": "2019-02-11"
@@ -25,25 +28,31 @@
       "provider": "Gale|Cengage",
       "platform": "Gale|Cengage platform",
       "itemCount": 100,
-      "coverage":{"beginCoverage":"2018-08-13","endCoverage":"2018-09-13"},
+      "coverage": {
+        "beginCoverage": "2018-08-13",
+        "endCoverage": "2018-09-13"
+      },
       "isSelected": "NotSpecified",
       "source": "localkb",
       "lastModified": "2019-02-11"
     }
   ],
-  "resultInfo" : {
-    "totalRecords" : 2,
-    "facets" : [ ],
-    "diagnostics" : [ {
-      "source" : "mod-agreements-1.0.2",
-      "code" : "200",
-      "recordCount" : 1,
-      "query" : "(name = a) sortby name"
-    }, {
-      "source" : "mod-codex-ekb-1.1.0",
-      "code" : "200",
-      "recordCount" : 1,
-      "query" : "(name = a) sortby name"
-    }
+  "resultInfo": {
+    "totalRecords": 2,
+    "facets": [],
+    "diagnostics": [
+      {
+        "source": "mod-agreements-1.0.2",
+        "code": "200",
+        "recordCount": 1,
+        "query": "(name = a) sortby name"
+      },
+      {
+        "source": "mod-codex-ekb-1.1.0",
+        "code": "200",
+        "recordCount": 1,
+        "query": "(name = a) sortby name"
+      }
+    ]
   }
 }

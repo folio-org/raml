@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "tenantJob.schema",
+  "title":  "Tenant job",
+  "description": "Tenant job information",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Job ID",
+      "type": "string"
+    },
+    "tenant": {
+      "description": "Tenant ID",
+      "type": "string"
+    },
+    "tenantAttributes": {
+      "description" : "Module information - content to initiate operation",
+      "$ref" : "tenantAttributes.schema"
+    },
+    "complete": {
+      "description": "Whether job is complete (true) or ongoing (false)",
+      "type": "boolean"
+    },
+    "error" : {
+      "description": "Error message if error has occurred",
+      "type": "string"
+    },
+    "messages" : {
+      "description": "Additional messages (warnings, errors)",
+      "type": "array",
+      "items": {
+        "type":"string"
+      }
+    }
+  }
+}

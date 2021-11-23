@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "tags.schema",
   "title": "tags",
   "description": "List of simple tags that can be added to an object",
   "type": "object",

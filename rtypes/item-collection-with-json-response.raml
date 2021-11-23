@@ -1,6 +1,7 @@
 #%RAML 1.0 ResourceType
-# item-collection.raml
+# item-collection-with-json-response.raml
     description: Entity representing a <<resourcePathName|!singularize>>
+    is: [language]
 
     get:
       description: |
@@ -17,12 +18,20 @@
         404:
           description: "Item with a given ID not found"
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: |
                 "<<resourcePathName|!singularize>> not found"
         500:
           description: "Internal server error, e.g. due to misconfiguration"
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: "internal server error, contact administrator"
     delete:
@@ -34,18 +43,30 @@
         404:
           description: "Item with a given ID not found"
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: |
                 "<<resourcePathName|!singularize>> not found"
         400:
           description: "Bad request, e.g. malformed request body or query parameter. Details of the error (e.g. name of the parameter or line/character number with malformed data) provided in the response."
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: |
                 "unable to delete <<resourcePathName|!singularize>> -- constraint violation"
         500:
           description: "Internal server error, e.g. due to misconfiguration"
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: "Internal server error, contact administrator"
 
@@ -64,12 +85,20 @@
         404:
           description: "Item with a given ID not found"
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: |
                 "<<resourcePathName|!singularize>> not found"
         400:
           description: "Bad request, e.g. malformed request body or query parameter. Details of the error (e.g. name of the parameter or line/character number with malformed data) provided in the response."
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: |
                 "unable to update <<resourcePathName|!singularize>> -- malformed JSON at 13:4"
@@ -81,5 +110,10 @@
         500:
           description: "Internal server error, e.g. due to misconfiguration"
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: "internal server error, contact administrator"
+
