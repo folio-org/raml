@@ -11,6 +11,8 @@
     "ejournal",
     "print",
     "unknown",
-    "onlinereference"
+    "onlinereference",
+    "streamingmedia",
+    "mixedcontent"
   ]
 }
