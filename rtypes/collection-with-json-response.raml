@@ -6,6 +6,7 @@
 # - pageable:  !include traits/pageable.raml
 # - searchable: !include traits/searchable.raml
       description: Collection of <<resourcePathName|!singularize>> items.
+      is: [language]
 
       get:
         description: Retrieve a list of <<resourcePathName|!singularize>> items.
@@ -21,16 +22,28 @@
           400:
             description: "Bad request, e.g. malformed request body or query parameter. Details of the error (e.g. name of the parameter or line/character number with malformed data) provided in the response."
             body:
+              application/json:
+                example:
+                  strict: false
+                  value: !include ../examples/errors.sample
               text/plain:
                 example: "unable to list <<resourcePathName>> -- malformed parameter 'query', syntax error at column 6"
           401:
             description: "Not authorized to perform requested action"
             body:
+              application/json:
+                example:
+                  strict: false
+                  value: !include ../examples/errors.sample
               text/plain:
                 example: "unable to list <<resourcePathName>> -- unauthorized"
           500:
             description: "Internal server error, e.g. due to misconfiguration"
             body:
+              application/json:
+                example:
+                  strict: false
+                  value: !include ../examples/errors.sample
               text/plain:
                 example: "internal server error, contact administrator"
 
@@ -54,16 +67,28 @@
           400:
             description: "Bad request, e.g. malformed request body or query parameter. Details of the error (e.g. name of the parameter or line/character number with malformed data) provided in the response."
             body:
+              application/json:
+                example:
+                  strict: false
+                  value: !include ../examples/errors.sample
               text/plain:
                 example: |
                   "unable to add <<resourcePathName|!singularize>> -- malformed JSON at 13:3"
           401:
             description: "Not authorized to perform requested action"
             body:
+              application/json:
+                example:
+                  strict: false
+                  value: !include ../examples/errors.sample
               text/plain:
                 example: "unable to create <<resourcePathName>> -- unauthorized"
           500:
             description: "Internal server error, e.g. due to misconfiguration"
             body:
+              application/json:
+                example:
+                  strict: false
+                  value: !include ../examples/errors.sample
               text/plain:
                 example: "Internal server error, contact administrator"

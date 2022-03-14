@@ -1,4 +1,5 @@
 {
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "name": "CODEX Package CQL Schema Extended",
   "description": "Additional indexes and operators in CODEX package search, support for them is optional. Indexes/relation that are not supported should be ignored by providers",
   "prefix": "ext",

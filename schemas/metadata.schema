@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "metadata.schema",
   "title": "Metadata Schema",
   "description": "Metadata about creation and changes to records, provided by the server (client should not provide)",
   "type": "object",

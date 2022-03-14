@@ -1,5 +1,12 @@
 #%RAML 1.0 Trait
       queryParameters:
+        totalRecords:
+          description: How to calculate the totalRecords property. "exact" for the correct number, "estimated" for an estimation, "auto" to automatically select "exact" or "estimated", "none" for suppressing the totalRecords property. For details see https://github.com/folio-org/raml-module-builder#estimated-totalrecords
+          type: string
+          pattern: "exact|estimated|none|auto"
+          required: false
+          example: none
+          default: auto
         offset:
           description: Skip over a number of elements by specifying an offset value for the query
           type: integer
@@ -16,3 +23,4 @@
           default: 10
           minimum: 0
           maximum: 2147483647
+

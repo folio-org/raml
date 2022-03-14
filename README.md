@@ -1,6 +1,6 @@
-# raml
+# Shared RAML and schema files (raml-util)
 
-Copyright (C) 2016-2019 The Open Library Foundation
+Copyright (C) 2016-2021 The Open Library Foundation
 
 This software is distributed under the terms of the Apache License,
 Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
@@ -16,7 +16,6 @@ in each such repository as its "raml-util" directory.
 Trait examples:
 
  - Authorization
- - Language
  - Pagination
  - etc.
 

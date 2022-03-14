@@ -1,5 +1,6 @@
 
     description: Entity representing a <<resourcePathName|!singularize>>
+    is: [language]
 
     get:
       description: |
@@ -16,16 +17,28 @@
         401:
           description: "Not authorized to perform requested action"
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: "unable to get retrieve <<resourcePathName|!singularize>> -- unauthorized"
         404:
           description: "Item with a given ID not found"
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: |
                 "<<resourcePathName|!singularize>> not found"
         500:
           description: "Internal server error, e.g. due to misconfiguration"
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: "internal server error, contact administrator"

@@ -1,4 +1,5 @@
 {
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "name": "CODEX Instance CQL Schema",
   "description": "Required indexes and operators in CODEX instance search. Providers should report any unsupported indexes/relations as errors.",
   "prefix": "codex",

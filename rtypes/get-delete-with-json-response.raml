@@ -1,5 +1,6 @@
 
     description: Entity representing a <<resourcePathName|!singularize>>
+    is: [language]
 
     get:
       description: |
@@ -16,18 +17,30 @@
         400:
           description: "Bad request"
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: |
                 "unable to process <<resourcePathName|!singularize>> -- constraint violation"
         404:
           description: "Item with a given ID not found"
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: |
                 "<<resourcePathName|!singularize>> not found"
         500:
           description: "Internal server error, e.g. due to misconfiguration"
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: "internal server error, contact administrator"
     delete:
@@ -39,18 +52,30 @@
         400:
           description: "Bad request"
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: |
                 "unable to process <<resourcePathName|!singularize>> -- constraint violation"
         404:
           description: "Item with a given ID not found"
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: |
                 "<<resourcePathName|!singularize>> not found"
         500:
           description: "Internal server error, e.g. due to misconfiguration"
           body:
+            application/json:
+              example:
+                strict: false
+                value: !include ../examples/errors.sample
             text/plain:
               example: "Internal server error, contact administrator"
 
