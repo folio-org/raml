@@ -23,7 +23,7 @@ pipeline {
 
     stage('API lint') {
       steps {
-        runApiLint('RAML', 'ramls', 'ramls.raml jsonSchemas.raml')
+        runApiLint('RAML', 'ramls', 'ramls.raml jsonSchemas.raml', true)
       }
     }
 
