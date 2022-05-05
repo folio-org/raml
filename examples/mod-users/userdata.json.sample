@@ -155,11 +155,11 @@
         },
         "metadata": {
             "type": "object",
-            "$ref": "http://localhost:9130/_/jsonSchemas?path=raml-util/schemas/metadata.schema"
+            "$ref": "metadata.schema"
         },
         "tags": {
             "type": "object",
-            "$ref": "http://localhost:9130/_/jsonSchemas?path=raml-util/schemas/tags.schema"
+            "$ref": "tags.schema"
         }
     },
     "additionalProperties": false,

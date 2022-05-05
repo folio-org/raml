@@ -8,28 +8,28 @@ documentation:
     content: This documents the API calls that can be made to query and manage users of the system
 
 types:
-  user: !include http://localhost:9130/_/jsonSchemas?path=userdata.json
-  userdataCollection: !include http://localhost:9130/_/jsonSchemas?path=userdataCollection.json
-  errors: !include http://localhost:9130/_/jsonSchemas?path=raml-util/schemas/errors.schema
+  user: !include userdata.json
+  userdataCollection: userdataCollection.json
+  errors: !include schemas/errors.schema
 
 traits:
-  orderable: !include http://localhost:9130/_/ramls?path=raml-util/traits/orderable.raml
-  pageable: !include http://localhost:9130/_/ramls?path=raml-util/traits/pageable.raml
-  searchable: !include http://localhost:9130/_/ramls?path=raml-util/traits/searchable.raml
-  validate: !include http://localhost:9130/_/ramls?path=raml-util/traits/validation.raml
-  facets: !include http://localhost:9130/_/ramls?path=raml-util/traits/facets.raml
+  orderable: !include traits/orderable.raml
+  pageable: !include traits/pageable.raml
+  searchable: !include traits/searchable.raml
+  validate: !include traits/validation.raml
+  facets: !include traits/facets.raml
 
 resourceTypes:
-  collection: !include http://localhost:9130/_/ramls?path=raml-util/rtypes/collection.raml
-  collection-item: !include http://localhost:9130/_/ramls?path=raml-util/rtypes/item-collection.raml
-  get-only: !include http://localhost:9130/_/ramls?path=raml-util/rtypes/get-only.raml
-  post-empty-body: !include http://localhost:9130/_/ramls?path=raml-util/rtypes/post-empty-body.raml
+  collection: !include rtypes/collection.raml
+  collection-item: !include rtypes/item-collection.raml
+  get-only: !include raml-util/rtypes/get-only.raml
+  post-empty-body: !include rtypes/post-empty-body.raml
 
 /users:
   type:
     collection:
-      exampleCollection: !include http://localhost:9130/_/jsonSchemas?path=examples/user_collection.sample
-      exampleItem: !include http://localhost:9130/_/jsonSchemas?path=examples/user.sample
+      exampleCollection: !include examples/user_collection.sample
+      exampleItem: !include examples/user.sample
       schemaCollection: userdataCollection
       schemaItem: user
   get:
@@ -46,7 +46,7 @@ resourceTypes:
   /{userId}:
     type:
       collection-item:
-        exampleItem: !include http://localhost:9130/_/jsonSchemas?path=examples/user.sample
+        exampleItem: !include examples/user.sample
         schema: user
     get:
       description: Get a single user
