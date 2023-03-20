@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Codex Source Schema",
-  "description": "Codex Source Schema",
+  "title": "Codex Source schema",
+  "description": "Codex Source schema",
   "type": "object",
   "additionalProperties": false,
   "properties": {
