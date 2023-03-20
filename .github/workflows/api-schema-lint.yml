@@ -16,13 +16,7 @@ env:
   API_DIRECTORIES: 'schemas'
   API_EXCLUDES: 'codex-next'
 
-on:
-  push:
-    paths:
-      - 'schemas/**'
-  pull_request:
-    paths:
-      - 'schemas/**'
+on: [push, pull_request]
 
 jobs:
   api-schema-lint:
