@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "Collection of external patrons",
+  "properties": {
+    "externalPatrons": {
+      "description": "List of external patron items",
+      "type": "array",
+      "id": "externalPatron",
+      "items": {
+        "type": "object",
+        "$ref": "external_patron.json"
+      }
+    },
+    "totalRecords": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "externalPatrons",
+    "totalRecords"
+  ]
+}
