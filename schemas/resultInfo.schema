@@ -6,7 +6,7 @@
   "properties": {
     "totalRecords": {
       "type": "integer",
-      "description": "Estimated or exact total number of records"
+      "description": "Estimated or exact total number of records. For details see https://github.com/folio-org/raml-module-builder#estimated-totalrecords"
     },
     "totalRecordsEstimated": {
       "type": "boolean",
